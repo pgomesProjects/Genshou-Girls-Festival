@@ -1,0 +1,9 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/definitions.rpy", line 2: is not terminated with a newline. (Check strings and parenthesis.)
+    define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed"
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Fri Nov 11 01:42:34 2022

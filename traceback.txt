@@ -1,0 +1,70 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/screens.rpy", line 1133, in execute
+    screen name_input(message, ok_action):
+  File "game/screens.rpy", line 1133, in execute
+    screen name_input(message, ok_action):
+  File "game/screens.rpy", line 1144, in execute
+    frame:
+  File "game/screens.rpy", line 1146, in execute
+    has vbox:
+  File "game/screens.rpy", line 1155, in execute
+    input default "" value VariableInputValue("player") length 12 allow "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+  File "renpy/common/00inputvalues.rpy", line 145, in get_text
+    return globals()[self.variable]
+KeyError: 'player'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\display\screen.py", line 451, in visit_all
+    callback(self)
+  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\display\screen.py", line 462, in per_interact
+    self.update()
+  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\display\screen.py", line 653, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 1133, in execute
+    screen name_input(message, ok_action):
+  File "game/screens.rpy", line 1133, in execute
+    screen name_input(message, ok_action):
+  File "game/screens.rpy", line 1144, in execute
+    frame:
+  File "game/screens.rpy", line 1146, in execute
+    has vbox:
+  File "game/screens.rpy", line 1155, in execute
+    input default "" value VariableInputValue("player") length 12 allow "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\display\behavior.py", line 1334, in __init__
+    default = value.get_text()
+  File "renpy/common/00inputvalues.rpy", line 145, in get_text
+    return globals()[self.variable]
+KeyError: 'player'
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.0.3.22090809
+Genshou Girls Festival 1.0
+Fri Nov 11 01:33:56 2022
