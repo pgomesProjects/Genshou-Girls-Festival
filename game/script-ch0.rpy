@@ -5,6 +5,8 @@ label ch0_main:
 
     scene black
 
+    #show yasuda at middle
+
     "People call me a {important}freak.{/important} A {important}weirdo.{/important} A {important}monster.{/important}"
     "A... {important}'Destructive'{/important}, people call it."
     "In this world full of abnormal people, even to them, I am {important}not normal.{/important}"

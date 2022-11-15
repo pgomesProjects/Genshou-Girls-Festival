@@ -258,13 +258,13 @@ screen quick_menu():
             yalign 1.0
 
             textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
+            textbutton _("Transcript") action ShowMenu('history')
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Save") action ShowMenu('save')
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            textbutton _("Options") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -317,13 +317,13 @@ screen navigation():
 
         else:
 
-            textbutton _("History") action ShowMenu("history")
+            textbutton _("Transcript") action ShowMenu("history")
 
             textbutton _("Save") action ShowMenu("save")
 
         textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("Options") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -333,18 +333,15 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        textbutton _("Bestiary") action ShowMenu("bestiary")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+        textbutton _("Credits") action ShowMenu("about")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            textbutton _("Exit") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -548,7 +545,7 @@ style return_button:
     yoffset -45
 
 
-## About screen ################################################################
+## Credits screen ################################################################
 ##
 ## This screen gives credit and copyright information about the game and Ren'Py.
 ##
@@ -562,7 +559,7 @@ screen about():
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("About"), scroll="viewport"):
+    use game_menu(_("Credits"), scroll="viewport"):
 
         style_prefix "about"
 
@@ -583,6 +580,40 @@ style about_label_text is gui_label_text
 style about_text is gui_text
 
 style about_label_text:
+    size gui.label_text_size
+
+## Bestiary screen ################################################################
+##
+## This screen shows the different monsters that the players have interacted with in the game.
+
+screen bestiary():
+
+    tag menu
+
+    ## This use statement includes the game_menu screen inside this one. The
+    ## vbox child is then included inside the viewport inside the game_menu
+    ## screen.
+    use game_menu(_("Bestiary"), scroll="viewport"):
+
+        style_prefix "bestiary"
+
+        vbox:
+
+            label "[config.name!t]"
+            text _("Version [config.version!t]\n")
+
+            ## gui.about is usually set in options.rpy.
+            if gui.about:
+                text "[gui.about!t]\n"
+
+            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+
+
+style bestiary_label is gui_label
+style bestiary_label_text is gui_label_text
+style bestiary_text is gui_text
+
+style bestiary_label_text:
     size gui.label_text_size
 
 
@@ -728,7 +759,7 @@ screen preferences():
 
     tag menu
 
-    use game_menu(_("Preferences"), scroll="viewport"):
+    use game_menu(_("Options"), scroll="viewport"):
 
         vbox:
 
@@ -891,7 +922,7 @@ screen history():
     ## Avoid predicting this screen, as it can be very large.
     predict False
 
-    use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0):
+    use game_menu(_("Transcript"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0):
 
         style_prefix "history"
 

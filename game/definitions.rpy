@@ -11,9 +11,9 @@ default persistent.playername = ""
 default player = persistent.playername
 default persistent.playthrough = 0
 
-#Custom style for important text
 init python:
 
+    #Custom style for important text
     def important_tag(tag, argument, contents):
 
         return [
@@ -23,3 +23,27 @@ init python:
             ]
 
     config.custom_text_tags["important"] = important_tag
+
+##Live Composites for all of the characters
+init:
+    #Current faces and bodies
+    $ aface = 'neutral'
+    $ abody = 'apose1'
+
+    $ sface = 'neutral'
+    $ sbody = 'spose1'
+
+    $ yface = 'neutral'
+    $ ybody = 'ypose1'
+
+    #Hues for images
+    $ huer = 1.0
+    $ hueg = 1.0
+    $ hueb = 1.0
+
+image yasuda:
+    LiveComposite(
+        (625,1000),
+        (0,0), im.MatrixColor("actors/yasuda/bodies/%s.png"%(ybody),im.matrix.tint(huer, hueg, hueb)),
+        (0,0), im.MatrixColor("actors/yasuda/faces/%s.png"%(yface),im.matrix.tint(huer, hueg, hueb)),
+        )
