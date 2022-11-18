@@ -19,11 +19,11 @@ ehthumbs_vista.db
 *.bak 
 *.odt#
 
-saves 
-tmp 
-cache 
-env 
-_wfCache
+/game/saves 
+/game/tmp 
+/game/cache 
+/game/env 
+/game/_wfCache
 
 log.txt 
 errors.txt 
