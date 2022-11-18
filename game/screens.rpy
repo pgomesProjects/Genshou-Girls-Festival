@@ -589,25 +589,45 @@ style about_label_text:
 screen bestiary():
 
     tag menu
-
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("Bestiary"), scroll="viewport"):
+    use game_menu(_("Bestiary")):
 
         style_prefix "bestiary"
 
-        vbox:
+        fixed:
+            ## The grid of bestiary.
+            grid 2 1:
 
-            label "[config.name!t]"
-            text _("Version [config.version!t]\n")
+                xalign 0.5
+                yalign 0.5
 
-            ## gui.about is usually set in options.rpy.
-            if gui.about:
-                text "[gui.about!t]\n"
+                add Image("images/bestiary/placeholder_portrait.png")
+                spacing 10
+                vbox:
+                    label "Character Name"
+                    text _("Supernatural Ability: Insert Here")
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+                    text _("Description: Insert Here")
 
+
+
+            ## Buttons to access other pages.
+            hbox:
+                style_prefix "page"
+
+                xalign 0.5
+                yalign 1.0
+
+                spacing gui.page_spacing
+
+                textbutton _("<")
+                textbutton _(">")
+
+
+style bestiary_menu_button:
+    yalign 1.0
 
 style bestiary_label is gui_label
 style bestiary_label_text is gui_label_text
