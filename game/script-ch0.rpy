@@ -7,6 +7,8 @@ label ch0_main:
 
     #show yasuda at middle
 
+    $monsters.append(Monster('placeholder_portrait.png', 'Example Monster', 'Example Ability', 'This is a test description.'))
+
     "People call me a {important}freak.{/important} A {important}weirdo.{/important} A {important}monster.{/important}"
     "A... {important}'Destructive'{/important}, people call it."
     "In this world full of abnormal people, even to them, I am {important}not normal.{/important}"

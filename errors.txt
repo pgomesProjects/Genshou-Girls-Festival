@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 600: textbutton expects a non-empty block.
-    textbutton _("Mute All"):
-                             ^
+File "game/screens.rpy", line 607: 'ShowMonster' is not a keyword argument or valid child for the grid statement.
+    ShowMonster(monsters[0].portrait)
+               ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri Nov 18 07:28:38 2022
+Fri Nov 18 14:06:39 2022

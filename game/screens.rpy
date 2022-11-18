@@ -596,34 +596,41 @@ screen bestiary():
 
         style_prefix "bestiary"
 
-        fixed:
-            ## The grid of bestiary.
-            grid 2 1:
+        if(len(monsters) > 0):
+            fixed:
+                ## The grid of bestiary.
+                grid 2 1:
 
-                xalign 0.5
-                yalign 0.5
+                    xalign 0.5
+                    yalign 0.5
 
-                add Image("images/bestiary/placeholder_portrait.png")
-                spacing 10
+                    text _("[monsters[0].portrait]")
+                    spacing 10
+                    vbox:
+                        label "[monsters[0].name]"
+                        text _("[monsters[0].ability]")
+
+                        text _("[monsters[0].description]")
+
+
+
+                ## Buttons to access other pages.
+                hbox:
+                    style_prefix "page"
+
+                    xalign 0.5
+                    yalign 1.0
+
+                    spacing gui.page_spacing
+
+                    textbutton _("<")
+                    textbutton _(">")
+        else:
+            fixed:
                 vbox:
-                    label "Character Name"
-                    text _("Supernatural Ability: Insert Here")
-
-                    text _("Description: Insert Here")
-
-
-
-            ## Buttons to access other pages.
-            hbox:
-                style_prefix "page"
-
-                xalign 0.5
-                yalign 1.0
-
-                spacing gui.page_spacing
-
-                textbutton _("<")
-                textbutton _(">")
+                    xalign 0.5
+                    yalign 0.5
+                    text _("Your Bestiary Is Empty.")
 
 
 style bestiary_menu_button:
