@@ -1,14 +1,19 @@
-default persistent.monsters = []
-default monsters = persistent.monsters
+define monsterPage = 0
 
-init -1 python:
-    class Monster(python_object):
-        def __init__ (self, portrait, name, ability, description):
-            python_object.__init__(self)
-            self.portrait = portrait
-            self.name = name
-            self.ability = ability
-            self.description = description
+init:
+    $ import monster as Mon
+    default persistent.monsters = []
+    default monsters = persistent.monsters
 
-        def __eq__(self, obj):
-            return self.name == obj.name and self.ability == obj.ability and self.description == obj.description
+init 1 python:
+    def AddToBestiary(newMon):
+        if(MonsterAlreadyAdded(newMon) == False):
+            monsters.append(newMon)
+            return True
+        return False
+
+    def MonsterAlreadyAdded(mon):
+        for m in range(0, len(monsters)):
+            if(monsters[m] == mon):
+                return True
+        return False

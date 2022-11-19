@@ -24,7 +24,6 @@ style hyperlink_text:
 style gui_text:
     properties gui.text_properties("interface")
 
-
 style button:
     properties gui.button_properties("button")
 
@@ -598,20 +597,34 @@ screen bestiary():
 
         if(len(monsters) > 0):
             fixed:
+                $ currentEntry = monsterPage + 1
+                text _("Entry [currentEntry]")
+
                 ## The grid of bestiary.
                 grid 2 1:
 
-                    xalign 0.5
+                    xalign 0.0
                     yalign 0.5
 
-                    text _("[monsters[0].portrait]")
-                    spacing 10
-                    vbox:
-                        label "[monsters[0].name]"
-                        text _("[monsters[0].ability]")
-
-                        text _("[monsters[0].description]")
-
+                    $ currentImage = monsters[monsterPage].portrait
+                    add "images/bestiary/[currentImage]"
+                    frame:
+                        xpadding 10
+                        ypadding 10
+                        xminimum 700
+                        xmaximum 700
+                        yminimum 500
+                        ymaximum 500
+                        has vbox
+                        box_wrap True
+                        xalign 1.0
+                        $ currentName = monsters[monsterPage].name
+                        label "[currentName]" xalign 1.0
+                        null height 20
+                        $ currentAbility = monsters[monsterPage].ability
+                        text _("[currentAbility]") xalign 1.0
+                        $ currentDesc = monsters[monsterPage].description
+                        text _("[currentDesc]") xalign 1.0
 
 
                 ## Buttons to access other pages.
@@ -623,8 +636,8 @@ screen bestiary():
 
                     spacing gui.page_spacing
 
-                    textbutton _("<")
-                    textbutton _(">")
+                    textbutton _("<") action SetVariable("monsterPage", If(monsterPage > 0, monsterPage - 1, 0))
+                    textbutton _(">") action SetVariable("monsterPage", If(monsterPage < len(monsters) - 1, monsterPage + 1, len(monsters) - 1))
         else:
             fixed:
                 vbox:
@@ -642,6 +655,8 @@ style bestiary_text is gui_text
 
 style bestiary_label_text:
     size gui.label_text_size
+
+
 
 
 ## Load and Save screens #######################################################

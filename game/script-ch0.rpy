@@ -7,7 +7,9 @@ label ch0_main:
 
     #show yasuda at middle
 
-    $monsters.append(Monster('placeholder_portrait.png', 'Example Monster', 'Example Ability', 'This is a test description.'))
+    python:
+        AddToBestiary(Mon.Monster('placeholder_portrait.png', 'Example Monster', 'Example Ability', 'This is a test description.'))
+        AddToBestiary(Mon.Monster('placeholder_portrait.png', 'Example Monster 2', 'Example Ability 2', 'This is another test description.'))
 
     "People call me a {important}freak.{/important} A {important}weirdo.{/important} A {important}monster.{/important}"
     "A... {important}'Destructive'{/important}, people call it."
