@@ -1,8 +1,7 @@
 # The game starts here.
 
 label ch0_main:
-
-
+    
     scene black
 
     #show yasuda at middle
@@ -182,5 +181,54 @@ label ch0_main:
     "My mind races a lot not knowing what to do."
     "My hands get clammy quickly and I roll over in bed."
     "I close my eyes both anticipating and dreading the first day of university."
+
+    call storyTransition
+
+    #scene bg room with dissolve
+    "I open my eyes, realizing the past month has been a huge blur for me."
+    "Living with depression and anxiety does that too."
+    "I feel it spiking once more, not enjoying the feeling of rushing around right now."
+    "I feel questions being tossed around my head. Will there be my own bus? Will I have to walk? I've never seen this school around the area?"
+    "All of these questions are spinning around my head as I try to pick an outfit."
+    "Let's see..."
+
+    window hide
+    menu:
+        "Pink Spotted Skirt With a White Skirt":
+            $outfit = "pink"
+            "I feel pretty out of my element in these, but I guess first impressions are worth it."
+        "Jeans With a Nice Red Blouse":
+            $outfit = "red"
+            "The jeans are comfortable for me, the blouse is slightly small on me. Maybe a little too provocative? Eh, whatever."
+        "Black Hoodie With Black Ripped Pants":
+            $outfit = "black"
+            "Ah, my standard outfit. I'm sure it'll make me look like the edgelord of the school, but at least I'll feel comfortable."
+
+    "As I get dressed for the day, I feel my anxiety spiking up again as I look over at my backpack."
+    "Shit, I should probably put stuff in there, shouldn't I?"
+    "I let out a distressed sigh, walking over to my backpack ready to put my school supplies in it."
+    "What should I put? Should I be prepared for the first day or just wait until a list?"
+    "I doubt it matters, but if it does I don't wanna feel awkward."
+
+    call chooseSupplies
+
+    "As I finish my prep routine, I hear my mom call me loudly."
+    m "[player]! You better move your little tush and HURRY UP!"
+    m "Your bus is here and you missed out on breakfast!"
+    "My heart starts racing as I grab my backpack."
+    "Before I head out, I do a quick 180 and grab my water bottle."
+    "Gotta stay hydrated."
+
+    #scene bg door with dissolve
+    "I turn my light off and rush down the stairs, shoving a piece of bacon into my mouth along the way."
+    "I hear my mom shuffling around, waiting to send me off."
+    "I wave goodbye to her and jump through the door to head outside."
+    "All I see is a yellow bright bus with a few people on it."
+    "Seems like a regular school bus, but I imagine that's sort of a disguise."
+    "My hands are shaking, as I feel my legs not wanting to move, but yet I'm getting closer to the bus."
+    "The doors to the bus swing open before I can get there and I stomp my way inside."
+    "I climb on the bus and meet the friendly smile of the bus driver. I smile back."
+    bd "Welcome. Hope you'll enjoy your stay once you got yourself packed up."
+    "I nod and start towards the end of the bus where I can sit there until I reach the school."
 
     return
