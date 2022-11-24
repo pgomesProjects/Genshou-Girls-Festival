@@ -3,7 +3,7 @@ label start:
     #Define Names
     $ y_name = "British Voice"
     $ a_name = "Blue Woman"
-    $ s_name = "Four-Armed Woman"
+    $ s_name = "Loud Voice"
     $ m_name = "Woman's Voice"
     $ lb_name = "Mysterious Girl"
     $ lm_name = "Quiet Man's Voice"
@@ -91,7 +91,8 @@ label chooseSupplies:
         "Eh, it’s my first day. They’ll probably supply me if anything."
     #If the player picked three items
     else:
-        "I pack my backpack with the essentials: [inventory[0]], [inventory[1]], and [inventory[2]]. I feel pretty confident but my anxiety is through the roof."
+        "I pack my backpack with the essentials: [inventory[0]], [inventory[1]], and [inventory[2]]."
+        "Hopefully this will work."
 
     return
 

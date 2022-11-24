@@ -2,10 +2,9 @@ label ch2_main:
 
     #scene bg playerdorm with dissolve
     #play music "audio/couplen_starrynight.mp3" fadein 2.0
-    "The last couple of days have gone by in a flash."
-    "My head is pounding as I start to wake up in  my dorm."
+    "My head is pounding as I start to wake up in my dorm."
     "I'm not used to waking up here, and it's already the first day of classes."
-    "I don't remember much from these last couple of days, besides the few interactions with Seiko, Azura, and Yasuda."
+    "I don't remember much from yesterday, besides the few interactions with Seiko, Azura, and Yasuda."
     "Everyone here has quite a strong personality, something I'm gonna have to get used to."
     "I shake my head, trying to wake myself up."
     "I look around to see Yasuda, sleeping still like a porcelain doll."
@@ -19,23 +18,23 @@ label ch2_main:
 
     #scene bg playerdorm with wipeleft_scene
 
-    "I phase through the door after an almost therapeutic shower experience, brushing my dampened hair."
+    "I phase through the door as quickly as I can after an almost therapeutic shower experience, brushing my dampened hair."
     "Yasuda sits on the edge of her bed, squinting her eyes as if she really woke up."
     "She looks at me, unfocused with a groggy tone."
     show yasuda at middle with dissolve
     y "Dear me...I was a few minutes away from...checking to make sure you hadn't fallen asleep in there..."
     "Shit, I've been in there for like, 45 minutes apparently."
-    "Had I really been overthinking there for {i}that{/i} long?"
+    "Was I really been overthinking for {i}that{/i} long?"
     mc "Uh, sorry for hogging it. Bathroom's all yours if you need it."
     "She shakes her head at me, deciding to instead take apart her not-so-messy bed and start to remake it."
     "Is she really tearing it apart just to remake it?"
     "I should expect this by now, but I can't get over how much of a neat freak this girl is."
     mc "Why are you making your bed, if it's not... messy?"
     y "I do not see what you mean."
-    y "My bed is quite unsightly, so I have to neaten it up after my slumber."
+    y "My bed is quite unsightly, so I have to neaten it up."
     "Well that's totally a new one."
     "I walk to my bed to put my stuff on it, looking at the clock. "
-    "Still an hour or so till our first classes. I hate morning classes with a passion."
+    "Still an hour or so till our first classes. I hate morning classes with a burning passion."
     #play sound "audio/sfx/knock_02.wav"
     "{i}Knock knock.{/i}"
     "Yasuda and I perk up from hearing the knock."
@@ -46,7 +45,7 @@ label ch2_main:
     "Instead, I see Seiko out in the distance with a little bit of messy hair, yawning."
     "I also see Azura on the ground, curled into a ball sleeping on the floor of the hallway."
     "From what I learned, Azura's never really had a bed before, so she just likes sleeping on the ground."
-    "I wave at the four-armed gremlin and her sleeping blue companion."
+    "I wave at the four-armed gremlin and her blue companion."
     #show seiko at sideLeft with dissolve
     s "Mornin', cutie!"
     mc "Good morning, Seiko."
@@ -57,8 +56,8 @@ label ch2_main:
     "I open mine and skim through it, noticing I have math in the morning as I expected."
     "However, there seems to be descriptions of all of my classes, and they all seem to be pretty strange."
     "Apparently, this math class has a focus on applying it to your abilities?"
-    "How the hell?"
-    "I keep looking and notice I have some class with Yasuda."
+    "How the hell can I do that?"
+    "I keep looking and notice I have some classes with Yasuda."
     "I look over at her while the nervousness of first day classes washes over me."
     y " Looks like we have...Natural Gym 101 along with English 101 together."
     mc " I'm surprised they did our schedules, I thought we were supposed to make them ourselves?"
@@ -67,14 +66,14 @@ label ch2_main:
     y "Let's see..."
     y "Today I have History of Supernatural first, then Psychic Abilities For Non-Psychics."
     y "Tomorrow I have Ability Exposure."
-    y "For myself and those here purely based on talent, we will be exposed to different supernatural abilities to prevent us from being uncomfortable with anything we witness here."
+    y "For myself and those here purely based on talent, we will be exposed to different supernatural abilities to prevent us from being uncomfortable here."
     y "Then overmorrow, I have...some special classes with administration."
     y "There is not much explained here, but I imagine it is because I am normal."
     y "Maybe they will assign me a talent eventually. Or maybe I will have powers that have gone undiscovered."
     "I shrug as Yasuda starts to get dressed in front of me without any hesitation."
     "She gets out of her grandma-looking nightgown and into her elaborate dress."
-    "Without her big outfit, her frame is incredibly thin. Concerningly so."
-    "How many parts are there to her dress anyways?!"
+    "Without her big outfit, her frame is thinner than I thought. Concerningly so."
+    "...how many parts are there to her dress anyways!?"
     mc "You're uh...not going to the bathroom to get dressed?"
     y "Why would I?"
     y "It is much more convenient to get dressed here, is it not?"
@@ -92,7 +91,7 @@ label ch2_main:
     a "Hello. Good morning."
     "I smile at the two of them as they come in bantering about what classes we all have."
     s "I got a looooot of classes that I'm really excited for!"
-    s "We have math together, right [player]?"
+    s "We have math together, right, [player]?"
     "I groan in my head. I've never been one for math."
     s " Now that I'm more awake, are you ready to have claaaaaaaaaaaaaasssssssssses??"
     mc "I guess, just not math."
@@ -100,9 +99,10 @@ label ch2_main:
     mc "Really? Didn't think you were a math person."
     y "I would assume the same, Azura."
     a "Yes. Yes I love math."
-    a "I'm learning d....division. Yes."
+    a "I'm learning d..."
+    a "...division. Yes."
     a "I'm really good with my mullipullation."
-    y "You mean multiplication?"
+    y "You mean {i}multiplication{/i}?"
     a "Yes. Yes. Multiplication."
     s "Well, we're gonna test you on that eventually, Azura!"
     s "Be prepared for the test of a lifetime!"
@@ -114,11 +114,12 @@ label ch2_main:
     s "Also, I got this weird gym thing called Supernatural Gym 101! I think they put me in the wrong class!"
     mc "Well, you have four arms, sooooo..."
     s "Fair enough!"
-    s "Maybe they think I'm sooo strong, that normal gym will crumble to the ground from my sheer awesomeness!"
+    s "Maybe they think I'm sooo strong, that Normal Gym will crumble to the ground from my sheer awesomeness!"
     s "And then all of the ladies would be wooing over me thinking I'm so cool for being so strong and sexy!"
     mc "...no. That wouldn't happen. Not even close."
     s "Well, you don't know that for sure!"
-    y "I believe that having four arms gives you an unfair advantage over us. I do not believe it is based on strength."
+    y "I believe that having four arms gives you an unfair advantage over us."
+    y "I do not think it is based on strength."
     mc "Yeah, you're a little gremlin."
     s "Heehee! A cute lil gremlin!"
     "Seiko gives a toothy grin, while Azura is studying her schedule intensely."
@@ -130,17 +131,15 @@ label ch2_main:
     a "Oh. Yey~"
     "Azura claps, and then continues on reading."
     a "And then on Friday, I have...Writing class."
-    #play sound "audio/sfx/school_bell.mp3"
-    "We hear a little chime come from a speaker in the ceiling."
-    s "Oh hey! That's probably the class bell thing!"
-    "Seiko grabs my arm."
-    s "Ready, math pardner?"
-    "She gives me a big toothy grin. I feel my hands get clammy quick."
+    "Seiko suddenly grabs my arm."
+    s "Are ya ready, math pardner?"
+    "I feel my hands get clammy quick."
     y "If that is the case, I will see you all later."
     y "Good luck with classes today. Pip pip!"
     #hide yasuda with dissolve
     "Yasuda walks out with a nod, her back stiff and straight."
-    "Pip pip? That's new. Kinda cute, though."
+    "{i}'Pip pip'{/i}?"
+    "That's new. Kinda cute, though."
     a "Bye."
     #hide azura with dissolve
     "Azura gives Seiko and I a hug, and Seiko gives her some head pats in return."
@@ -152,10 +151,10 @@ label ch2_main:
     s "I'm sure it'll be just fine since there isn't really anything to do on the first day!"
     "I guess she's right."
     "I see the math class coming closer to us. I feel my hands twitching."
-    "Seiko touches my shoulder to reassure me."
+    "Seiko touches my shoulder to comfort me as we enter."
     #scene bg classroom with wipeleft_scene
     #show seiko at middle
-    "We sit down for class as we wait for the Professor."
+    "We sit down for class as we wait for the professor."
     "It was nice of her to join me at least."
     "I feel Seiko lean over and I turn to look towards her."
     s "Hey! Maybe later we can hang out after classes!"
@@ -167,8 +166,8 @@ label ch2_main:
 
     #scene bg classroom with dissolve
     #play music "audio/everyoneisgoodfriend.mp3" fadein 2.0
-    "My thoughts are still in one piece as the class was just used to introduce everyone and the whole syllabus spiel."
-    "I probably screwed up my introduction, but at least nothing was graded."
+    "My thoughts are still in one piece as the class was just used for introductions and the whole syllabus spiel."
+    "I probably screwed up my intro, but at least nothing was graded."
     "Well, during that time, I've gotten a clear picture of what my schedule's gonna be with everyone."
     "I made sure to write it down."
 
@@ -189,8 +188,6 @@ label ch2_main:
 
 
     #scene bg gym_int with wipeleft_scene
-    "How would Natural Gym work for those with supernatural abilities? Is it different activities depending on your talent?"
-    "It seems like a complete contradiction."
     "I see Yasuda's spiral black hair out in the distance looking lost."
     "I speed my walk up quickly to her. She notices me about halfway."
     show yasuda at middle
@@ -240,28 +237,29 @@ label ch2_main:
         mc "You mean like yours? I remember you telling me you're like, basically done with your training and all that."
         "Yasuda standing next to me is very awkward."
         "I look over at her."
-        mc " I'm sorry! This is Helena! I met her during the meet and greet."
+        mc "Sorry, This is Helena."
+        mc "I met her during orientation."
         hl "Heya... Goth Chica!"
-        y " Yasuda is fine."
-        hl " Nah! Goth Chica fits more!"
+        y "Yasuda is fine."
+        hl "Nah! Goth Chica fits more!"
         "Yasuda pouts a little bit, but her eyes show she's very not comfortable around her."
         "Helena shows her teeth to show she is smiling."
-        "Yasuda is uncomfortable."
-        "It looks like a lot."
+        "Yep. Yasuda's definitely uncomfortable."
         hl " Aight, since it's your first fuckin' class, it's mainly introduction of all you students."
         hl "The next class which is next week will be when we start teachin' you the basics."
         y " I would imagine you will be there the whole time."
-        "Helena could feel that smart remark even though Yasuda said it with a little bit of anger but her face pouts."
+        "Helena could feel that smart remark even though Yasuda said it with a little bit of attitude."
     else:
         "As Yasuda and I get into the gym, we look around at more of the interesting characters of our school."
         "There's not many people in our class, thankfully."
-        "The teacher isn't here, but a wolf girl seems to be a teacher's assistant for us."
+        "The teacher isn't here, but a wolf girl seems to be the teacher's assistant for us."
 
     "We walk over to the circle of people who also seem to be waiting for the teacher."
     "One girl has brightly colored hair which looks like it has zebra stripes."
     "There's another girl who has really long legs but really short arms."
     "Apparently she's part T-Rex, but honestly it's hard not to laugh at it."
-    "Yasuda must have noticed, due to her disapproving glare at me. Whatever."
+    "Yasuda must have noticed, due to her disapproving glare at me."
+    "Whatever."
     "The professor comes in, a normal young man."
     k "Good morning class. I am Mr. Kyzuki, but Kyzuki or Mr. K is just fine, too."
     k "I'll be your Normal Gym professor for all of your years here.."
@@ -276,7 +274,7 @@ label ch2_main:
     "The crowd begins to differ, as they seem interested in my power."
     trex "WUHHHHH? I've never heard of something like that!"
     sss "That'sssssssssss ssssspectacular!"
-    "Wow, guess I am pretty abnormal."
+    "Wow, seems I'm pretty abnormal in this crowd."
     "The class goes by without incident, as the rest of the students introduce themselves."
 
     #scene bg gym_int with dissolve
@@ -284,6 +282,8 @@ label ch2_main:
         "The professor and Helena go over the syllabus with us and before no time, we're let out for the day."
     else:
         "The professor and the teacher's assistant, who's name is apparently Helena, go over the syllabus with us and before no time, we're let out for the day."
+        python:
+            AddToBestiary(hl_bestiary)
 
     #scene bg lockerroom with wipeleft_scene
     show yasuda at middle
@@ -295,9 +295,11 @@ label ch2_main:
     y "Well, what are your plans, [player]?"
     mc "Erm, I don't have any really."
     y "Oh?"
-    mc "Yeah. Guess I have some free time to figure out what I'm gonna do for the rest of the day."
-    y "I see. Well, I will be in our dorm if you need anything from me."
-    y "Take care of yourself now. Pip pip!"
+    mc "Yeah, guess I have some free time to figure out what I'm gonna do for the rest of the day."
+    y "I see."
+    y "Well, I will be in our dorm if you need anything from me."
+    y "Take care of yourself now."
+    y "Pip pip!"
     hide yasuda with dissolve
     "Yasuda heads off with some pep in her step."
     "I have the rest of the day to do things. Let's see what I can do."
@@ -317,7 +319,7 @@ label ch2_main:
     #show tutorial_floor with dissolve
     tut "Click on the different spots on the map to enter each location. To navigate between floors, use the up and down arrow keys."
     tut "While exploring, you may come across bonus content, which may provide interesting dialogue or add items to your backpack."
-    tut "In order to continue the story, you will need to interact with either Azura or Seiko."
+    tut "For this occassion, order to continue the story, you will need to visit certain areas and interact with either Azura or Seiko once you're finished."
     tut "You can find those rooms by looking for their icons on top of specific rooms."
     tut "Have fun!"
 
@@ -347,7 +349,8 @@ label ch2_main:
     "Azura and Seiko enter the room."
     #$yface = 'surprised'
     show yasuda at middle, focus zorder 2
-    y "Oh? Azura too? What brings you both to our dorm?"
+    y "Oh? Azura too?"
+    y "What brings you both to our dorm?"
     show yasuda at unfocus zorder 0
     #show seiko at focus zorder 2
     s "Well, I wanted to talk to everyone about somethin'!"
@@ -359,7 +362,7 @@ label ch2_main:
     #show seiko at focus zorder 2
     s "Yeah, her too! Heehee!"
     #show seiko at unfocus zorder 0
-    mc "So, what is it?"
+    mc "What is it?"
     #$sface = 'neutral'
     #show seiko at focus zorder 2
     s "Soooo, remember that festival that was mentioned during the whole orientation thing?"
@@ -370,7 +373,8 @@ label ch2_main:
     #$sface = 'happy'
     show yasuda at unfocus zorder 0
     #show seiko at focus zorder 2
-    s "Nope! I already did!"
+    s "Not {i}plan{/i}!"
+    s "I already did!"
     s "And so did Azura!"
     #show seiko at unfocus zorder 0
     mc "Azura? You too?"
@@ -414,7 +418,7 @@ label ch2_main:
     s "I have too many ideas to choose from! Heehee!"
     s "So, what do you think we should do about this?"
     #show seiko at unfocus zorder 0
-    "This is an interesting ordeal, especially knowing a little about it from how mom talked about it with a lot of praise."
+    "This is an interesting ordeal, especially knowing a little about it from how Mom talked about it with a lot of praise."
     "As long as I'm not a part of their acts, I'd be perfectly fine with helping them do their thing for sure."
     mc "How about we all meet somewhere formally to talk about this tomorrow?"
     mc "Maybe a classroom or something."
@@ -438,7 +442,8 @@ label ch2_main:
     show yasuda at focus zorder 2
     y "Maybe treat it in a similar fashion."
     show yasuda at unfocus zorder 0
-    mc "I can...try, at least. Just don't get mad if I'm still asleep since I don't have classes tomorrow."
+    mc "I can...try, at least."
+    mc "Just don't get mad if I'm still asleep since I don't have classes tomorrow."
     #show azura at focus zorder 2
     a "Okay."
     #show azura at unfocus zorder 0
@@ -471,7 +476,8 @@ label ch2_main:
     #show azura at easeInsideLeft
     "Seiko heads for the door with Azura in tow."
     #show seiko at focus zorder 2
-    s "See ya later, alligators! This'll be LOTS of fun!"
+    s "See ya later, alligators!"
+    s "This'll be LOTS of fun!"
     #show seiko at unfocus zorder 0
     #show azura at focus zorder 2
     a "I'm excited. Bye."
@@ -483,12 +489,12 @@ label ch2_main:
     scene black with dissolve
     #play music "audio/yttd_all_move_forward.mp3" fadein 2.0
     "The festival is quite some time away, but I'm already really nervous about this."
-    "I'll tell mom later about these plans, but will I really be able to help them myself?"
+    "I'll tell Mom later about these plans, but will I really be able to help them myself?"
     "I'm abnormal. My ideas are probably just as abnormal as I am."
     "Although..."
-    "Abnormal might just be the key to making a show stopping talent show!"
+    "Abnormal might just be the key to making a show stopping talent show."
     "Yeah, that's it."
     "This might actually be..."
-    "{important}Where I belong.{/important}"
+    "...{important}where I belong.{/important}"
 
     return

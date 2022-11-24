@@ -6,15 +6,15 @@ label ch1_main:
     "What do I do?"
     "Will there be immediate classes?"
     "Will I have time to meet people?"
-    "Can I get settled before some kind of meet and greet?"
+    "Can I get settled before orientation?"
 
     #stop music fadeout 2.0
-    "I look up out of my thoughts, and before I know it, I'm seeing the biggest school I have ever seen."
+    "I look up to get out of my thoughts, and when I come to, I see the biggest school I have ever seen."
 
     #play music "audio/serenityextended.mp3" fadein 2.0
     "My eyes get wide in amazement at the sight of the school."
     "For once, my anxiety feels at ease as I gaze at the beautiful architecture."
-    "This feels like a home away from home."
+    "I don't know why, but this feels like a home away from home."
     "I feel the bus come to a complete stop in front of the gates."
     "All of the students start to file out of the bus slowly, as I'm stuck in the back of the bus waiting for my turn."
     "As I watch all the kids get off the bus, I look down and see well dressed butlers holding elegantly crafted signs."
@@ -24,21 +24,25 @@ label ch1_main:
     "Instead of waiting for the bus like I had planned, I just phase through the side of it, making sure to land on the ground gracefully instead of making a fool out of myself."
 
     #scene bg outside with dissolve
-    "I look around seeing all of the signs trying to find the one with my first name."
-    "After looking through the sea of writing, I stumble across my name."
-    "Seems I belong here, after all."
-    "I start walking trying to force myself to say hi to the gentleman holding my sign."
+    "I look around at all of the signs, trying to find the one with my first name."
+    "After looking through the sea of writing, I stumble across it in big letters."
+    "Guess I'm in the right place, after all."
+    "I start walking trying to force myself to say hi to the person holding my sign."
     "As I get closer, I see he is an older gentleman with a receding hairline."
     "His hair is a mix of black and grey, blending all together in a way that matches his old age well."
     "I finally get close enough that he will be able to hear me."
     "Wow, he's pretty tall."
-    "I head over to him, trying to force myself into eye contact but simply failing to do so."
+    "I try to force myself into eye contact but simply failing to do so."
     mc "Uh...hi, I'm [player]?"
     "He looked at me with a small smile. Maybe one of pity?"
     om "Welcome! You must be one of our newest students, come follow me!"
-    om "My name is Mr. Harukawa, the principal at this here academy. A pleasure."
-    "I reach out to shake his hand."
+    om "My name is Mr. Furukawa, the principal at this here academy. A pleasure."
+    "Wait, the principal!?"
+    "Why is he my assistant!?"
+    "Don't they have enough staff for that?"
+    "I reach out to shake his hand, hoping to not mess up in front of the person that literally runs the place."
     "While he gives my hand a firm grip, I end up doing one of those limp fish handshakes in return."
+    "Sure nailed {i}that{/i} one."
     om "I hope you brought a suitcase with clothes, if not we can have your guardians mail them to you."
     "Suitcase? Uh, that wasn't really in the letter at all."
     mc "Uh...yeah, I haven't even packed my clothes."
@@ -46,20 +50,21 @@ label ch1_main:
     "My hands start to sweat. Have I already messed up?"
     om "Come, follow me to where we will have the meet and greet, along with showing you to your dorm."
     "I look up at him as we start walking into the courtyard of the school, spying on the upperclassmen that are just trying to have their free time."
-    "There's an array of different people and specimens that I had never even thought possible!"
+    "There's an array of different people and specimens that I had never even thought possible."
     "Compared to all these abnormal people, I feel like..."
     "I'm the most {i}normal{/i} from the abnormal."
     mc "So, we all live in dorms, right? Is that how it's gonna work?"
-    "He looks down at me, probably wondering why I was not informed of the situations here."
-    om "Yes, the reason why is that we all live in dorms here. Most humans are not a fan of supernaturals once we develop powers."
-    om "Therefore, we stay here until our students have mastered their powers and can live in harmony with the normals."
+    "He looks down at me, probably wondering why I asked a stupid question."
+    om "Yes, everyone that attends this school gets their own space. We have no commuters."
+    om "The reason why is that we try to protect our outstanding students from those in society who aren't all that welcome with the supernatural."
+    om "Therefore, our students stay here until they have mastered their powers and can show that we can live in harmony with the Normals."
     "I follow him slowly, staying behind him trying to look around and take in the elaborate and quite expensive scenery all around me."
     "I get the feeling of butterflies in my stomach."
     "Thoughts start racing in my head again."
     "What if my roommate doesn't like me? I'm sure to get a roommate. "
-    "But hey, at least it's an all girls school so I don't have to deal with brutes screaming down the hallway or something."
+    "But hey, at least it's the all girls section so I don't have to deal with brutes screaming down the hallway or something."
     "The thought of that makes me relieved."
-    "Boys at my old school would always pick on me for switching teams."
+    "Boys at my old school would always pick on me for 'switching teams'."
     "There were a lot of homophobes at that school."
     "I'm just happy I'm somewhere I belong, or should belong at least."
     "I keep following the nice man, realizing I was lost in thought."
@@ -68,23 +73,26 @@ label ch1_main:
     "I didn't hear a single word of what he just said."
     mc "Yeah uh, can you repeat that? Didn't get the last part."
     "He smirks patiently and begins to explain it again to my jumbled mind."
-    om "Of course, [player]. I was just introducing you to your dorm room. Two doors up is the bathroom."
+    om "Of course, [player]. I was just going over our living facility."
+    om "Your dorm is to the right. Two doors up is the bathroom. Common area is on the second floor."
     om "Your roommate should be in there already, eager to meet you."
-    om "I hope you enjoy our school and surely hope you will attend the courtyard meet and greet in an hour."
-    "I nod in his direction as he departs to work on his other tours."
+    om "I hope you enjoy your time here at our academy."
+    om "And I surely hope you will attend the orientation ceremony at the courtyard in an hour."
+    "I nod in his direction as he departs to work on whatever else principals do."
+    "I sigh, since I don't have to keep forcing myself to act proper."
 
     "Which leaves me with my dorm and...my new roommate."
     "I feel my stomach get butterflies, and my throat feels as though there is something stuck in it."
     "What if she doesn't like me?"
     "What if she is the opposite of me?"
-    "What kind of power does she have?!"
+    "What kind of power does she have!?"
     "I stand there trying to take deep breaths through this small panic attack."
     "I've never been good at meeting new people."
-    "I look around and notice some of the girls staring at me wondering why I wasn't going in."
+    "I look around and notice some of the other students in the distance staring at me, wondering why I wasn't going in."
     "Okay, [player], you got this!"
     "I knock on the door timidly."
     y "Come in!"
-    "As the faint voice invites me, I smile feeling the butterflies go away slightly."
+    "As the faint, distinctly British, voice invites me, I smile feeling the butterflies go away slightly."
     "I phase through the door."
 
     #call showCg from _call_showCg_2
@@ -109,7 +117,7 @@ label ch1_main:
     "A clean freak though?"
     "I hope she doesn't mind cleaning my clothes and books up all the time."
     "My butterflies went away at this point as I set my bag down in the middle of the floor."
-    mc "That's fine, what's your name again?"
+    mc "That's fine. What's your name again?"
 
     #$yface = 'surprised'
     show yasuda at bounce
@@ -117,7 +125,7 @@ label ch1_main:
     $y_name = "Yasuda"
     #$yface = 'neutral'
     show yasuda
-    y "My name is Yasuda Nana. It is quite the pleasure to meet you, miss."
+    y "My name is Yasuda Nana. It is quite the pleasure to meet you, [player]."
     "I give her a nod to greet her as formally as I can."
     "However, when I look back up, Yasuda seems to be staring at my backpack like it committed arson."
     "She seems to be itching to move my bag, but is holding herself from doing so."
@@ -125,13 +133,13 @@ label ch1_main:
     #$yface = 'surprised'
     show yasuda
     y "I apologize, did that offend you?"
-    y "I just really like a clean room."
+    y "I just really like a clean room. It refreshes the mind."
     mc "No worries, you're fine."
     $yface = 'neutral'
     show yasuda
     "I pick my bag up to place on my side and make myself comfortable."
     mc "So erm, tell me a little bit about yourself, since we'll be rooming together and all."
-    y "Well, I am no one special really."
+    y "Well, I am no one special, really."
     y "I like gardening, tea, and reading a good book over candle light."
     mc "...cool, but what's your power?"
     "Yasuda looks at me a bit hesitantly."
@@ -155,17 +163,17 @@ label ch1_main:
     y "However, being in an environment with so many spectacular specimens will surely make me an outcast."
     "That makes two of us."
     "Probably why we're paired as roommates then."
-    y "And what about yourself, Miss [player]?"
+    y "And what about yourself, [player]?"
     mc "I uh...phase through stuff, I guess."
     mc "Like, anything. If I wanted to."
     "Yasuda claps her hands together."
     #$yface = 'happy'
     show yasuda
     y "Ah, that's a splendid ability!"
-    y "So that explains the phenomenon I saw as you entered our dormitory."
+    y "So that explains the phenomenon I saw as you entered our room."
     #$yface = 'neutral'
     show yasuda
-    y "I must warn you for the future that if you are to phase through the door, please knock beforehand."
+    y "I must warn you for the future that if you are to phase through the door, continue to knock beforehand."
     mc "Yeah, of course."
     mc "I'm not a peeping tom or anything."
     #$yface = 'happy'
@@ -197,30 +205,30 @@ label ch1_main:
     mc "The school? Haven't really seen much of it other than the outside and a few hallways."
     y "Have you not explored outside of the dormitory areas?"
     mc "Not really, just kinda got here."
-    y "Well, I urge that you get familiar with your surroundings before the meet and greet soon."
+    y "Well, I urge that you get familiar with your surroundings before orientation."
     y "Might as well if you have the time."
     "I probably should, shouldn't I?"
-    "I'd feel kinda dumb if I had trouble getting to the meet and greet."
+    "I'd feel kinda dumb if I had trouble getting there in the first place."
     mc "I'll go do that. You do the same."
     #$yface = 'happy'
     show yasuda
-    y "Certainly. I will quickly tidy up the room and depart."
+    y "Certainly. I will quickly tidy up the room and depart on my own."
     "But...the place is already as clean as I could imagine it to be."
     y "Farewell, for now."
     mc "See ya."
-    "I left Yasuda to herself while I went to check out the school's interior."
+    "I leave Yasuda to herself while I go check out the school's interior."
     #$yface = 'neutral'
 
     #scene bg hallways with dissolve
     #stop music fadeout 2.0
 
-    "The hallways here are pretty wide, looking at them."
+    "The hallways here are pretty wide."
     "They go pretty far too, with tons of doors to the left and right of me."
-    "Outside of some of the doors, social circles have already been made."
-    "Kind of look like upperclassmen though from the looks of it."
-    "Some of them seem to even be reuniting like old friends."
-    "Although I've never really had my circle of friends, seeing so many is a little depressing, don't you think?"
-    "However, before I can answer my own question, my vision is obscured by a veil of vibrant blue."
+    "Outside of some of the doors, looks like social circles have already been made."
+    "Looks like upperclassmen though from the looks of it."
+    "Some of them seem to be reuniting like old friends."
+    "Although I've never really had my circle of friends, seeing so many is a little depressing."
+    "However, before I can turn around to get away from these people, my vision is obscured by a veil of vibrant blue."
 
     #play music "audio/04_sun_manzai_third.mp3" fadein 2.0
     #call showCg from _call_showCg_3
@@ -274,10 +282,9 @@ label ch1_main:
 
     mc "Uh...well hi there."
     "The blue girl with cloudy grey eyes stands a few inches taller than me."
-    "She has very wavy and messy bluish hair and a face that kind of seems frozen in a way."
-    "It just...doesn't move really."
-    "She also wears a beanie on her head and a really tiny outfit, showing off her really bellyful body."
-    #$a_name = "Azura"
+    "I look at her face that kind of seems frozen in a way."
+    "It just...doesn't emote, really. I can't tell what she's feeling."
+    $a_name = "Azura"
     a "I'm Azura."
     mc "...[player]."
     a "See? See?"
@@ -285,7 +292,7 @@ label ch1_main:
     "Sure enough, her name is Azura Bell."
     "She's apparently Canadian. I guess that's a first for me."
     "Azura jumps up and down, almost excitedly, while her face remains a constant sad expression."
-    "Huh...it's really weird."
+    "It's really jarring, unsettling even."
     mc "Are you okay?"
     a "Yes. Yes."
     #$aface = 'surprised'
@@ -293,28 +300,30 @@ label ch1_main:
     a "Are you new? I'm new too."
     mc "Yeah, I just got here not long ago."
     a "Oooooooh."
-    "She stares at me with a curious, but wholesome glare in her eyes."
+    "She stares at me with a curious, but friendly glare in her eyes."
     a "You look nice too."
     mc "Thanks? Also, why the heck did you sniff me?"
     a "...sniff?"
     #$aface = 'neutral'
     #show azura
-    a "Oh. Yes, yes. I like to know your smell."
+    a "Oh. Yes, yes."
+    a "I'd like to know your smell."
     "This girl is all sorts of bonkers."
     "And she seems sort of...slow, I guess?"
     "But I think her spirits are in the right place."
     "I'll try my best to steer the conversation, see what she knows and all."
-    "Maybe even make a friend. She seems pretty nice."
+    "Maybe even make a friend."
+    "She seems pretty nice, all things considered."
     mc "So uh, what makes you special?"
     a "I'm blue."
     mc "Mhm. I see."
     #$aface = 'excited'
     #show azura
-    a "And I can smell a lot."
+    a "They say I smell better than other people."
     mc "I've noticed. Do you smell everyone you meet?"
     "Azura nods vigorously."
     a "I can tell who's my friend by their smell."
-    mc "I guess that's something neat."
+    mc "I guess that's pretty darn neat."
     #how azura at bounce
     a "Yey~"
     #$aface = 'neutral'
@@ -329,9 +338,9 @@ label ch1_main:
     mc "Ah. So you're happy then, right?"
     a "Yes."
     mc "Good to know."
-    mc "Hey, by the way, you're going to that meet and greet, right?"
+    mc "Hey, by the way, you're going to orientation, right?"
     a "Mhm."
-    a "But, what do we do before the meet and greet?"
+    a "But, what do we do before then?"
     mc "Well, I was planning on looking around the place so I don't-"
     a "Oh. I can show you."
     a "I looked at the c...campus! The campus, yes."
@@ -342,17 +351,19 @@ label ch1_main:
     #show azura at bounce
     a "Yey~"
     #show azura at hug
-    "Azura proceeds to give me a big hug."
-    "Azura grabs my hand and leads me deeper in the school, her gait more like that of waddling."
-    "And thus begins my mini-tour of the school from a...very interesting guide."
+    "Azura proceeds to give me a big, warm hug."
+    "She then grabs my hand and leads me deeper in the school, her gait more like that of waddling."
+    "Thus begins my mini-tour of the school from a...very interesting guide."
 
     #scene bg gym_int with dissolve
     #play music "audio/happydays.mp3" fadein 2.0
     #$aface = 'neutral'
     #show azura
 
-    "Azura brings me all around the campus, from the courtyard to the classroom area to the cafeteria."
-    "She really has a good sense of direction. It's strange, but at least I know I won't get lost."
+    "Azura brings me all around the campus, from the courtyard to the classrooms to the cafeteria."
+    "She really has a good sense of direction."
+    "And she's a sweetheart, too."
+    "It's strange how fast she learned this place, but at least I know I won't get lost."
     "The place is really fancy all around, and there's a lot of unique faces."
     "Azura practically drags me everywhere until we reach the gym."
     #show azura at jumping
@@ -366,7 +377,7 @@ label ch1_main:
     "{i}CLUNK CLUNK.{/i}"
     "It's ID locked. I haven't gotten an ID yet."
     a "Oh."
-    "She looks a little disappointed, since the last time we saw a bathroom nearby was near the cafeteria some time ago."
+    "She seems a little disappointed, since the last time we saw a bathroom nearby was near the cafeteria some time ago."
     "However, this is the perfect scenario for weirdos like me."
     mc "It's alright. I'll go unlock it."
     mc "I can phase through walls, so I can just open it, probably."
@@ -390,7 +401,7 @@ label ch1_main:
     "{i}THUD!{/i}"
     "I hit my head on the interior of a locker door."
     "Hey, at least I know I can fit in one of these lockers."
-    s "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHH HHHHHHHH!!!"
+    s "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHH!!!"
     "I hear someone scream in the locker room."
     "I just got into major amounts of trouble, didn't I? Shit."
     "Will there be a security guard?"
@@ -401,17 +412,20 @@ label ch1_main:
     "I see a blonde girl who is slightly thin with... 4 arms?!?!"
     "She peers into the small fitting space of what seems to be her locker."
     "She looks at me up and down giving this... flirty look?"
-    "I can't stop looking at her extra arms, then switching my attention at her face with a smirk."
-    s "So, would ya like to tell me how you ended up in my locker?"
+    "I can't stop looking at her extra arms."
+    "But I manage to switch to looking her face covered with a big smirk."
+    $s_name = "Four-Armed Girl"
+    s "So, would ya like to tell me how you ended up in this locker?"
     mc "I-I-I was just trying to unlock the door for my friend..."
     mc "...cause she has to use the bathroom."
-    s "Well, how'd ya get in if the door to the gym automatically locks?"
+    s "Well, how'd ya end up in there when the door's locked on the other side?"
     "My mouth refuses to work, even though the answer's very simple."
     "I hate feeling interrogated by people."
     "It makes me tense up greatly and get me all flustered."
     "She keeps looking at me waiting for an answer."
-    mc "I can phase through the walls so-"
-    s "Ah,  don't worry about it! It's fine! I'm just messing with ya! Heehee!"
+    mc "I-I can phase through the walls so-"
+    s "Ah,  don't worry about it!"
+    s "It's fine! I'm just messing with ya! Heehee!"
     "The weirdo with four arms puffs out her tiny chest and begins to scream from the top of her lungs."
     $s_name = "Seiko"
     s "The name's Seiko!"
@@ -421,11 +435,11 @@ label ch1_main:
     "She's probably loud enough to make my ears ring."
     "I give Seiko a weird, confused look."
     "Oh great, a loud mouth."
-    mc "Nice to meet you. I'm [player]."
+    mc "[player]."
     mc "Nothing spectacular."
     "Seiko extends one of her hands towards me."
     s "Let's get ya outta there!"
-    "Seiko yanks me out of her locker, closing it behind me."
+    "Seiko yanks me out of the locker, slamming it behind me."
     #hide cg with dissolve
 
     #scene bg lockerroom
@@ -439,13 +453,12 @@ label ch1_main:
     #play sound "audio/sfx/running.wav"
     #show azura at running
     "I barely get to open the door as Azura rushes in and goes straight to the stalls."
-    "Seiko laughs softly, seeing the big girl try to waddle run."
+    "Seiko laughs softly, seeing Azura's goofy run."
     #$sface = 'happy'
     #show seiko zorder 2
-    s "That your friend? She's such a cuuuuuuuuuuuutie patootie! Heehee!"
+    s "S'that your friend? She's such a cuuuuuuuuuuuutie patootie! Heehee!"
     "I cover my ears as she screams once more."
     "If she were just a little bit louder, I bet this entire locker room would just collapse in on itself."
-    "I guess it was just my body giving me the chills."
 
     #show azura at sideLeft with moveinleft
     "Azura comes out of the bathroom sighing with relief."
@@ -480,7 +493,7 @@ label ch1_main:
     "And just as I make the thought, Azura just goes to town, saying hello to the four armed gremlin with her face."
     "Seiko doesn't seem to mind it. though."
     "Actually, she seems like she's... enjoying it?"
-    "Seiko retorts by petting Azura like a dog."
+    "Seiko retorts by petting Azura on the head."
     "I guess that seems fitting for her."
     "They seem to like each others company, well that's good at least."
     #$sface = 'happy'
@@ -488,9 +501,9 @@ label ch1_main:
     s "You are the cutest thing ever!"
     s "You remind me of a big puppy! Heehee!"
     #show seiko at unfocus, easeInsideLeft
-    "Seiko hugs Azura with her 4 arms, Azura hugging back."
+    "Seiko hugs Azura with all of her arms, Azura hugging back."
     "Well... here I am, watching the weirdos hug each other."
-    "I watch as Seiko uses one of her extra arms to keep petting Azura softly on the head."
+    "I watch as Seiko uses one of her extra arms to keep petting Azura softly."
     "I wait there patiently, just kicking my feet against each other."
     "All of a sudden, I hear an alarm go off."
     "Seems to be coming from Seiko's phone in her back pocket."
@@ -502,40 +515,39 @@ label ch1_main:
     s "Oooooh yeahhhhhhhhhhhhh!"
     #show seiko at unfocus
     "Azura I think looks concerned."
-    "So hard to tell what she is feeling with the constant sad puppy eye look going on."
+    "So hard to tell what she is feeling with the constant sad eye look going on."
     #show seiko at focus
-    s "The meet and greet is in 10 minutes! We have to get going to the courtyard!"
+    s "Orientation's in 10 minutes! We have to get going to the courtyard!"
     #show seiko at unfocus
-    "Azura and I nod as Seiko grabs our hands to hold."
+    "Azura and I nod as Seiko grabs our hands."
 
     #scene bg gym_int with dissolve
     #$sface = 'happy'
     #show seiko at middle with dissolve
-    "Her hands are really soft, and she seems to have a mild layer of perfume."
-    "I never noticed that before."
-    "Seiko uses her other two arms to open the door for us."
+    "Her hands are really soft, and I just noticed she has a little bit of fancy perfume on."
+    "Seiko uses her free hands to open the door for us."
     #$sface = 'neutral'
 
     #scene bg field with dissolve
 
-    "We spent a long time inside that locker room."
+    "We spent a longer time inside that locker room than I thought."
     #show seiko at sideLeft with dissolve
-    "Time really flies when you have a really loud 4 armed girl yelling in your ears."
+    "Time really flies when you have a really loud four armed woman yelling in your ears."
     #show azura at sideRight with dissolve
-    "Along with a chubby blue dog girl that was locked outside for a bit that had to pee."
+    "Along with a big blue woman just...being herself I guess?"
     "What a weird day so far."
     "I guess it will always be weird."
     "I mean it's a supernatural school. Why wouldn't it be weird?"
     "That seems to be the normal here."
     "I stand in the sea of supernaturals, looking for Yasuda."
     "I'm sure she'll get a kick out of the ragtag gang that I've conjured up."
-    "Sure enough, I see her strut in from the distance, her posture stiff and straight like an Englishwoman."
+    "Sure enough, I see her strut in from the distance, her posture stiff and straight like a proper Englishwoman."
     "She sticks out like a sore thumb."
     #stop music fadeout 2.0
     show yasuda at middle with dissolve
     #play music "audio/everyoneisgoodfriend.mp3" fadein 2.0
     show yasuda at focus zorder 2
-    y "Hello, Miss [player]. I am glad to see you once more."
+    y "Hello, [player]. I am glad to see you once more."
     show yasuda at unfocus  zorder 0
     #mc "Heya."
     "Seiko immediately eyes the anomaly that presented itself."
@@ -561,6 +573,7 @@ label ch1_main:
     #$yface = 'surprised'
     #show yasuda at focus zorder 2
     y "Oh!-"
+    "Yasuda goes stiff, raising her hands to let Azura do her thing."
     y "Hello, young lady."
     show yasuda at unfocus zorder 0
     "{i}Sniff sniff.{/i}"
@@ -576,7 +589,7 @@ label ch1_main:
     "Yasuda avoids touching Azura as she gets herself acquainted."
     show yasuda at focus zorder 2
     #$yface = 'neutral'
-    y "So, what do you plan to do for the meetup, [player]?"
+    y "So, what do you plan to do for the meet up, [player]?"
     show yasuda at unfocus zorder 0
     mc "What I wanna do?"
     show yasuda at focus zorder 2
@@ -603,60 +616,62 @@ label ch1_main:
             call meet_hide
 
     #scene bg field with wipeleft_scene
-    "Time goes by in a blur, seems like hours at this point."
-    "I hear speakers spit out some feedback, then a loud boom."
+    "The time flies by, seems like hours at this point."
+    "I hear speakers shot out some feedback, then a loud boom."
     "Seems like there's a whole set up for this meet and greet that I wasn't even aware of."
-    "I look over and see the nice old gentleman that walked me to the dormitories."
-    "I hear his loud voice."
-    om "Good Afternoon student; newcomers and returning."
-    om "Welcome! I am the head of administration, Principal Harukawa."
+    "I look over and see the principal once again."
+    "I hear his loud voice echo from the speakers."
+    om "Good Afternoon students; newcomers and returning."
+    om "Welcome! I am the head of administration, Principal Furukawa."
     om "I know you all are excited for the new year, but first we gotta do the boring stuff."
     om "What to expect for the upcoming year ahead of us."
     om " First off, I hope you all enjoy your new roommates."
     om "If you have an issue with yours, please come to the front office and we can discuss it privately and anonymously."
     "The Principal goes on about the technical stuff, school manuals, blah blah blah."
-    "I kinda doze off during some parts, but at least he doesn't seem like a buzzkill."
+    "I kinda doze off during some parts, but at least he doesn't seem like a complete buzzkill."
     om "...another matter I would like to address is, of course, the one beginning of the year event everyone looks forward to."
     "Hm, maybe he's going to talk about the festival? Mom mentioned it to me."
-    "I heard it's all about talent, decor, and lots of unique booths!"
+    "I heard it's all about talent, decor, and lots of unique booths."
     "I'm surprised they hold it so early in the year, since it's only April."
     om "...The Summer Supernatural Festival!"
     "Nailed it."
-    om "This year, however, we will be adding a couple new features that have been commonly requested."
-    om "We, as the school, decided to add a talent show!"
-    om "We will also be adding some unique food contests!"
-    "Woah! A talent show?"
+    om "This year, however, we will be adding a new event that have been commonly requested."
+    om "We, the school board, decided to add a talent show!"
+    "Huh, a talent show?"
     "That would be an interesting thing to be able to experience."
     "I can hear happy cheers and clapping from what looks like the Third and Fourth years."
-    "Chitter-chatter begins abruptly roaring from the crowd."
+    "Chitter-chatter begins abruptly roaring from the crowd not long after."
     om " Alright, settle down everyone."
     om "We know that these are exciting times and happily encourage anyone to apply for these events!"
     om "We get unique talents every year, so we hope to see some exciting abilities from the student body."
     om "And onto other topics-"
     "As the Principal keeps talking, I start to zone out again."
     "Trying to figure out what I should do."
-    "Do I even want to sign up for the festival?"
+    "Do I even want to go for the festival?"
     "I still have time to think about it, but I immediately think back to my high school proms and formal events of the like."
     "Will I have to find a date all over again?"
     "My palms start to sweat thinking about it."
-    om "Enjoy the rest of your day, everyone.. Classes start the day after tomorrow, so spend it wisely getting prepared."
+    om "Enjoy the rest of your day, everyone."
+    om "Classes start the day after tomorrow, so spend it wisely getting prepared."
     "The principal seemingly disappears as he finishes his speech."
     #$sface = 'neutral'
     #show seiko at sideLeft with dissolve
     show yasuda at middle with dissolve
     #show azura at sideRight with dissolve
     "I see the trio walking over to me, smiling."
-    "Well except for Azura, she has that permanent sad face."
+    "Well, except for Azura, she has that permanent sad face."
     #$sface = 'happy'
     #show seiko at focus, bounce zorder 2
-    s " I have like a bajillion ideas for that talent show I'm super duper HYYYYPEEEED!"
+    s "I have like a bajillion ideas for that talent show thing!"
+    s "I'm super duper HYYYYPEEEED!"
     #show seiko at unfocus zorder 0
     "Azura looks confused, but doesn't say anything."
     #$yface = 'blush'
     show yasuda
-    "Yasuda seems apprehensive about the whole thing."
-    mc "I'm looking forward to it, too. The festival part, not the people part."
-    mc "For now, I think it's time to hit the dorms and call it in."
+    "Yasuda seems apprehensive."
+    mc "I'm looking forward to it, too."
+    mc "The festival part, not the people part."
+    mc "For now, I think it's time to hit the dorms and call it a day."
     #$yface = 'neutral'
     show yasuda
     "Yasuda nods and leads the way, but Seiko and Azura tag along."
@@ -668,14 +683,15 @@ label ch1_main:
     #$sface = 'happy'
     #show seiko at sideLeft, focus zorder 2
     s "More pets for my big ol' blue friend!"
+    "Azura lets out a slow, but loud laugh."
     #show seiko at unfocus zorder 0
     #$aface = 'excited'
     #show azura at slightLeft, focus zorder 2
-    a "Yey~"
+    a "A-hee-hee-hee."
     #show azura at unfocus zorder 0
     #hide seiko with dissolve
     #hide azura with dissolve
-    "Azura jumps down with excitement as Seiko drags her into their dorm."
+    "She jumps down with excitement as Seiko drags her into their dorm."
     "Yasuda and I go into our dorm."
 
     #scene bg playerdorm with dissolve
@@ -697,7 +713,7 @@ label ch1_main:
     y "Who is it?"
     s "Your favorite girl in the whole universe, that's who!"
     s "Anyways, wanna go eat some lunch later?"
-    s "I heard the lunch vouchers are gonna get handed out today!"
+    s "I heard the meal plan stuff is gonna get handed out today!"
     mc "Sure, grab us in a bit."
     "Afterwards, Yasuda keeps to herself while I self reflect."
     "I can tell this is the start of some {i}wonderful{/i} friendships."
@@ -719,8 +735,8 @@ label meet_socialize:
     hl "Yo! The name's Helena Ivory! Nice t' fuckin' meet ya!"
     "A sailor mouth, but she's pretty cool looking."
     "She wears a punkish outfit with ripped jeans."
-    "Her tail is huge, and has markings all over it."
-    "Definitely the first time I've seen a real anthro."
+    "Her tail is huge."
+    "Definitely the first time I've seen someone like this."
     "I know someone that'd be jealous that I've met a real wolf girl."
     if outfit == "black":
         "Glad I wore this outfit to the meetup."
@@ -732,11 +748,12 @@ label meet_socialize:
     hl "Really? That's actually amazing!"
     hl "But have you seen this?"
     "Before I can inquire, I start floating in the air."
+    "I frantically try to grab the ground in a panic."
     mc "Wh-"
     hl "Gahahahaha! Did ya shit yourself?"
     hl "I can move you with my miiind!"
     hl "Pretty fuckin' impressive ain't it?"
-    mc "Yeah, but c-could you pleeeease warn me beforehand?"
+    mc "Yeah, but c-could you pleeeease warn me beforehand before you do that?"
     "She puts me back down on the ground. I fumble and catch myself."
     hl "Sorry, toots. Just get carried away sometimes."
     hl "But yeah. Been workin' on my power for the last three years here!"
@@ -747,6 +764,8 @@ label meet_socialize:
     #call changeBar(0.005) from _call_changeBar_2
     "Guess she's having fun too."
 
+    python:
+        AddToBestiary(hl_bestiary)
     #stop music fadeout 2.0
     #play music "audio/everyoneisgoodfriend.mp3" fadein 2.0
 
@@ -782,7 +801,7 @@ label meet_group:
     #$yface = 'blush'
     show yasuda at bounce
     y "Eh? Me?"
-    y "Ah, I am...quite the shy character, I must say."
+    y "Ah, I am...quite the shy woman, I must say."
     y "I don't think I'll do well with conversing with new faces."
     mc "Well, you did well enough warming up to me."
     mc "How about we try it together?"
@@ -834,8 +853,8 @@ label meet_hide:
     "Azura practically melts in Seiko's hands, laying on her back, seemingly excited."
     #call changeBar(-0.005) from _call_changeBar_3
     #show azura at focus zorder 2
-    a "Yey~ I did it."
-    "After Azura's second pet session of the day, Seiko and Azura drag me back into the circle and attempt to get me to socialize."
+    a "I did it."
+    "After Azura's second pet session of the day, Seiko and Azura drag me back into the circle and attempt to get me to socialize with strangers."
     "Guess I have no choice, but I won't like it."
     #$aface = 'neutral'
     #$sface = 'neutral'

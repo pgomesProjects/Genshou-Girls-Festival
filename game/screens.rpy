@@ -623,8 +623,9 @@ screen bestiary():
                         null height 20
                         $ currentAbility = monsters[monsterPage].ability
                         text _("[currentAbility]") xalign 1.0
+                        null height 20
                         $ currentDesc = monsters[monsterPage].description
-                        text _("[currentDesc]") xalign 1.0
+                        text _("[currentDesc]") xalign 1.0 text_align 1.0
 
 
                 ## Buttons to access other pages.

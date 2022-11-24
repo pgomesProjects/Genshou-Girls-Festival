@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 618: Line is indented, but the preceding vbox statement does not expect a block. Please check this line's indentation.
-    box_wrap True
+File "game/script-ch0.rpy", line 130: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    python:
     ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Nov 19 03:06:49 2022
+Thu Nov 24 03:31:59 2022

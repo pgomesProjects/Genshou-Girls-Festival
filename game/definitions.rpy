@@ -26,8 +26,11 @@ define sec =  Character('Secretary', color='#4B4BBD', who_outlines=[ (1, "#00000
 
 ##Bestiary NPCs
 define lb = DynamicCharacter('lb_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#0B8080', who_outlines=[ (1, "#000000") ])
+define lb_bestiary = Mon.Monster('placeholder_portrait.png', 'Libra', 'Professional Tracker', 'After seeing a picture of any person, Libra is able to pinpoint their exact location. While she may be too young to be a faculty member, her ability is too good to not use. In exchange for working with the academy, she is trying to locate her long lost brother.')
 define lm = DynamicCharacter('lm_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#D4A35F', who_outlines=[ (1, "#000000") ])
+define lm_bestiary = Mon.Monster('placeholder_portrait.png', '"Limil"', 'Professional Protector', 'Limil is a changeling, a human raised in a fae household. To save Limil from a life threatening illness, his youngest brother, Wire, consulted Libra\'s older brother and performed [[REDACTED]] to save Limil\'s life. In order to repay the man, Limil has been tasked with protecting Libra at the cost of keeping her older brother\'s name in secrecy.')
 define hl = DynamicCharacter('hl_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#195A32', who_outlines=[ (1, "#000000") ])
+define hl_bestiary = Mon.Monster('placeholder_portrait.png', '"Helena"', 'Student of Telekinesis', 'Being the oldest sibling in her large family, she ended up getting the responsibility of helping raise them pushed onto her at a young age. She\'s been hardened through having to mature very early on. Initially, she chose to attend the academy to get away from her hectic life, but over the years, she\'s been able to discover herself.')
 
 ##Memory Variables
 ##
