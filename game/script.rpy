@@ -1,5 +1,4 @@
 label start:
-
     #Define Names
     $ y_name = "British Voice"
     $ a_name = "Blue Woman"
@@ -17,7 +16,12 @@ label start:
     $ rab_name = "Rabbit Student"
     $ sec_name = "Secretary"
 
+    #Show UI
+    show screen in_game_ui
+    #show screen relationship_heart
+    #show screen objective_popup
     call storyTransition
+    with dissolve
     call ch0_main
     call storyTransition
     call ch1_main

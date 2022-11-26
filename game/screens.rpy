@@ -571,7 +571,7 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a}")
 
 
 style about_label is gui_label
@@ -622,23 +622,23 @@ screen bestiary():
                         label "[currentName]" xalign 1.0
                         null height 20
                         $ currentAbility = monsters[monsterPage].ability
-                        text _("[currentAbility]") xalign 1.0
+                        text _("{size=33}[currentAbility]{/size}") xalign 1.0
                         null height 20
                         $ currentDesc = monsters[monsterPage].description
-                        text _("[currentDesc]") xalign 1.0 text_align 1.0
+                        text _("{size=33}[currentDesc]{/size}") xalign 1.0 text_align 1.0
 
 
                 ## Buttons to access other pages.
                 hbox:
                     style_prefix "page"
 
-                    xalign 0.5
+                    xalign 0.4
                     yalign 1.0
 
                     spacing gui.page_spacing
 
-                    textbutton _("<") action SetVariable("monsterPage", If(monsterPage > 0, monsterPage - 1, 0))
-                    textbutton _(">") action SetVariable("monsterPage", If(monsterPage < len(monsters) - 1, monsterPage + 1, len(monsters) - 1))
+                    textbutton _("Prev") action SetVariable("monsterPage", If(monsterPage > 0, monsterPage - 1, 0))
+                    textbutton _("Next") action SetVariable("monsterPage", If(monsterPage < len(monsters) - 1, monsterPage + 1, len(monsters) - 1))
         else:
             fixed:
                 vbox:
@@ -1323,11 +1323,11 @@ screen skip_indicator():
         hbox:
             spacing 9
 
-            text _("Skipping")
+            text _("{color=#000000}Skipping{/color}")
 
-            text "▸" at delayed_blink(0.0, 1.0) style "skip_triangle"
-            text "▸" at delayed_blink(0.2, 1.0) style "skip_triangle"
-            text "▸" at delayed_blink(0.4, 1.0) style "skip_triangle"
+            text "{color=#000000}▸{/color}" at delayed_blink(0.0, 1.0) style "skip_triangle"
+            text "{color=#000000}▸{/color}" at delayed_blink(0.2, 1.0) style "skip_triangle"
+            text "{color=#000000}▸{/color}" at delayed_blink(0.4, 1.0) style "skip_triangle"
 
 
 ## This transform is used to blink the arrows one after another.

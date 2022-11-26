@@ -283,7 +283,8 @@ label ch2_main:
     else:
         "The professor and the teacher's assistant, who's name is apparently Helena, go over the syllabus with us and before no time, we're let out for the day."
         python:
-            AddToBestiary(hl_bestiary)
+            if(AddToBestiary(hl_bestiary)):
+                renpy.show_screen("bestiary_popup", name="Helena Ivory")
 
     #scene bg lockerroom with wipeleft_scene
     show yasuda at middle

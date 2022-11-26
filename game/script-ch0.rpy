@@ -128,8 +128,8 @@ label ch0_main:
     lb "Okay!"
 
     python:
-        AddToBestiary(lb_bestiary)
-        AddToBestiary(lm_bestiary)
+        if(AddToBestiary(lb_bestiary) and AddToBestiary(lm_bestiary)):
+            renpy.show_screen("bestiary_popup", name="Libra and Limil")
 
     #hide cg with dissolve
     "Limil retreats into the corner of my room while Libra simply opens my window and hops out."

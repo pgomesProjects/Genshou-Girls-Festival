@@ -765,7 +765,8 @@ label meet_socialize:
     "Guess she's having fun too."
 
     python:
-        AddToBestiary(hl_bestiary)
+        if(AddToBestiary(hl_bestiary)):
+            renpy.show_screen("bestiary_popup", name="Helena Ivory")
     #stop music fadeout 2.0
     #play music "audio/everyoneisgoodfriend.mp3" fadein 2.0
 

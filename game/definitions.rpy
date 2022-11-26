@@ -36,6 +36,10 @@ define hl_bestiary = Mon.Monster('placeholder_portrait.png', '"Helena"', 'Studen
 ##
 ##These are variables that will change the flow of the story
 #Outfit
+define day = "Monday"
+define time = "Daytime"
+define location = "Bedroom"
+define objective = "Get comfortable with academy life."
 define outfit = ""
 default met_helena_at_orientation = None
 

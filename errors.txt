@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/script-ch0.rpy", line 130: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    python:
-    ^
+File "game/script-ch0.rpy", line 132: invalid syntax
+        $ renpy.show_screen(bestiary_popup, name="Libra and Limil")
+         ^
+    
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Nov 24 03:31:59 2022
+Sat Nov 26 07:55:21 2022
