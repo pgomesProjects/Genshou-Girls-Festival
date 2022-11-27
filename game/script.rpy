@@ -18,8 +18,8 @@ label start:
 
     #Show UI
     show screen in_game_ui
-    #show screen relationship_heart
-    #show screen objective_popup
+    show screen relationship_heart
+    
     call storyTransition
     with dissolve
     call ch0_main

@@ -207,6 +207,7 @@ label ch0_main:
     call storyTransition
 
     #scene bg room with dissolve
+    show screen objective_popup
     "I open my eyes, realizing the past month has been a huge blur for me."
     "Living with depression and anxiety does that to a person."
     "I feel it spiking once more, not enjoying the feeling of rushing around and getting myself ready right now."
