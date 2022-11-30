@@ -20,13 +20,13 @@ label start:
     show screen in_game_ui
     show screen relationship_heart
     
-    call storyTransition
+    call storyTransition from _call_storyTransition
     with dissolve
-    call ch0_main
-    call storyTransition
-    call ch1_main
-    call storyTransition
-    call ch2_main
+    call ch0_main from _call_ch0_main
+    call storyTransition from _call_storyTransition_1
+    call ch1_main from _call_ch1_main
+    call storyTransition from _call_storyTransition_2
+    call ch2_main from _call_ch2_main
 
     tut "END OF DEMO."
 

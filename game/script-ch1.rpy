@@ -105,7 +105,7 @@ label ch1_main:
     "My roommate looks at me with a wide smile and gets off the bed to greet me with a bow."
     #hide cg with dissolve
 
-    #scene bg playerdorm
+    scene bg playerdorm
 
     show yasuda at middle
 
@@ -197,7 +197,7 @@ label ch1_main:
 
     #scene bg playerdorm
 
-    call storyTransition
+    call storyTransition from _call_storyTransition_4
 
     #$yface = 'surprised'
     show yasuda
@@ -605,15 +605,15 @@ label ch1_main:
     menu:
         "Why Not Socialize?":
 
-            call meet_socialize
+            call meet_socialize from _call_meet_socialize
 
         "Stick Close To The Group":
 
-            call meet_group
+            call meet_group from _call_meet_group
 
         "Find Somewhere To Hide!":
 
-            call meet_hide
+            call meet_hide from _call_meet_hide
 
     #scene bg field with wipeleft_scene
     "The time flies by, seems like hours at this point."

@@ -162,7 +162,7 @@ label ch2_main:
     "I nod."
     "Hopefully it'll be fun, but I don't really doubt that with her."
 
-    call storyTransition
+    call storyTransition from _call_storyTransition_5
 
     #scene bg classroom with dissolve
     #play music "audio/everyoneisgoodfriend.mp3" fadein 2.0

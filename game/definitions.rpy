@@ -32,6 +32,9 @@ define lm_bestiary = Mon.Monster('placeholder_portrait.png', 'Limil', 'Professio
 define hl = DynamicCharacter('hl_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#195A32', who_outlines=[ (1, "#000000") ])
 define hl_bestiary = Mon.Monster('placeholder_portrait.png', 'Helena Ivory', 'Student of Telekinesis', 'Being the oldest sibling in her large family, she ended up getting the responsibility of helping raise them pushed onto her at a young age. She\'s been hardened through having to mature very early on. Initially, she chose to attend the academy to get away from her hectic life, but over the years, she\'s been able to discover herself.')
 
+##Backgrounds
+image bg playerdorm = "bgs/bg playerdorm.png"
+
 ##Memory Variables
 ##
 ##These are variables that will change the flow of the story

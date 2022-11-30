@@ -4,8 +4,6 @@ label ch0_main:
 
     scene black
 
-    #show yasuda at middle
-
     "People call me a {important}freak.{/important} A {important}weirdo.{/important} A {important}monster.{/important}"
     "A... {important}'Destructive'{/important}, people call it."
     "In this world full of abnormal people, even to them, I am {important}not normal.{/important}"
@@ -204,7 +202,7 @@ label ch0_main:
     "Maybe I'll finally be talked about without the word 'Destructive' being spit out of people's mouths."
     "I close my eyes both anticipating and dreading the first day of university."
 
-    call storyTransition
+    call storyTransition from _call_storyTransition_3
 
     #scene bg room with dissolve
     show screen objective_popup
@@ -235,7 +233,7 @@ label ch0_main:
     "What should I put? Should I be prepared for the first day or just wait until a list?"
     "I doubt it matters, but if it does, I don't wanna feel awkward."
 
-    call chooseSupplies
+    call chooseSupplies from _call_chooseSupplies
 
     "As I finish my prep routine, I hear my mom call me loudly."
     m "[player]! You better move your little tush and HURRY UP!"

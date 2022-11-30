@@ -702,7 +702,7 @@ label playerDorm1:
     y "Certainly."
     $yface = 'neutral'
     hide yasuda with dissolve
-    call freeTime
+    call freeTime from _call_freeTime
     return
 
 label noInteraction:
