@@ -35,6 +35,67 @@ define hl_bestiary = Mon.Monster('placeholder_portrait.png', 'Helena Ivory', 'St
 ##Backgrounds
 image bg playerdorm = "bgs/bg playerdorm.png"
 
+##Freetime Variables
+image tutorial_floor = "gui/freetime/floor2.png"
+define floor0_spots = []
+define floor1_spots = []
+define floor2_spots = []
+define floor3_spots = []
+define currentSpot = ""
+
+#Locations
+
+#Outside
+define pondLoc = ""
+define pondSeen = False
+define fieldLoc = ""
+define fieldSeen = False
+define shedLoc = ""
+define shedSeen = False
+define gardenLoc = ""
+define gardenSeen = False
+
+#Basement
+define b01Loc = ""
+define b01Seen = False
+define b02Loc = ""
+define b02Seen = False
+define b03Loc = ""
+define b03Seen = False
+define b04Loc = ""
+define b04Seen = False
+define b05Loc = ""
+define b05Seen = False
+define b06Loc = ""
+define b06Seen = False
+define b07Loc = ""
+define b07Seen = False
+define b08Loc = ""
+define b08Seen = False
+define b09Loc = ""
+define b09Seen = False
+define studyHallLoc = ""
+define studyHallSeen = False
+
+#Floor 1
+define libraryLoc = ""
+define librarySeen = False
+define gymLoc = ""
+define gymSeen = False
+define lockerRoomLoc = ""
+define lockerRoomSeen = False
+define cafeteriaLoc = ""
+define cafeteriaSeen = False
+define nurseLoc = ""
+define nurseSeen = False
+define advisorsLoc = ""
+define advisorsSeen = False
+
+#Floor 2
+define azuraSeikoLoc = ""
+define azuraSeikoSeen = False
+define playDormLoc = ""
+
 ##Memory Variables
 ##
 ##These are variables that will change the flow of the story

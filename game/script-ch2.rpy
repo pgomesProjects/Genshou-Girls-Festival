@@ -305,16 +305,6 @@ label ch2_main:
     "Yasuda heads off with some pep in her step."
     "I have the rest of the day to do things. Let's see what I can do."
 
-    #FREE TIME START
-    #$ map_floor = 2
-    #$ floor0_spots = []
-    #$ floor1_spots = []
-    #$ floor2_spots = []
-    #$ floor3_spots = []
-    #$ floor0_spots.append("gui/freetime/girl_locations/seiko/seiko_location_1.png")
-    #$ floor1_spots.append("gui/freetime/girl_locations/azura/azura_location_1.png")
-    #$ floor3_spots.append("gui/freetime/girl_locations/yasuda/yasuda_location_1.png")
-
     tut 'On occasion, you will have "Free Time".'
     tut "In this case, a minimap will appear that you can navigate. You will be able to explore the school."
     #show tutorial_floor with dissolve
@@ -326,7 +316,17 @@ label ch2_main:
 
     #hide tutorial_floor
 
-    #call freeTimeSetUp from _call_freeTimeSetUp
+    #FREE TIME START
+    $ map_floor = 2
+    $ floor0_spots = []
+    $ floor1_spots = []
+    $ floor2_spots = []
+    $ floor3_spots = []
+    $ floor0_spots.append("gui/freetime/girl_locations/seiko/seiko_location_1.png")
+    $ floor1_spots.append("gui/freetime/girl_locations/azura/azura_location_1.png")
+    $ floor3_spots.append("gui/freetime/girl_locations/yasuda/yasuda_location_1.png")
+    
+    call freeTimeSetUp
 
     #play music "audio/everyoneisgoodfriend.mp3" fadein 2.0
     #scene bg playerdorm with dissolve

@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/definitions.rpy", line 36: expected '=' not found.
-    define image bg playerdorm = "bgs/bg playerdorm.png"
-                 ^
+The label _call_freeTime is defined twice, at File "game/freetime.rpy", line 50:
+    call freeTime from _call_freeTime
+and File "game/freetime-events.rpy", line 705:
+    call freeTime from _call_freeTime
+
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Nov 30 04:24:02 2022
+Sat Dec  3 10:31:54 2022

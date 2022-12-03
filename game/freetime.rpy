@@ -4,6 +4,93 @@
 define map_floor = 0
 define freeTimeNum = 0
 
+label freeTimeSetUp:
+
+    #Beginning Set Up
+    init python:
+        freeTimeNum += 1
+
+        #Outside
+        pondLoc = "pond" + str(freeTimeNum)
+        fieldLoc = "field" + str(freeTimeNum)
+        shedLoc = "shed" + str(freeTimeNum)
+        gardenLoc = "garden" + str(freeTimeNum)
+
+        #Basement
+        b01Loc = "b01_Class" + str(freeTimeNum)
+        b02Loc = "b02_Class" + str(freeTimeNum)
+        b03Loc = "b03_Class" + str(freeTimeNum)
+        b04Loc = "b04_Class" + str(freeTimeNum)
+        b05Loc = "b05_Class" + str(freeTimeNum)
+        b06Loc = "b06_Class" + str(freeTimeNum)
+        b07Loc = "b07_Class" + str(freeTimeNum)
+        b08Loc = "b08_Class" + str(freeTimeNum)
+        b09Loc = "b09_Class" + str(freeTimeNum)
+        studyHallLoc = "studyHall" + str(freeTimeNum)
+
+        #Floor 1
+        libraryLoc = "library" + str(freeTimeNum)
+        gymLoc = "gym" + str(freeTimeNum)
+        lockerRoomLoc = "lockerRoom" + str(freeTimeNum)
+        cafeteriaLoc = "cafeteria" + str(freeTimeNum)
+        nurseLoc = "nurse" + str(freeTimeNum)
+        advisorsLoc = "advisors" + str(freeTimeNum)
+
+        #Floor 2
+        azuraSeikoLoc = "azuraSeikoDorm" + str(freeTimeNum)
+        playerDormLoc = "playerDorm" + str(freeTimeNum)
+
+    $ renpy.block_rollback()
+    #play sound "audio/sfx/fte_start.wav"
+    show screen freeTime_ani
+    $ renpy.pause(2.4, hard='True')
+    hide screen freeTime_ani
+
+    #play music "audio/datsflaze_haste.mp3"
+    call freeTime
+
+    #After Set Up
+    #Outside
+    $ pondSeen = False
+    $ fieldSeen = False
+    $ shedSeen = False
+    $ gardenSeen = False
+
+    #Basement
+    $ b01Seen = False
+    $ b02Seen = False
+    $ b03Seen = False
+    $ b04Seen = False
+    $ b05Seen = False
+    $ b06Seen = False
+    $ b07Seen = False
+    $ b08Seen = False
+    $ b09Seen = False
+    $ studyHallSeen = False
+
+    #Floor 1
+    $ librarySeen = False
+    $ gymSeen = False
+    $ lockerRoomSeen = False
+    $ cafeteriaSeen = False
+    $ nurseSeen = False
+    $ advisorsSeen = False
+
+    #Floor 2
+    $ azuraSeikoSeen = False
+
+    return
+
+label freeTime:
+    $ renpy.block_rollback()
+    $ renpy.choice_for_skipping()
+    $ config.rollback_enabled = False
+
+    show screen schedule_icon with dissolve
+    call screen freeTime_minimap with dissolve
+
+    return
+
 transform startAni:
     xalign -2.0
     yalign 0.5

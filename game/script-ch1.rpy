@@ -355,17 +355,36 @@ label ch1_main:
     "She then grabs my hand and leads me deeper in the school, her gait more like that of waddling."
     "Thus begins my mini-tour of the school from a...very interesting guide."
 
-    #scene bg gym_int with dissolve
     #play music "audio/happydays.mp3" fadein 2.0
     #$aface = 'neutral'
     #show azura
 
-    "Azura brings me all around the campus, from the courtyard to the classrooms to the cafeteria."
+    "Azura starts to bring me around, showing and naming off all of the places we pass by."
     "She really has a good sense of direction."
     "And she's a sweetheart, too."
     "It's strange how fast she learned this place, but at least I know I won't get lost."
     "The place is really fancy all around, and there's a lot of unique faces."
-    "Azura practically drags me everywhere until we reach the gym."
+
+    #scene bg courtyard
+
+    "We reach the courtyard, which seems to have one of those stages in the middle that looks like it was set up for the occasion."
+    "There's a few groups of people here already, sitting on benches or just forming their own clusters."
+    a "This is where the meet up is."
+    mc "Good to know for later. Thank you."
+    "Azura seems to try and give me a smile, but her face kind of just twitches."
+    "We move onto more areas. Azura practically drags me everywhere."
+
+    #scene bg classroom
+    a "...this is class. We learn things here."
+
+    #scene bg cafeteria
+    a "...there is food here. They gave me some earlier."
+    a "They were very nice."
+
+    #scene bg gym_int with dissolve
+
+    a "...and um, this is the place to get stronger."
+
     #show azura at jumping
     "While she shows me the big interior of the gym, she starts jumping around a bit more than usual."
     mc "Something up?"
@@ -616,7 +635,7 @@ label ch1_main:
             call meet_hide from _call_meet_hide
 
     #scene bg field with wipeleft_scene
-    "The time flies by, seems like hours at this point."
+    "The time flies by, feels like hours turned into minutes."
     "I hear speakers shot out some feedback, then a loud boom."
     "Seems like there's a whole set up for this meet and greet that I wasn't even aware of."
     "I look over and see the principal once again."
@@ -855,7 +874,7 @@ label meet_hide:
     #call changeBar(-0.005) from _call_changeBar_3
     #show azura at focus zorder 2
     a "I did it."
-    "After Azura's second pet session of the day, Seiko and Azura drag me back into the circle and attempt to get me to socialize with strangers."
+    "After Azura's second pet session of the day, the two weirdos drag me back into the circle and attempt to get me to socialize with strangers."
     "Guess I have no choice, but I won't like it."
     #$aface = 'neutral'
     #$sface = 'neutral'
