@@ -8,10 +8,10 @@ label ch1_main:
     "Will I have time to meet people?"
     "Can I get settled before orientation?"
 
-    #stop music fadeout 2.0
+    stop music fadeout 2.0
     "I look up to get out of my thoughts, and when I come to, I see the biggest school I have ever seen."
 
-    #play music "audio/serenityextended.mp3" fadein 2.0
+    play music "audio/serenityextended.mp3" fadein 2.0
     "My eyes get wide in amazement at the sight of the school."
     "For once, my anxiety feels at ease as I gaze at the beautiful architecture."
     "I don't know why, but this feels like a home away from home."
@@ -220,7 +220,7 @@ label ch1_main:
     #$yface = 'neutral'
 
     #scene bg hallways with dissolve
-    #stop music fadeout 2.0
+    stop music fadeout 2.0
 
     "The hallways here are pretty wide."
     "They go pretty far too, with tons of doors to the left and right of me."
@@ -230,7 +230,7 @@ label ch1_main:
     "Although I've never really had my circle of friends, seeing so many is a little depressing."
     "However, before I can turn around to get away from these people, my vision is obscured by a veil of vibrant blue."
 
-    #play music "audio/04_sun_manzai_third.mp3" fadein 2.0
+    play music "audio/04_sun_manzai_third.mp3" fadein 2.0
     #call showCg from _call_showCg_3
     "{i}Sniff sniff.{/i}"
     "A blue skinned girl clings onto me, her face pressed into my body."
@@ -355,7 +355,7 @@ label ch1_main:
     "She then grabs my hand and leads me deeper in the school, her gait more like that of waddling."
     "Thus begins my mini-tour of the school from a...very interesting guide."
 
-    #play music "audio/happydays.mp3" fadein 2.0
+    play music "audio/happydays.mp3" fadein 2.0
     #$aface = 'neutral'
     #show azura
 
@@ -412,11 +412,11 @@ label ch1_main:
     "I do my regular hop-n-phase technique through the wall to get inside."
 
     #scene black with dissolve
-    #stop music fadeout 2.0
+    stop music fadeout 2.0
     "However..."
     "I forgot locker rooms usually have lockers, so I unphase too quickly."
     mc "Fu-"
-    #play sound "audio/sfx/locker_thud.wav"
+    play sound "audio/sfx/locker_thud.wav"
     "{i}THUD!{/i}"
     "I hit my head on the interior of a locker door."
     "Hey, at least I know I can fit in one of these lockers."
@@ -427,7 +427,7 @@ label ch1_main:
     "Will I get kicked out on my first day?"
     "As I sit there in my thoughts for a second, I hear the locker door open slowly."
     #call showCg from _call_showCg_4
-    #play music "audio/listenup.mp3" fadein 2.0
+    play music "audio/listenup.mp3" fadein 2.0
     "I see a blonde girl who is slightly thin with... 4 arms?!?!"
     "She peers into the small fitting space of what seems to be her locker."
     "She looks at me up and down giving this... flirty look?"
@@ -469,7 +469,7 @@ label ch1_main:
     #show seiko at middle with dissolve
     "She gives me a smile."
     "I inch away slowly, swiftly making it to the door that I have to open for Azura."
-    #play sound "audio/sfx/running.wav"
+    play sound "audio/sfx/running.wav"
     #show azura at running
     "I barely get to open the door as Azura rushes in and goes straight to the stalls."
     "Seiko laughs softly, seeing Azura's goofy run."
@@ -562,9 +562,9 @@ label ch1_main:
     "I'm sure she'll get a kick out of the ragtag gang that I've conjured up."
     "Sure enough, I see her strut in from the distance, her posture stiff and straight like a proper Englishwoman."
     "She sticks out like a sore thumb."
-    #stop music fadeout 2.0
+    stop music fadeout 2.0
     show yasuda at middle with dissolve
-    #play music "audio/everyoneisgoodfriend.mp3" fadein 2.0
+    play music "audio/everyoneisgoodfriend.mp3" fadein 2.0
     show yasuda at focus zorder 2
     y "Hello, [player]. I am glad to see you once more."
     show yasuda at unfocus  zorder 0
@@ -726,7 +726,7 @@ label ch1_main:
         #$yface = 'neutral'
         #hide yasuda with dissolve
 
-    #play sound "audio/sfx/knock_01.wav"
+    play sound "audio/sfx/knock_01.wav"
     "As Yasuda cleans and dusts literally nothing at this point, a knock is heard at our door."
     "Already???"
     y "Who is it?"
@@ -736,7 +736,7 @@ label ch1_main:
     mc "Sure, grab us in a bit."
     "Afterwards, Yasuda keeps to herself while I self reflect."
     "I can tell this is the start of some {i}wonderful{/i} friendships."
-    #stop music fadeout 2.0
+    stop music fadeout 2.0
 
     return
 
@@ -748,8 +748,8 @@ label meet_socialize:
     "I walk through the crowds and stray away from the group."
     "A student eventually approaches my awkward self."
     "A wolf girl with bright red hair seems to wanna chat with me."
-    #stop music fadeout 2.0
-    #play music "audio/itsshowtime.mp3" fadein 2.0
+    stop music fadeout 2.0
+    play music "audio/itsshowtime.mp3" fadein 2.0
     $ met_helena_at_orientation = True
     hl "Yo! The name's Helena Ivory! Nice t' fuckin' meet ya!"
     "A sailor mouth, but she's pretty cool looking."
@@ -786,8 +786,8 @@ label meet_socialize:
     python:
         if(AddToBestiary(hl_bestiary)):
             renpy.show_screen("bestiary_popup", name="Helena Ivory")
-    #stop music fadeout 2.0
-    #play music "audio/everyoneisgoodfriend.mp3" fadein 2.0
+    stop music fadeout 2.0
+    play music "audio/everyoneisgoodfriend.mp3" fadein 2.0
 
     return
 

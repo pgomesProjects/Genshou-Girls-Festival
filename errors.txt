@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-The label _call_freeTime is defined twice, at File "game/freetime.rpy", line 50:
-    call freeTime from _call_freeTime
-and File "game/freetime-events.rpy", line 705:
-    call freeTime from _call_freeTime
-
+File "game/bestiary.rpy", line 21: invalid syntax
+    def PrintMsg(msg)
+    
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Dec  3 10:31:54 2022
+Sun Dec  4 09:34:53 2022

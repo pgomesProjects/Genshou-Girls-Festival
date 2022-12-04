@@ -46,15 +46,15 @@ label ch0_main:
     "Annnd send."
     "There, that should get me some privacy."
 
-    #stop music
-    #play sound "audio/sfx/backpack_01.mp3"
+    stop music
+    play sound "audio/sfx/backpack_01.mp3"
     "{i}Rustle rustle.{/i}"
 
     #hide cg with dissolve
 
     "A noise comes from the side of my bed where I keep my backpack."
     "Something probably just fell near my bag. No worries."
-    #play sound "audio/sfx/backpack_02.mp3"
+    play sound "audio/sfx/backpack_02.mp3"
     "{i}Rustle rustle.{/i}"
     "..."
     "Okay maybe two things fell near my bag."
@@ -137,7 +137,7 @@ label ch0_main:
     "Limil disappeared out of thin air, too."
     "...I feel like drug trips are more normal than those two."
 
-    #play music "audio/00_quiet_ambience.mp3" fadein 2.0
+    play music "audio/00_quiet_ambience.mp3" fadein 2.0
     "I head back to my bed and stare at the silhouette of the letter."
     "I can feel my stomach drop."
 

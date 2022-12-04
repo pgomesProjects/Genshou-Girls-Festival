@@ -1,7 +1,7 @@
 label ch2_main:
 
     #scene bg playerdorm with dissolve
-    #play music "audio/couplen_starrynight.mp3" fadein 2.0
+    play music "audio/couplen_starrynight.mp3" fadein 2.0
     "My head is pounding as I start to wake up in my dorm."
     "I'm not used to waking up here, and it's already the first day of classes."
     "I don't remember much from yesterday, besides the few interactions with Seiko, Azura, and Yasuda."
@@ -35,7 +35,7 @@ label ch2_main:
     "Well that's totally a new one."
     "I walk to my bed to put my stuff on it, looking at the clock. "
     "Still an hour or so till our first classes. I hate morning classes with a burning passion."
-    #play sound "audio/sfx/knock_02.wav"
+    play sound "audio/sfx/knock_02.wav"
     "{i}Knock knock.{/i}"
     "Yasuda and I perk up from hearing the knock."
     "Two small white envelopes get slid under the bottom of the door."
@@ -84,7 +84,7 @@ label ch2_main:
     y "I understand. Again, I am sorry for assuming."
     "I chuckle softly to myself but finish trying to do something to my hair."
     "I settled on long pigtails for now. When my hair dries more it'll look better at least."
-    #play sound "audio/sfx/knock_01.wav"
+    play sound "audio/sfx/knock_01.wav"
     "I hear a knock on our door once more and I come face-to-face with a livelier Seiko and an awakened Azura."
     #show seiko at sideLeft
     #show azura at sideRight
@@ -165,7 +165,7 @@ label ch2_main:
     call storyTransition from _call_storyTransition_5
 
     #scene bg classroom with dissolve
-    #play music "audio/everyoneisgoodfriend.mp3" fadein 2.0
+    play music "audio/everyoneisgoodfriend.mp3" fadein 2.0
     "My thoughts are still in one piece as the class was just used for introductions and the whole syllabus spiel."
     "I probably screwed up my intro, but at least nothing was graded."
     "Well, during that time, I've gotten a clear picture of what my schedule's gonna be with everyone."
@@ -325,17 +325,17 @@ label ch2_main:
     $ floor0_spots.append("gui/freetime/girl_locations/seiko/seiko_location_1.png")
     $ floor1_spots.append("gui/freetime/girl_locations/azura/azura_location_1.png")
     $ floor3_spots.append("gui/freetime/girl_locations/yasuda/yasuda_location_1.png")
-    
+
     call freeTimeSetUp
 
-    #play music "audio/everyoneisgoodfriend.mp3" fadein 2.0
+    play music "audio/everyoneisgoodfriend.mp3" fadein 2.0
     #scene bg playerdorm with dissolve
     "Well, today's been a good day."
     "I managed to get my classes in order, got to hang out with my friends, all that good stuff."
     "I think I'll do fine here, as long as these classes don't get too hard."
     "Or too weird."
     "It's evening now, so I'll just relax on my bed while Yasuda finishes the last of that book."
-    #play sound "audio/sfx/knock_02.wav"
+    play sound "audio/sfx/knock_02.wav"
     "{i}Knock knock knock.{/i}"
     "There's a knock at my door."
     "I already know who it is. It has to be her."
@@ -484,11 +484,11 @@ label ch2_main:
     a "I'm excited. Bye."
     #hide azura with dissolve
     #hide seiko with dissolve
-    #stop music fadeout 2.0
+    stop music fadeout 2.0
     "The door closes behind them, leaving Yasuda and I alone in our thoughts."
     "Yasuda is nervously fidgeting, while I head to my bed and let my thoughts consume me."
     scene black with dissolve
-    #play music "audio/yttd_all_move_forward.mp3" fadein 2.0
+    play music "audio/yttd_all_move_forward.mp3" fadein 2.0
     "The festival is quite some time away, but I'm already really nervous about this."
     "I'll tell Mom later about these plans, but will I really be able to help them myself?"
     "I'm abnormal. My ideas are probably just as abnormal as I am."

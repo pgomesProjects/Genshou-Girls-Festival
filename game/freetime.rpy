@@ -41,12 +41,12 @@ label freeTimeSetUp:
         playerDormLoc = "playerDorm" + str(freeTimeNum)
 
     $ renpy.block_rollback()
-    #play sound "audio/sfx/fte_start.wav"
+    play sound "audio/sfx/fte_start.wav"
     show screen freeTime_ani
     $ renpy.pause(2.4, hard='True')
     hide screen freeTime_ani
 
-    #play music "audio/datsflaze_haste.mp3"
+    play music "audio/datsflaze_haste.mp3"
     call freeTime
 
     #After Set Up

@@ -26,6 +26,8 @@ style gui_text:
 
 style button:
     properties gui.button_properties("button")
+    hover_sound "gui/sfx/smghover.wav"
+    activate_sound "gui/sfx/onclick.wav"
 
 style button_text is gui_text:
     properties gui.text_properties("button")
@@ -635,8 +637,8 @@ screen bestiary():
 
                     spacing gui.page_spacing
 
-                    textbutton _("Prev") action SetVariable("monsterPage", If(monsterPage > 0, monsterPage - 1, 0))
-                    textbutton _("Next") action SetVariable("monsterPage", If(monsterPage < len(monsters) - 1, monsterPage + 1, len(monsters) - 1))
+                    textbutton _("Prev") action SetVariable("monsterPage", If(monsterPage > 0, monsterPage - 1, 0)), Function(PrintMsg, "Prev Button")
+                    textbutton _("Next") action SetVariable("monsterPage", If(monsterPage < len(monsters) - 1, monsterPage + 1, len(monsters) - 1)), Function(PrintMsg, "Next Button")
         else:
             fixed:
                 vbox:

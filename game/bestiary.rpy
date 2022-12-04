@@ -17,3 +17,6 @@ init 1 python:
             if(monsters[m] == mon):
                 return True
         return False
+
+    def PrintMsg(msg):
+        print(msg)
