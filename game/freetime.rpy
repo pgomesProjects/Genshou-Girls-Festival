@@ -85,6 +85,7 @@ label freeTime:
     $ renpy.block_rollback()
     $ renpy.choice_for_skipping()
     $ config.rollback_enabled = False
+    $ quick_menu = False
 
     show screen schedule_icon with dissolve
     call screen freeTime_minimap with dissolve
@@ -147,13 +148,13 @@ screen freeTime_minimap:
             #Gym
             hotspot(504, 296, 269, 218) action Call(gymLoc)
             #Lockerroom
-            hotspot(605, 523, 170, 111) action Call(lockerRoomLoc)
+            hotspot(605, 523, 170, 111) action Call(lockerRoomLoc), SetVariable("quick_menu", True)
             #Cafeteria
-            hotspot(1217, 124, 215, 242) action Call(cafeteriaLoc)
+            hotspot(1217, 124, 215, 242) action Call(cafeteriaLoc), SetVariable("quick_menu", True)
             #Nurse
-            hotspot(1217, 373, 126, 145) action Call(nurseLoc)
+            hotspot(1217, 373, 126, 145) action Call(nurseLoc), SetVariable("quick_menu", True)
             #Advisors
-            hotspot(1218, 523, 212, 115) action Call(advisorsLoc)
+            hotspot(1218, 523, 212, 115) action Call(advisorsLoc), SetVariable("quick_menu", True)
         if map_floor == 3:
             #AzuraSeikoDorm
             hotspot(779, 426, 42, 103) action Call(azuraSeikoLoc)

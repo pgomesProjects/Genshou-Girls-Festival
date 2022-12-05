@@ -7,6 +7,11 @@ define rel_meter = 0
 define AZURA_MAX = -0.05
 define SEIKO_MAX = 0.05
 
+define AZURA_COLOR = "#8AA3DB"
+define SEIKO_COLOR = "#F1D998"
+
+define currentColor = "#FFFFFF"
+
 image dial = "gui/relationship/dial.png"
 
 style day:
@@ -27,7 +32,7 @@ screen in_game_ui:
             text "[location]"
 
 screen relationship_heart:
-    add "gui/ui/relationship_heart.png" xalign 0.01 yalign 0.25
+    add "gui/ui/relationship_heart.png" xalign 0.01 yalign 0.25 matrixcolor TintMatrix(currentColor)
 
 screen bestiary_popup(name):
     fixed at popupWindow:
