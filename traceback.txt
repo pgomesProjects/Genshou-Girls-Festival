@@ -1,70 +1,34 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00action_other.rpy", line 578, in __call__
-    rv = self.callable(*self.args, **self.kwargs)
-  File "game/bestiary.rpy", line 22, in UpdatePage
-    pageVar += val
-TypeError: can only concatenate str (not "int") to str
+  File "game/script.rpy", line 27, in script call
+    call ch1_main from _call_ch1_main
+  File "game/script-ch1.rpy", line 248, in script call
+    call changeColor(-0.1)
+  File "game/hud.rpy", line 96, in script
+    $ currentColor = Color.interpolate(AZURA_COLOR, rel_meter)
+  File "game/hud.rpy", line 96, in <module>
+    $ currentColor = Color.interpolate(AZURA_COLOR, rel_meter)
+TypeError: interpolate() missing 1 required positional argument: 'fraction'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
+  File "game/script.rpy", line 27, in script call
+    call ch1_main from _call_ch1_main
+  File "game/script-ch1.rpy", line 248, in script call
+    call changeColor(-0.1)
+  File "game/hud.rpy", line 96, in script
+    $ currentColor = Color.interpolate(AZURA_COLOR, rel_meter)
   File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "D:\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
-    python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
-    ui.interact()
-  File "D:\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 4258, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "D:\renpy-8.0.3-sdk\renpy\display\layout.py", line 1175, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "D:\renpy-8.0.3-sdk\renpy\display\transition.py", line 53, in event
-    return self.new_widget.event(ev, x, y, st) # E1101
-  File "D:\renpy-8.0.3-sdk\renpy\display\layout.py", line 1175, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "D:\renpy-8.0.3-sdk\renpy\display\layout.py", line 1175, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "D:\renpy-8.0.3-sdk\renpy\display\screen.py", line 743, in event
-    rv = self.child.event(ev, x, y, st)
-  File "D:\renpy-8.0.3-sdk\renpy\display\layout.py", line 1175, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "D:\renpy-8.0.3-sdk\renpy\display\layout.py", line 1399, in event
-    rv = super(Window, self).event(ev, x, y, st)
-  File "D:\renpy-8.0.3-sdk\renpy\display\layout.py", line 279, in event
-    rv = d.event(ev, x - xo, y - yo, st)
-  File "D:\renpy-8.0.3-sdk\renpy\display\layout.py", line 1175, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "D:\renpy-8.0.3-sdk\renpy\display\layout.py", line 1399, in event
-    rv = super(Window, self).event(ev, x, y, st)
-  File "D:\renpy-8.0.3-sdk\renpy\display\layout.py", line 279, in event
-    rv = d.event(ev, x - xo, y - yo, st)
-  File "D:\renpy-8.0.3-sdk\renpy\display\layout.py", line 1175, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "D:\renpy-8.0.3-sdk\renpy\display\layout.py", line 1175, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "D:\renpy-8.0.3-sdk\renpy\display\behavior.py", line 1073, in event
-    return handle_click(self.clicked)
-  File "D:\renpy-8.0.3-sdk\renpy\display\behavior.py", line 1008, in handle_click
-    rv = run(action)
-  File "D:\renpy-8.0.3-sdk\renpy\display\behavior.py", line 329, in run
-    return action(*args, **kwargs)
-  File "renpy/common/00action_other.rpy", line 578, in __call__
-    rv = self.callable(*self.args, **self.kwargs)
-  File "game/bestiary.rpy", line 22, in UpdatePage
-    pageVar += val
-TypeError: can only concatenate str (not "int") to str
+  File "game/hud.rpy", line 96, in <module>
+    $ currentColor = Color.interpolate(AZURA_COLOR, rel_meter)
+TypeError: interpolate() missing 1 required positional argument: 'fraction'
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 Genshou Girls Festival 1.0
-Sun Dec  4 09:27:01 2022
+Mon Dec  5 03:26:00 2022

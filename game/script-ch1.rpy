@@ -245,7 +245,7 @@ label ch1_main:
             "She's not doing any harm, I hope."
             "She sniffs me for a solid minute before backing off."
 
-            #call changeBar(-0.005) from _call_changeBar
+            call changeColor(-0.1)
             #hide cg with dissolve
             #show azura at middle
             a "Hello. I like your smell."
@@ -261,7 +261,7 @@ label ch1_main:
             "The blue girl immediately stops and backs away, however she looks pretty sad."
             "I kind of feel bad now, but she invaded my personal space."
 
-            #call changeBar(0.005) from _call_changeBar_1
+            call changeColor(0.1)
             #hide cg with dissolve
             #show azura
 
@@ -780,7 +780,7 @@ label meet_socialize:
     mc "Yeah, guess so. Good job."
     "Helena and I talk for a while."
     "In the meantime, I see Seiko in the distance basically trying to woo over the ladies."
-    #call changeBar(0.005) from _call_changeBar_2
+    call changeColor(0.1)
     "Guess she's having fun too."
 
     python:
@@ -871,7 +871,7 @@ label meet_hide:
     #$aface = 'excited'
     #show azura
     "Azura practically melts in Seiko's hands, laying on her back, seemingly excited."
-    #call changeBar(-0.005) from _call_changeBar_3
+    call changeColor(-0.1)
     #show azura at focus zorder 2
     a "I did it."
     "After Azura's second pet session of the day, the two weirdos drag me back into the circle and attempt to get me to socialize with strangers."

@@ -1,6 +1,6 @@
 label ch2_main:
 
-    #scene bg playerdorm with dissolve
+    scene bg playerdorm with dissolve
     play music "audio/couplen_starrynight.mp3" fadein 2.0
     "My head is pounding as I start to wake up in my dorm."
     "I'm not used to waking up here, and it's already the first day of classes."
@@ -136,7 +136,7 @@ label ch2_main:
     "I feel my hands get clammy quick."
     y "If that is the case, I will see you all later."
     y "Good luck with classes today. Pip pip!"
-    #hide yasuda with dissolve
+    hide yasuda with dissolve
     "Yasuda walks out with a nod, her back stiff and straight."
     "{i}'Pip pip'{/i}?"
     "That's new. Kinda cute, though."
@@ -273,7 +273,7 @@ label ch2_main:
     mc "That's all there is to me really. I'm not that interesting."
     "The crowd begins to differ, as they seem interested in my power."
     trex "WUHHHHH? I've never heard of something like that!"
-    sss "That'sssssssssss ssssspectacular!"
+    ane "That'sssssssssss ssssspectacular!"
     "Wow, seems I'm pretty abnormal in this crowd."
     "The class goes by without incident, as the rest of the students introduce themselves."
 
@@ -329,7 +329,7 @@ label ch2_main:
     call freeTimeSetUp
 
     play music "audio/everyoneisgoodfriend.mp3" fadein 2.0
-    #scene bg playerdorm with dissolve
+    scene bg playerdorm with dissolve
     "Well, today's been a good day."
     "I managed to get my classes in order, got to hang out with my friends, all that good stuff."
     "I think I'll do fine here, as long as these classes don't get too hard."

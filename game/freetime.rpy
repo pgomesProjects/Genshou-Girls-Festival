@@ -92,6 +92,14 @@ label freeTime:
 
     return
 
+label freeTimeEventSetup:
+    $ config.rollback_enabled = True
+    hide screen schedule_icon with dissolve
+    hide screen show_schedule with dissolve
+    $ quick_menu = True
+
+    return
+
 transform startAni:
     xalign -2.0
     yalign 0.5

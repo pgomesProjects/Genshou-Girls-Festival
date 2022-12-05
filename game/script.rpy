@@ -12,14 +12,14 @@ label start:
     $ k_name = "Kyzuki"
     $ z_name = "Zebra Student"
     $ trex_name = "T-Rex Student"
-    $ sss_name = "Snake Student"
+    $ ane_name = "Snake Student"
     $ rab_name = "Rabbit Student"
     $ sec_name = "Secretary"
 
     #Show UI
     show screen in_game_ui
     show screen relationship_heart
-    
+
     call storyTransition from _call_storyTransition
     with dissolve
     call ch0_main from _call_ch0_main

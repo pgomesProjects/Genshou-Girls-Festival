@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/freetime.rpy", line 151: expected a keyword argument, colon, or end of line.
-    hotspot(605, 523, 170, 111) action Call(lockerRoomLoc), $quickMenu = True
-                                                            ^
+File "game/hud.rpy", line 106: expected 'comma or end of line' not found.
+    currentAlpha = abs(rel_meter)
+                 ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Dec  4 18:24:06 2022
+Mon Dec  5 02:54:42 2022

@@ -13,14 +13,14 @@ define om = DynamicCharacter('om_name', what_prefix='"', what_suffix='"', ctc="c
 define k = DynamicCharacter('k_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#E0B73D', who_outlines=[ (1, "#000000") ])
 define z = DynamicCharacter('z_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#474747', who_outlines=[ (1, "#000000") ])
 define trex = DynamicCharacter('trex_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#4F4331', who_outlines=[ (1, "#000000") ])
-define sss = DynamicCharacter('sss_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#72A67C', who_outlines=[ (1, "#000000") ])
+define ane = DynamicCharacter('ane_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#72A67C', who_outlines=[ (1, "#000000") ])
 define rab = DynamicCharacter('rab_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#E9C1D2', who_outlines=[ (1, "#000000") ])
 define sec = DynamicCharacter('sec_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#4B4BBD', who_outlines=[ (1, "#000000") ])
 
 define k = Character('Kyzuki', color='#E0B73D', who_outlines=[ (1, "#000000") ])
 define z = Character('Zebra Student', color='#474747', who_outlines=[ (1, "#000000") ])
 define trex = Character('T-Rex Student', color='#4F4331', who_outlines=[ (1, "#000000") ])
-define sss = Character('Snake Student', color='#72A67C', who_outlines=[ (1, "#000000") ])
+define ane = Character('Snake Student', color='#72A67C', who_outlines=[ (1, "#000000") ])
 define rab =  Character('Rabbit Girl', color='#E9C1D2', who_outlines=[ (1, "#000000") ])
 define sec =  Character('Secretary', color='#4B4BBD', who_outlines=[ (1, "#000000") ])
 

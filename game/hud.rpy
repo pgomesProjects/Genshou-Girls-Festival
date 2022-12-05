@@ -1,18 +1,14 @@
-## Relationship Chart
-## Draws a dial to the screen and controls how much the dial moves
-
 define rel_meter = 0
 
 #Max values for each end
-define AZURA_MAX = -0.05
-define SEIKO_MAX = 0.05
+define AZURA_MAX = -1
+define SEIKO_MAX = 1
 
-define AZURA_COLOR = "#8AA3DB"
-define SEIKO_COLOR = "#F1D998"
+define AZURA_COLOR = Color((138,163,219))
+define SEIKO_COLOR = Color((241,217,152))
 
-define currentColor = "#FFFFFF"
-
-image dial = "gui/relationship/dial.png"
+define prevColor = Color((255,255,255))
+define currentColor = Color((255,255,255))
 
 style day:
     size 60
@@ -32,7 +28,7 @@ screen in_game_ui:
             text "[location]"
 
 screen relationship_heart:
-    add "gui/ui/relationship_heart.png" xalign 0.01 yalign 0.25 matrixcolor TintMatrix(currentColor)
+    add "gui/ui/relationship_heart.png" xalign 0.01 yalign 0.25 at changeHeart
 
 screen bestiary_popup(name):
     fixed at popupWindow:
@@ -76,32 +72,37 @@ transform showRight:
     on hide:
         linear 0.2 xpos 430 alpha 0.0
 
-screen relationship_bar():
-    add "gui/relationship/relationship.png" xalign 0.0 yalign 0.0
-    add "gui/relationship/dial.png" at moveDial
-    text "{color=#8AA1DE}Azura{/color}":
-        at transform:
-            align (0.01, 0.001) alpha 1.0
-    text "{color=#BB1B1E}Seiko{/color}":
-        at transform:
-            align (0.105, 0.001) alpha 1.0
 
-
-#Changes the position of the dial
-label changeBar(changeValue):
+#Changes the alpha / color of the heart
+label changeColor(changeValue):
 
     $ rel_meter += changeValue
 
     if rel_meter > SEIKO_MAX:
-        $rel_meter = SEIKO_MAX
+        $ rel_meter = SEIKO_MAX
 
     elif rel_meter < AZURA_MAX:
-        $rel_meter = AZURA_MAX
+        $ rel_meter = AZURA_MAX
 
-    hide screen relationship_bar
-    show screen relationship_bar
+    $ prevColor = currentColor
+
+    #Currently Yasuda Route
+    if rel_meter == 0:
+        $ currentColor = Color((255,255,255))
+
+    #Currently Azura Route
+    elif rel_meter < 0:
+        $ currentColor = Color((255,255,255)).interpolate(AZURA_COLOR, rel_meter)
+
+    #Current Seiko Route
+    elif rel_meter > 0:
+        $ currentColor = Color((255,255,255)).interpolate(SEIKO_COLOR, rel_meter)
+
+    hide screen relationship_heart
+    show screen relationship_heart
 
 return
 
-transform moveDial:
-    linear 0.3 xpos rel_meter
+transform changeHeart:
+    matrixcolor TintMatrix(prevColor)
+    linear 0.3 matrixcolor TintMatrix(currentColor)

@@ -6,9 +6,7 @@
 
 #Outside
 label pond1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if pondSeen == False:
         scene bg pond with dissolve
         call noInteraction from _call_noInteraction
@@ -17,9 +15,7 @@ label pond1:
     return
 
 label field1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if fieldSeen == False:
         scene bg field with dissolve
         $sface = 'neutral'
@@ -164,7 +160,7 @@ label field1:
                         s "Yeah!"
                         "That's...weirdly relieving in a way."
                         "With eyes on both of us, I crawl off of the table top and act as if nothing happened, going to grab some lunch with Seiko."
-                        call changeBar(0.005) from _call_changeBar_4
+                        call changeColor(0.1)
 
                     "Maybe At A Different Time":
                         mc "Eh, I'm not really sure that's right now is the right place and time for that."
@@ -221,7 +217,7 @@ label field1:
                         "If anything, she's a little bummed."
                         "We walk side by side to go rally up our group for some lunch."
                         "Well, at least after everything, I didn't get forced into any weird escapades."
-                        call changeBar(-0.005) from _call_changeBar_5
+                        call changeColor(-0.1)
 
                 $ fieldSeen = True
             "No":
@@ -231,9 +227,7 @@ label field1:
     return
 
 label shed1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if shedSeen == False:
         scene bg shed with dissolve
         call noInteraction from _call_noInteraction_1
@@ -242,9 +236,7 @@ label shed1:
     return
 
 label garden1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if gardenSeen == False:
         scene bg garden with dissolve
         call noInteraction from _call_noInteraction_2
@@ -254,9 +246,7 @@ label garden1:
 
 #Basement
 label b01_Class1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if b01Seen == False:
         scene bg classroom with dissolve
         call noInteraction from _call_noInteraction_3
@@ -265,9 +255,7 @@ label b01_Class1:
     return
 
 label b02_Class1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if b02Seen == False:
         scene bg classroom with dissolve
         call noInteraction from _call_noInteraction_4
@@ -276,9 +264,7 @@ label b02_Class1:
     return
 
 label b03_Class1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if b03Seen == False:
         scene bg classroom with dissolve
         call noInteraction from _call_noInteraction_5
@@ -287,9 +273,7 @@ label b03_Class1:
     return
 
 label b04_Class1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if b04Seen == False:
         scene bg classroom with dissolve
         call noInteraction from _call_noInteraction_6
@@ -298,9 +282,7 @@ label b04_Class1:
     return
 
 label b05_Class1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if b05Seen == False:
         scene bg classroom with dissolve
         call noInteraction from _call_noInteraction_7
@@ -309,9 +291,7 @@ label b05_Class1:
     return
 
 label b06_Class1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if b06Seen == False:
         scene bg classroom with dissolve
         call noInteraction from _call_noInteraction_8
@@ -320,9 +300,7 @@ label b06_Class1:
     return
 
 label b07_Class1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if b07Seen == False:
         scene bg classroom with dissolve
         call noInteraction from _call_noInteraction_9
@@ -331,9 +309,7 @@ label b07_Class1:
     return
 
 label b08_Class1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if b08Seen == False:
         scene bg classroom with dissolve
         call noInteraction from _call_noInteraction_10
@@ -342,9 +318,7 @@ label b08_Class1:
     return
 
 label b09_Class1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if b09Seen == False:
         scene bg classroom with dissolve
         call noInteraction from _call_noInteraction_11
@@ -353,9 +327,7 @@ label b09_Class1:
     return
 
 label studyHall1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if studyHallSeen == False:
         scene bg classroom with dissolve
         $aface = 'neutral'
@@ -477,7 +449,7 @@ label studyHall1:
                         if "loose paper" in inventory:
                             mc "I have some in my bag if you want it."
                             s "Perfect, thankies!"
-                            call changeBar(0.005) from _call_changeBar_6
+                            call changeColor(0.1)
                             "Seiko takes the paper and starts to do the math on the paper."
                         else:
                             mc "Sorry, don't have any on me."
@@ -507,7 +479,7 @@ label studyHall1:
                         "Azura didn't seem keen on the idea in her voice. I can hear it in her voice."
                         "She didn't really get anywhere here."
                         "The two roommates pack up their stuff and head out to the dorms."
-                        call changeBar(0.005) from _call_changeBar_7
+                        call changeColor(0.1)
 
                     "I Can Do It":
                         mc "Alright. Let's sit down and do this together."
@@ -570,20 +542,18 @@ label studyHall1:
                         mc "Of course I will Azura! I'll be happy to help you out with any assignment if I can."
                         a "Yey~"
                         "Azura seems satisfied with my help."
-                        call changeBar(-0.005) from _call_changeBar_8
+                        call changeColor(-0.1)
 
                 $ studyHallSeen = True
             "No":
                 hide azura with dissolve
-                call freeTime from _call_freeTime_2
+                call freeTime
 
     return
 
 #Floor 1
 label library1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if librarySeen == False:
         scene bg library with dissolve
         "I enter the library, looking for some books."
@@ -600,9 +570,7 @@ label library1:
     return
 
 label gym1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if gymSeen == False:
         scene bg gym_int with dissolve
         call noInteraction from _call_noInteraction_12
@@ -611,9 +579,7 @@ label gym1:
     return
 
 label lockerRoom1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if lockerRoomSeen == False:
         scene bg lockerroom with dissolve
         call noInteraction from _call_noInteraction_13
@@ -622,20 +588,18 @@ label lockerRoom1:
     return
 
 label cafeteria1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if cafeteriaSeen == False:
-        scene bg cafeteria with dissolve
-        call noInteraction from _call_noInteraction_14
+        #scene bg cafeteria with dissolve
+        "No time better than now to grab a bite to eat."
+        "I decide to check out the cafeteria, hoping that they serve at least somewhat edible food."
+        "Back in high school, I'm pretty sure I found mold in my pizza once."
         $ cafeteriaSeen = True
-    call freeTime from _call_freeTime_18
+    call freeTime
     return
 
 label nurse1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if nurseSeen == False:
         scene bg nurse with dissolve
         call noInteraction from _call_noInteraction_15
@@ -644,22 +608,18 @@ label nurse1:
     return
 
 label advisors1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if advisorsSeen == False:
         scene bg advisors with dissolve
         call noInteraction from _call_noInteraction_16
         $ advisorsSeen = True
-    call freeTime from _call_freeTime_20
+    call freeTime
     return
 
 #Floor 2
 
 label azuraSeikoDorm1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     if azuraSeikoSeen == False:
         scene bg hallways with dissolve
         "{i}Knock Knock.{/i}"
@@ -670,9 +630,7 @@ label azuraSeikoDorm1:
     return
 
 label playerDorm1:
-    $ config.rollback_enabled = True
-    hide screen schedule_icon with dissolve
-    hide screen show_schedule with dissolve
+    call freeTimeEventSetup
     scene bg playerdorm with dissolve
     "I head back to our dorm to see Yasuda reading her book."
     $yface = 'neutral'
