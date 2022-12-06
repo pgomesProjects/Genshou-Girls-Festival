@@ -11,7 +11,7 @@ label pond1:
         scene bg pond with dissolve
         call noInteraction from _call_noInteraction
         $ pondSeen = True
-    call freeTime from _call_freeTime_4
+    call freeTime
     return
 
 label field1:
@@ -244,88 +244,7 @@ label garden1:
     call freeTime from _call_freeTime_6
     return
 
-#Basement
-label b01_Class1:
-    call freeTimeEventSetup
-    if b01Seen == False:
-        scene bg classroom with dissolve
-        call noInteraction from _call_noInteraction_3
-        $ b01Seen = True
-    call freeTime from _call_freeTime_7
-    return
-
-label b02_Class1:
-    call freeTimeEventSetup
-    if b02Seen == False:
-        scene bg classroom with dissolve
-        call noInteraction from _call_noInteraction_4
-        $ b02Seen = True
-    call freeTime from _call_freeTime_8
-    return
-
-label b03_Class1:
-    call freeTimeEventSetup
-    if b03Seen == False:
-        scene bg classroom with dissolve
-        call noInteraction from _call_noInteraction_5
-        $ b03Seen = True
-    call freeTime from _call_freeTime_9
-    return
-
-label b04_Class1:
-    call freeTimeEventSetup
-    if b04Seen == False:
-        scene bg classroom with dissolve
-        call noInteraction from _call_noInteraction_6
-        $ b04Seen = True
-    call freeTime from _call_freeTime_10
-    return
-
-label b05_Class1:
-    call freeTimeEventSetup
-    if b05Seen == False:
-        scene bg classroom with dissolve
-        call noInteraction from _call_noInteraction_7
-        $ b05Seen = True
-    call freeTime from _call_freeTime_11
-    return
-
-label b06_Class1:
-    call freeTimeEventSetup
-    if b06Seen == False:
-        scene bg classroom with dissolve
-        call noInteraction from _call_noInteraction_8
-        $ b06Seen = True
-    call freeTime from _call_freeTime_12
-    return
-
-label b07_Class1:
-    call freeTimeEventSetup
-    if b07Seen == False:
-        scene bg classroom with dissolve
-        call noInteraction from _call_noInteraction_9
-        $ b07Seen = True
-    call freeTime from _call_freeTime_13
-    return
-
-label b08_Class1:
-    call freeTimeEventSetup
-    if b08Seen == False:
-        scene bg classroom with dissolve
-        call noInteraction from _call_noInteraction_10
-        $ b08Seen = True
-    call freeTime from _call_freeTime_14
-    return
-
-label b09_Class1:
-    call freeTimeEventSetup
-    if b09Seen == False:
-        scene bg classroom with dissolve
-        call noInteraction from _call_noInteraction_11
-        $ b09Seen = True
-    call freeTime from _call_freeTime_15
-    return
-
+#Underground
 label studyHall1:
     call freeTimeEventSetup
     if studyHallSeen == False:
@@ -665,5 +584,5 @@ label playerDorm1:
 
 label noInteraction:
     "I enter and take a look around."
-    "Hm. Nothing interesting going on right now. I'll look somewhere else."
+    "Hm. Nothing interesting going on right now. I'll go look somewhere else."
     return
