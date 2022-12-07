@@ -17,15 +17,7 @@ label freeTimeSetUp:
         gardenLoc = "garden" + str(freeTimeNum)
 
         #Basement
-        b01Loc = "b01_Class" + str(freeTimeNum)
-        b02Loc = "b02_Class" + str(freeTimeNum)
-        b03Loc = "b03_Class" + str(freeTimeNum)
-        b04Loc = "b04_Class" + str(freeTimeNum)
-        b05Loc = "b05_Class" + str(freeTimeNum)
-        b06Loc = "b06_Class" + str(freeTimeNum)
-        b07Loc = "b07_Class" + str(freeTimeNum)
-        b08Loc = "b08_Class" + str(freeTimeNum)
-        b09Loc = "b09_Class" + str(freeTimeNum)
+        classroomLoc = "classroom" + str(freeTimeNum)
         studyHallLoc = "studyHall" + str(freeTimeNum)
 
         #Floor 1
@@ -57,15 +49,7 @@ label freeTimeSetUp:
     $ gardenSeen = False
 
     #Basement
-    $ b01Seen = False
-    $ b02Seen = False
-    $ b03Seen = False
-    $ b04Seen = False
-    $ b05Seen = False
-    $ b06Seen = False
-    $ b07Seen = False
-    $ b08Seen = False
-    $ b09Seen = False
+    $ classroomSeen = False
     $ studyHallSeen = False
 
     #Floor 1
@@ -130,24 +114,6 @@ screen freeTime_minimap:
             #Garden
             hotspot(1302, 183, 90, 167) action Call(gardenLoc)
         if map_floor == 1:
-            #B-01
-            hotspot(483, 125, 213, 174) action Call(b01Loc)
-            #B-02
-            hotspot(481, 301, 216, 187) action Call(b02Loc)
-            #B-03
-            hotspot(481, 495, 219, 243) action Call(b03Loc)
-            #B-04
-            hotspot(704, 623, 167, 115) action Call(b04Loc)
-            #B-05
-            hotspot(879, 627, 180, 110) action Call(b05Loc)
-            #B-06
-            hotspot(1065, 627, 152, 112) action Call(b06Loc)
-            #B-07
-            hotspot(1225, 502, 207, 234) action Call(b07Loc)
-            #B-08
-            hotspot(1227, 297, 207, 196) action Call(b08Loc)
-            #B-09
-            hotspot(1226, 123, 205, 168) action Call(b09Loc)
             #Study Hall
             hotspot(838, 236, 245, 246) action Call(studyHallLoc)
         if map_floor == 2:

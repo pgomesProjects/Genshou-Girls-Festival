@@ -13,16 +13,8 @@ define om = DynamicCharacter('om_name', what_prefix='"', what_suffix='"', ctc="c
 define k = DynamicCharacter('k_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#E0B73D', who_outlines=[ (1, "#000000") ])
 define z = DynamicCharacter('z_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#474747', who_outlines=[ (1, "#000000") ])
 define trex = DynamicCharacter('trex_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#4F4331', who_outlines=[ (1, "#000000") ])
-define ane = DynamicCharacter('ane_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#72A67C', who_outlines=[ (1, "#000000") ])
 define rab = DynamicCharacter('rab_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#E9C1D2', who_outlines=[ (1, "#000000") ])
 define sec = DynamicCharacter('sec_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#4B4BBD', who_outlines=[ (1, "#000000") ])
-
-define k = Character('Kyzuki', color='#E0B73D', who_outlines=[ (1, "#000000") ])
-define z = Character('Zebra Student', color='#474747', who_outlines=[ (1, "#000000") ])
-define trex = Character('T-Rex Student', color='#4F4331', who_outlines=[ (1, "#000000") ])
-define ane = Character('Snake Student', color='#72A67C', who_outlines=[ (1, "#000000") ])
-define rab =  Character('Rabbit Girl', color='#E9C1D2', who_outlines=[ (1, "#000000") ])
-define sec =  Character('Secretary', color='#4B4BBD', who_outlines=[ (1, "#000000") ])
 
 ##Bestiary NPCs
 define lb = DynamicCharacter('lb_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#0B8080', who_outlines=[ (1, "#000000") ])
@@ -31,6 +23,18 @@ define lm = DynamicCharacter('lm_name', what_prefix='"', what_suffix='"', ctc="c
 define lm_bestiary = Mon.Monster('placeholder_portrait.png', 'Limil', 'Professional Protector', 'Limil is a changeling, a human raised in a fae household. To save Limil from a life threatening illness, his youngest brother, Wire, consulted Libra\'s older brother and performed [[REDACTED]] to save Limil\'s life. In order to repay the man, Limil has been tasked with protecting Libra at the cost of keeping her older brother\'s name in secrecy.')
 define hl = DynamicCharacter('hl_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#195A32', who_outlines=[ (1, "#000000") ])
 define hl_bestiary = Mon.Monster('placeholder_portrait.png', 'Helena Ivory', 'Student of Telekinesis', 'Being the oldest sibling in her large family, she ended up getting the responsibility of helping raise them pushed onto her at a young age. She\'s been hardened through having to mature very early on. Initially, she chose to attend the academy to get away from her hectic life, but over the years, she\'s been able to discover herself.')
+define ane = DynamicCharacter('ane_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#72A67C', who_outlines=[ (1, "#000000") ])
+define ane_bestiary = Mon.Monster('placeholder_portrait.png', 'Anemone Chauveret', 'Student of Hypnotism', 'Anemone is the only child from a first-generation family of people with a snake mutation. As a child, her appearance and ability to hypnotize anyone made her someone people would ostracize. In her teens, she would get in trouble for trying to forcefully hypnotize someone into being her friend, which made the situation even worse.')
+define cha = DynamicCharacter('cha_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#72A67C', who_outlines=[ (1, "#000000") ])
+define cha_bestiary = Mon.Monster('placeholder_portrait.png', 'Charmeine Hale', 'Student of Prayer', '')
+define sam = DynamicCharacter('sam_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#72A67C', who_outlines=[ (1, "#000000") ])
+define sam_bestiary = Mon.Monster('placeholder_portrait.png', 'Samriti Reilly', 'Student of Memory', '')
+define air = DynamicCharacter('air_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#72A67C', who_outlines=[ (1, "#000000") ])
+define air_bestiary = Mon.Monster('placeholder_portrait.png', 'Aire Daou', 'Student of Hearing', '')
+define elo = DynamicCharacter('elo_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#72A67C', who_outlines=[ (1, "#000000") ])
+define elo_bestiary = Mon.Monster('placeholder_portrait.png', 'Eloise Meyer', 'Professional Regenerator', '')
+define chr = DynamicCharacter('chr_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", color='#72A67C', who_outlines=[ (1, "#000000") ])
+define chr_bestiary = Mon.Monster('placeholder_portrait.png', 'Christine Windsor', 'Professional Oracle', '')
 
 ##Backgrounds
 image bg playerdorm = "bgs/bg playerdorm.png"
@@ -56,24 +60,8 @@ define gardenLoc = ""
 define gardenSeen = False
 
 #Basement
-define b01Loc = ""
-define b01Seen = False
-define b02Loc = ""
-define b02Seen = False
-define b03Loc = ""
-define b03Seen = False
-define b04Loc = ""
-define b04Seen = False
-define b05Loc = ""
-define b05Seen = False
-define b06Loc = ""
-define b06Seen = False
-define b07Loc = ""
-define b07Seen = False
-define b08Loc = ""
-define b08Seen = False
-define b09Loc = ""
-define b09Seen = False
+define classroomLoc = ""
+define classroomSeen = False
 define studyHallLoc = ""
 define studyHallSeen = False
 

@@ -245,6 +245,23 @@ label garden1:
     return
 
 #Underground
+label classroom1:
+    call freeTimeEventSetup
+    if classroomSeen == False:
+        scene bg classroom with dissolve
+        "I take a look into one of the classrooms with the door slightly ajar."
+        "There's a young lady with a blindfold painting a very beautiful portrait of a bat woman on a couch."
+        "I could only ever dream of painting that well, nevermind with a blindfold."
+        "I try to sneak a peek into the room some more, only to accidentally bump the door."
+        "Hopefully they don't notice."
+        "..."
+        "..."
+        "Yep, they noticed."
+        "They look straight in my direction as I contemplate phasing through the wall behind me."
+        $ classroomSeen = True
+    call freeTime
+    return
+
 label studyHall1:
     call freeTimeEventSetup
     if studyHallSeen == False:
@@ -513,6 +530,68 @@ label cafeteria1:
         "No time better than now to grab a bite to eat."
         "I decide to check out the cafeteria, hoping that they serve at least somewhat edible food."
         "Back in high school, I'm pretty sure I found mold in my pizza once."
+        "I head into the back where all the hustle and bustle is going on."
+        "Looks to be a very standard buffet style of salads, soups, meats, and whatever else."
+        "I don't smell anything questionable, so I think I should be okay."
+        "I decide to grab a grill cheese sandwich and some \"Jasmine Rice\", according to the little label on top."
+        "Before I make my way out, I see a familiar face trying to blend into the crowd."
+        "It's a bit hard for her though, since she has such a large snake tail."
+        "It's that snake girl from my Normal Gym class."
+        "She looks just about ready to cry, her eyes darting around frantically."
+        "I can relate, definitely been there before."
+        "...you know what? I'll try to help her."
+        "I put my plate in one hand and wander over to the strange, shy girl."
+        "I tap the table next to her to get her attention."
+        ane "Hm?"
+        mc "Hey, wanna eat together?"
+        ane "Oh, you're that phassssssing girl from gym!"
+        ane "That'd be fine, thank you."
+        "She looks at me with a weak smile and follows me to a small table."
+        ane "You're [player], right?"
+        mc "Yep. Glad you remembered."
+        mc "What's your name?"
+        $ane_name = "Anemone"
+        ane "It'sssss Anemone."
+        ane "My name isss a bit weird, but mom gave it to me, ssssso..."
+        mc "I think it's pretty. Haven't heard it before."
+        mc "So, are you new to this academy also?"
+        ane "Yep, although I didn't really want to come here."
+        ane "Sssssschoolss kind of make me uncomfortable."
+        mc "Why's that?"
+        "Anemone goes quiet, taking a bite of some fish before she decides to answer."
+        ane "It'ssss jusssst that people like to ssssstare and call me weird."
+        ane "It makes me feel like I'm not human."
+        mc "Well, you look pretty human to me."
+        mc "Just uh...very snake-y, too."
+        ane "I um...don't really want to be sssssseen assss a sssssnake."
+        "Anemone takes another bite of her food, but a single tear rolls down her right eye."
+        ane "I'm just a girl."
+        ane "A normal girl."
+        ane "My {important}mutation{/important} doesn't make me any lesssss human."
+        mc "...I see."
+        "Man, I guess she has it pretty hard."
+        "Thankfully in my family, we can hide our abilities pretty well."
+        "For people like Anemone, Azura, and Seiko, they can't really hide how they were born."
+        "I won't really pry since I just met her, but I can sympathize."
+        mc "Well, you're a really nice girl, Anemone. No matter what you look like."
+        ane "Oh. Well, thank you. Really."
+        "She gives a bit more of a smile. Seems like she's feeling a bit better."
+        ane "I guess that'd make you my firssssssst friend, here."
+        ane "It'ssss been a while ssssince I've had sssssome real-life friendsssss."
+        mc "Same here, although I found quite the interesting bunch during orientation."
+        "Anemone takes out a small item from her coat pocket."
+        ane "Have thisssss. As a token of our friendsssship."
+        "She hands me a small pin with a spiral on it."
+        mc "Oh, that's so cute! Thank you."
+        "I grab my backpack and fasten it on the side."
+        $ inventory.append("Spiral Pin")
+        tut "Spiral Pin added to Backpack."
+        "We end up chatting for a little bit more before we head our separate ways."
+        "And thankfully, the food was definitely edible."
+        python:
+            if(AddToBestiary(ane_bestiary)):
+                renpy.show_screen("bestiary_popup", name="Anemone Chauveret")
+
         $ cafeteriaSeen = True
     call freeTime
     return

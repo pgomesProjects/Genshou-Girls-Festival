@@ -15,6 +15,8 @@ label start:
     $ ane_name = "Snake Student"
     $ rab_name = "Rabbit Student"
     $ sec_name = "Secretary"
+    $ sam_name = "Blindfolded Student"
+    $ air_name = "Bat Student"
 
     #Show UI
     show screen in_game_ui
