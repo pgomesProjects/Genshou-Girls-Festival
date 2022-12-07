@@ -256,7 +256,7 @@ label classroom1:
         "Hopefully they don't notice."
         "..."
         "..."
-        "Yep, they noticed."
+        "Shit, they totally noticed."
         "They look straight in my direction as I contemplate phasing through the wall behind me."
         $ classroomSeen = True
     call freeTime
@@ -410,7 +410,7 @@ label studyHall1:
                         s "Try getting a tutor or somethin' maybe! That could help!"
                         a "Oh. Okay."
                         "Azura and Seiko pack up their stuff."
-                        a "Do you think tutors are good, [p_firstName]?"
+                        a "Do you think tutors are good, [player]?"
                         mc "Uh, yeah, probably."
                         "Azura didn't seem keen on the idea in her voice. I can hear it in her voice."
                         "She didn't really get anywhere here."
@@ -472,7 +472,7 @@ label studyHall1:
                         "Either way, I'm really glad it wasn't a big ordeal."
                         "I hate doing math in general."
                         mc "You did great, Azura. I'm proud of you"
-                        a "Thank you, [p_firstName]. I understand division much better."
+                        a "Thank you, [player]. I understand division much better."
                         mc "I'm really happy that I could help you out!"
                         a "Will you help me if I need it?"
                         mc "Of course I will Azura! I'll be happy to help you out with any assignment if I can."
@@ -526,7 +526,7 @@ label lockerRoom1:
 label cafeteria1:
     call freeTimeEventSetup
     if cafeteriaSeen == False:
-        #scene bg cafeteria with dissolve
+        scene bg cafeteria with dissolve
         "No time better than now to grab a bite to eat."
         "I decide to check out the cafeteria, hoping that they serve at least somewhat edible food."
         "Back in high school, I'm pretty sure I found mold in my pizza once."

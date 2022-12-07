@@ -55,3 +55,24 @@ transform focus:
 
 transform unfocus:
     linear 0.1 zoom 1.0
+
+#Transitions
+define wipeleft_scene = MultipleTransition([
+    False, ImageDissolve("gui/transitions/wipeleft.png", 0.75, ramplen=64),
+    Solid("#000"), Pause(0.5),
+    Solid("#000"), ImageDissolve("gui/transitions/wipeleft.png", 0.75, ramplen=64),
+    True])
+
+#Show the next cg available
+label showCg:
+
+    window hide dissolve
+    $ cgNum += 1
+
+    show cg with dissolve
+
+    pause
+
+    window show dissolve
+
+    return

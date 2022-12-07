@@ -16,7 +16,7 @@ label ch2_main:
     "I squeeze everything into my arms and bunny hop through the door, hoping it doesn't make much noise."
     "I take a nice shower, letting my thoughts go as the warm water runs down my body."
 
-    #scene bg playerdorm with wipeleft_scene
+    scene bg playerdorm with wipeleft_scene
 
     "I phase through the door as quickly as I can after an almost therapeutic shower experience, brushing my dampened hair."
     "Yasuda sits on the edge of her bed, squinting her eyes as if she really woke up."
@@ -41,17 +41,17 @@ label ch2_main:
     "Two small white envelopes get slid under the bottom of the door."
     "Those must be our weekly schedules, judging how we only know about our first class for now."
     "I grab them off the floor and phase into the hallway, hoping to see if I can thank the messenger that sent these."
-    #scene bg hallways
+    scene bg hallways
     "Instead, I see Seiko out in the distance with a little bit of messy hair, yawning."
     "I also see Azura on the ground, curled into a ball sleeping on the floor of the hallway."
     "From what I learned, Azura's never really had a bed before, so she just likes sleeping on the ground."
     "I wave at the four-armed gremlin and her blue companion."
-    #show seiko at sideLeft with dissolve
+    show seiko at sideLeft with dissolve
     s "Mornin', cutie!"
     mc "Good morning, Seiko."
     "I watch Seiko go back into her room, giving a loud yawn."
     "I phase back into my dorm to give Yasuda her schedule."
-    #scene bg playerdorm with dissolve
+    scene bg playerdorm with dissolve
     show yasuda at middle
     "I open mine and skim through it, noticing I have math in the morning as I expected."
     "However, there seems to be descriptions of all of my classes, and they all seem to be pretty strange."
@@ -86,8 +86,8 @@ label ch2_main:
     "I settled on long pigtails for now. When my hair dries more it'll look better at least."
     play sound "audio/sfx/knock_01.wav"
     "I hear a knock on our door once more and I come face-to-face with a livelier Seiko and an awakened Azura."
-    #show seiko at sideLeft
-    #show azura at sideRight
+    show seiko at sideLeft
+    show azura at sideRight
     a "Hello. Good morning."
     "I smile at the two of them as they come in bantering about what classes we all have."
     s "I got a looooot of classes that I'm really excited for!"
@@ -141,19 +141,19 @@ label ch2_main:
     "{i}'Pip pip'{/i}?"
     "That's new. Kinda cute, though."
     a "Bye."
-    #hide azura with dissolve
+    hide azura with dissolve
     "Azura gives Seiko and I a hug, and Seiko gives her some head pats in return."
     "Azura parts ways with us as we head to math."
 
-    #scene bg hallways with dissolve
-    #show seiko at middle
+    scene bg hallways with dissolve
+    show seiko at middle
     s "Trust me, it won't be too bad!"
     s "I'm sure it'll be just fine since there isn't really anything to do on the first day!"
     "I guess she's right."
     "I see the math class coming closer to us. I feel my hands twitching."
     "Seiko touches my shoulder to comfort me as we enter."
-    #scene bg classroom with wipeleft_scene
-    #show seiko at middle
+    scene bg classroom with wipeleft_scene
+    show seiko at middle
     "We sit down for class as we wait for the professor."
     "It was nice of her to join me at least."
     "I feel Seiko lean over and I turn to look towards her."
@@ -164,7 +164,7 @@ label ch2_main:
 
     call storyTransition from _call_storyTransition_5
 
-    #scene bg classroom with dissolve
+    scene bg classroom with dissolve
     play music "audio/everyoneisgoodfriend.mp3" fadein 2.0
     "My thoughts are still in one piece as the class was just used for introductions and the whole syllabus spiel."
     "I probably screwed up my intro, but at least nothing was graded."
@@ -172,22 +172,22 @@ label ch2_main:
     "I made sure to write it down."
 
 
-    #show screen schedule_icon with dissolve
-    #show screen show_schedule with dissolve
+    show screen schedule_icon with dissolve
+    show screen show_schedule with dissolve
 
     tut "This is your schedule."
     tut "You can access your schedule whenever you see the icon in the top right corner."
     tut "Whenever you see it, click the icon to open and close your schedule for reference."
 
-    #hide screen schedule_icon with dissolve
-    #hide screen show_schedule with dissolve
+    hide screen schedule_icon with dissolve
+    hide screen show_schedule with dissolve
 
     "I think that's everything."
     "Now that it's time for a break, I see Seiko run off to her next class."
     "I try to find Yasuda, since we both have gym together."
 
 
-    #scene bg gym_int with wipeleft_scene
+    scene bg gym_int with wipeleft_scene
     "I see Yasuda's spiral black hair out in the distance looking lost."
     "I speed my walk up quickly to her. She notices me about halfway."
     show yasuda at middle
@@ -200,7 +200,7 @@ label ch2_main:
     "We hear the bell finally ring."
     "I walk with Yasuda inside the gym."
 
-    #scene bg lockerroom with wipeleft_scene
+    scene bg lockerroom with wipeleft_scene
     show yasuda at middle
     "We head over to the locker rooms and take the stall all the way in the back."
     "Yasuda takes one and I take the other that are side by side."
@@ -222,7 +222,7 @@ label ch2_main:
     mc "At least we kinda match today, right?"
     "Yasuda puts back on her smile as we walk out of the locker room together."
 
-    #scene bg gym_int with wipeleft_scene
+    scene bg gym_int with wipeleft_scene
     show yasuda at middle
     if met_helena_at_orientation == True:
         "As we walk out onto the gym floor, I see Helena in my class as well wearing a tank top with red shorts with thigh high socks."
@@ -277,7 +277,7 @@ label ch2_main:
     "Wow, seems I'm pretty abnormal in this crowd."
     "The class goes by without incident, as the rest of the students introduce themselves."
 
-    #scene bg gym_int with dissolve
+    scene bg gym_int with dissolve
     if  met_helena_at_orientation == True:
         "The professor and Helena go over the syllabus with us and before no time, we're let out for the day."
     else:
@@ -286,7 +286,7 @@ label ch2_main:
             if(AddToBestiary(hl_bestiary)):
                 renpy.show_screen("bestiary_popup", name="Helena Ivory")
 
-    #scene bg lockerroom with wipeleft_scene
+    scene bg lockerroom with wipeleft_scene
     show yasuda at middle
     "Yasuda and I get dressed in the locker room and prepare to head off."
     mc "What's next on your schedule, Yasuda?"
@@ -307,14 +307,14 @@ label ch2_main:
 
     tut 'On occasion, you will have "Free Time".'
     tut "In this case, a minimap will appear that you can navigate. You will be able to explore the school."
-    #show tutorial_floor with dissolve
+    show tutorial_floor with dissolve
     tut "Click on the different spots on the map to enter each location. To navigate between floors, use the up and down arrow keys."
     tut "While exploring, you may come across bonus content, which may provide interesting dialogue or add items to your backpack."
     tut "For this occassion, order to continue the story, you will need to visit certain areas and interact with either Azura or Seiko once you're finished."
     tut "You can find those rooms by looking for their icons on top of specific rooms."
     tut "Have fun!"
 
-    #hide tutorial_floor
+    hide tutorial_floor
 
     #FREE TIME START
     $ map_floor = 2
@@ -343,98 +343,98 @@ label ch2_main:
     s "Hiya cutie! I wanted to talk to ya real quick!"
     mc "Alright! I'm coming!"
     "I get up and open the door."
-    #$sface = 'neutral'
-    #$aface = 'neutral'
-    #show seiko at sideLeft with dissolve
-    #show azura at sideRight with dissolve
+    $sface = 'neutral'
+    $aface = 'neutral'
+    show seiko at sideLeft with dissolve
+    show azura at sideRight with dissolve
     "Azura and Seiko enter the room."
     #$yface = 'surprised'
     show yasuda at middle, focus zorder 2
     y "Oh? Azura too?"
     y "What brings you both to our dorm?"
     show yasuda at unfocus zorder 0
-    #show seiko at focus zorder 2
+    show seiko at focus zorder 2
     s "Well, I wanted to talk to everyone about somethin'!"
-    #show seiko at unfocus zorder 0
-    #show azura at focus zorder 2
+    show seiko at unfocus zorder 0
+    show azura at focus zorder 2
     a "Me too."
-    #show azura at unfocus zorder 0
+    show azura at unfocus zorder 0
     #$sface = 'happy'
-    #show seiko at focus zorder 2
+    show seiko at focus zorder 2
     s "Yeah, her too! Heehee!"
-    #show seiko at unfocus zorder 0
+    show seiko at unfocus zorder 0
     mc "What is it?"
-    #$sface = 'neutral'
-    #show seiko at focus zorder 2
+    $sface = 'neutral'
+    show seiko at focus zorder 2
     s "Soooo, remember that festival that was mentioned during the whole orientation thing?"
-    #show seiko at unfocus zorder 0
-    #$yface = 'neutral'
+    show seiko at unfocus zorder 0
+    $yface = 'neutral'
     show yasuda at focus zorder 2
     y "Indeed. You plan to sign up?"
     #$sface = 'happy'
     show yasuda at unfocus zorder 0
-    #show seiko at focus zorder 2
+    show seiko at focus zorder 2
     s "Not {i}plan{/i}!"
     s "I already did!"
     s "And so did Azura!"
-    #show seiko at unfocus zorder 0
+    show seiko at unfocus zorder 0
     mc "Azura? You too?"
-    #show azura at focus zorder 2
+    show azura at focus zorder 2
     a "Yes. Seiko said it would be fun."
     a "I want to have fun, so I signed up."
-    #show azura at unfocus zorder 0
+    show azura at unfocus zorder 0
     show yasuda at focus zorder 2
     y "I see."
     #$yface = 'happy'
     show yasuda
     mc "That's good news for both of you. Congrats."
-    #$sface = 'neutral'
+    $sface = 'neutral'
     show yasuda at unfocus zorder 0
-    #show seiko at focus zorder 2
+    show seiko at focus zorder 2
     s "Wait a second!"
     s "Before we're done here, I wanna ask you both somethin'! You and Yasuda!"
     #$yface = 'surprised'
-    #show seiko at unfocus zorder 0
+    show seiko at unfocus zorder 0
     show yasuda at focus zorder 2
     y "Me?"
     y "Are you suggesting that we both sign up as well?"
     show yasuda at unfocus zorder 0
-    #show seiko at focus zorder 2
+    show seiko at focus zorder 2
     s "Nah, that's your guys's choice!"
     s "I'm askin' if you can help us with our acts!"
-    #show seiko at unfocus zorder 0
+    show seiko at unfocus zorder 0
     mc "Help with your acts?"
-    #show azura at focus zorder 2
+    show azura at focus zorder 2
     a "Yes. I want to do good at the talent show."
     a "But I don't know what to do, so I suggested that you can give me talents."
-    #$yface = 'neutral'
-    #show azura at unfocus zorder 0
+    $yface = 'neutral'
+    show azura at unfocus zorder 0
     show yasuda at focus zorder 2
     y "So, you two need acts, correct?"
     show yasuda at unfocus zorder 0
-    #show seiko at focus zorder 2
+    show seiko at focus zorder 2
     s "Yup yup! Unlike Azura, I have the opposite problem!"
     #$sface = 'happy'
-    #show seiko
+    show seiko
     s "I have too many ideas to choose from! Heehee!"
     s "So, what do you think we should do about this?"
-    #show seiko at unfocus zorder 0
+    show seiko at unfocus zorder 0
     "This is an interesting ordeal, especially knowing a little about it from how Mom talked about it with a lot of praise."
     "As long as I'm not a part of their acts, I'd be perfectly fine with helping them do their thing for sure."
     mc "How about we all meet somewhere formally to talk about this tomorrow?"
     mc "Maybe a classroom or something."
     #$yface = 'happy'
-    #show yasuda at focus zorder 2
+    show yasuda at focus zorder 2
     y "Ah, that sounds like a splendid idea."
-    #$yface = 'neutral'
+    $yface = 'neutral'
     show yasuda
     y "We will need permission first, correct?"
     show yasuda at unfocus zorder 0
     mc "Yeah, of course. But I imagine as long as we aren't interrupting anything or breaking any rules, we should be fine, right?"
-    #$sface = 'neutral'
-    #show seiko at focus zorder 2
+    $sface = 'neutral'
+    show seiko at focus zorder 2
     s "Sounds like a plan! Tomorrow in the morning after breakfast!"
-    #show seiko at unfocus zorder 0
+    show seiko at unfocus zorder 0
     mc "I'll try. I'm not much of a morning person though."
     show yasuda at focus zorder 2
     y "You managed to wake up for classes, no?"
@@ -445,15 +445,15 @@ label ch2_main:
     show yasuda at unfocus zorder 0
     mc "I can...try, at least."
     mc "Just don't get mad if I'm still asleep since I don't have classes tomorrow."
-    #show azura at focus zorder 2
+    show azura at focus zorder 2
     a "Okay."
-    #show azura at unfocus zorder 0
-    #show seiko at focus zorder 2
+    show azura at unfocus zorder 0
+    show seiko at focus zorder 2
     s "Great! It's a date then!"
     s "Me, Azura, [player], and Yasuda!"
     s "Let's meet in the cafeteria tomorrow morning, then we'll go and ask for a room together!"
     #$yface = 'surprised'
-    #show seiko at unfocus zorder 0
+    show seiko at unfocus zorder 0
     show yasuda at focus zorder 2
     y "Eh? Me as well?"
     #$yface = 'blush'
@@ -462,28 +462,28 @@ label ch2_main:
     y "I apologize, I would just be a burden to the team."
     #$sface = 'happy'
     show yasuda at unfocus zorder 0
-    #show seiko at focus zorder 2
+    show seiko at focus zorder 2
     s "Nonsense! I think you'll be great!"
     s "Everyone will! Just trust me, okay?"
-    #show seiko at unfocus zorder 0
+    show seiko at unfocus zorder 0
     show yasuda at focus zorder 2
     y "Well...if you say so."
     y "I would like to help if I can, but I sincerely apologize if my efforts are not suitable for the tasks at hand."
     show yasuda at unfocus zorder 0
-    #show seiko at focus zorder 2
+    show seiko at focus zorder 2
     s "Don't be such a worrywart!"
     s "So for now, let's take a well deserved break for the day and meet up in the morning!"
-    #show seiko at unfocus zorder 0
-    #show azura at easeInsideLeft
+    show seiko at unfocus zorder 0
+    show azura at easeInsideLeft
     "Seiko heads for the door with Azura in tow."
-    #show seiko at focus zorder 2
+    show seiko at focus zorder 2
     s "See ya later, alligators!"
     s "This'll be LOTS of fun!"
-    #show seiko at unfocus zorder 0
-    #show azura at focus zorder 2
+    show seiko at unfocus zorder 0
+    show azura at focus zorder 2
     a "I'm excited. Bye."
-    #hide azura with dissolve
-    #hide seiko with dissolve
+    hide azura with dissolve
+    hide seiko with dissolve
     stop music fadeout 2.0
     "The door closes behind them, leaving Yasuda and I alone in our thoughts."
     "Yasuda is nervously fidgeting, while I head to my bed and let my thoughts consume me."

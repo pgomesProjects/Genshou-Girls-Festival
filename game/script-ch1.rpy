@@ -1,6 +1,6 @@
 label ch1_main:
 
-    #scene bg bus with dissolve
+    scene bg bus with dissolve
     "I ignore the other passengers, as my head is spinning around with thoughts as per usual."
     "I feel so overwhelmed that my brain might just melt in my head and become some liquidy mess."
     "What do I do?"
@@ -23,7 +23,7 @@ label ch1_main:
     "Wait, this is a school for the supernatural. I doubt they would mind if I used it."
     "Instead of waiting for the bus like I had planned, I just phase through the side of it, making sure to land on the ground gracefully instead of making a fool out of myself."
 
-    #scene bg outside with dissolve
+    scene bg outside with dissolve
     "I look around at all of the signs, trying to find the one with my first name."
     "After looking through the sea of writing, I stumble across it in big letters."
     "Guess I'm in the right place, after all."
@@ -123,7 +123,7 @@ label ch1_main:
     show yasuda at bounce
     y "Oh my goodness, I totally forgot!"
     $y_name = "Yasuda"
-    #$yface = 'neutral'
+    $yface = 'neutral'
     show yasuda
     y "My name is Yasuda Nana. It is quite the pleasure to meet you, [player]."
     "I give her a nod to greet her as formally as I can."
@@ -156,7 +156,7 @@ label ch1_main:
     "Is it really that obvious?"
     mc "Sorry...it's just..."
     mc "Isn't this school for people with super talents and supernatural powers?"
-    #$yface = 'neutral'
+    $yface = 'neutral'
     show yasuda
     y "Yes, yes I would assume so. I was curious when I was scouted too."
     y "But the administration said that their decision was entirely intentional, and therefore I will entrust that they made the right decision."
@@ -171,7 +171,7 @@ label ch1_main:
     show yasuda
     y "Ah, that's a splendid ability!"
     y "So that explains the phenomenon I saw as you entered our room."
-    #$yface = 'neutral'
+    $yface = 'neutral'
     show yasuda
     y "I must warn you for the future that if you are to phase through the door, continue to knock beforehand."
     mc "Yeah, of course."
@@ -184,7 +184,7 @@ label ch1_main:
     "I'm still really stumped on her status though."
     "I wonder why someone who's normal got thrown in here."
     "Maybe it's some sort of social experiment? Who knows?"
-    #$yface = 'neutral'
+    $yface = 'neutral'
     show yasuda
     y "Anything else besides your power that you would like to share?"
     mc "Well, other than that, I'm pretty straightforward."
@@ -195,7 +195,7 @@ label ch1_main:
     "Yasuda's got some...interesting choices in her playlist."
     "Let's see where this goes."
 
-    #scene bg playerdorm
+    scene bg playerdorm
 
     call storyTransition from _call_storyTransition_4
 
@@ -217,9 +217,9 @@ label ch1_main:
     y "Farewell, for now."
     mc "See ya."
     "I leave Yasuda to herself while I go check out the school's interior."
-    #$yface = 'neutral'
+    $yface = 'neutral'
 
-    #scene bg hallways with dissolve
+    scene bg hallways with dissolve
     stop music fadeout 2.0
 
     "The hallways here are pretty wide."
@@ -247,12 +247,12 @@ label ch1_main:
 
             call changeColor(-0.1)
             #hide cg with dissolve
-            #show azura at middle
+            show azura at middle
             a "Hello. I like your smell."
-            #show azura at jumping
+            show azura at jumping
             "She jumps happily, despite her face looking quite sad."
             "It's a little weird, but I think she's happy?"
-            #show azura at middle
+            show azura at middle
 
         "Tell Her To Back Off":
 
@@ -263,7 +263,7 @@ label ch1_main:
 
             call changeColor(0.1)
             #hide cg with dissolve
-            #show azura
+            show azura
 
             a "Hello."
 
@@ -276,7 +276,7 @@ label ch1_main:
             "The blue girl backs off, with a weirdly sad look on her face."
 
             #hide cg with dissolve
-            #show azura
+            show azura
 
             a "I like you."
 
@@ -296,7 +296,7 @@ label ch1_main:
     mc "Are you okay?"
     a "Yes. Yes."
     #$aface = 'surprised'
-    #show azura
+    show azura
     a "Are you new? I'm new too."
     mc "Yeah, I just got here not long ago."
     a "Oooooooh."
@@ -304,8 +304,8 @@ label ch1_main:
     a "You look nice too."
     mc "Thanks? Also, why the heck did you sniff me?"
     a "...sniff?"
-    #$aface = 'neutral'
-    #show azura
+    $aface = 'neutral'
+    show azura
     a "Oh. Yes, yes."
     a "I'd like to know your smell."
     "This girl is all sorts of bonkers."
@@ -318,22 +318,22 @@ label ch1_main:
     a "I'm blue."
     mc "Mhm. I see."
     #$aface = 'excited'
-    #show azura
+    show azura
     a "They say I smell better than other people."
     mc "I've noticed. Do you smell everyone you meet?"
     "Azura nods vigorously."
     a "I can tell who's my friend by their smell."
     mc "I guess that's pretty darn neat."
-    #how azura at bounce
+    show azura at bounce
     a "Yey~"
-    #$aface = 'neutral'
-    #show azura
+    $aface = 'neutral'
+    show azura
     "Azura claps to herself, seemingly excited but her face not showing it."
     mc "Are you alright?"
     a "Hm?"
     mc "You look concerned. Something bugging you?"
     a "Oh. No. I just have a hard time showing...showing..."
-    #show azura at bounce
+    show azura at bounce
     a "Emotion! That's the word."
     mc "Ah. So you're happy then, right?"
     a "Yes."
@@ -348,16 +348,16 @@ label ch1_main:
     a "Can I show you?"
     mc "Um, sure."
     #$aface = 'excited'
-    #show azura at bounce
+    show azura at bounce
     a "Yey~"
-    #show azura at hug
+    show azura at hug
     "Azura proceeds to give me a big, warm hug."
     "She then grabs my hand and leads me deeper in the school, her gait more like that of waddling."
     "Thus begins my mini-tour of the school from a...very interesting guide."
 
     play music "audio/happydays.mp3" fadein 2.0
-    #$aface = 'neutral'
-    #show azura
+    $aface = 'neutral'
+    show azura
 
     "Azura starts to bring me around, showing and naming off all of the places we pass by."
     "She really has a good sense of direction."
@@ -365,7 +365,7 @@ label ch1_main:
     "It's strange how fast she learned this place, but at least I know I won't get lost."
     "The place is really fancy all around, and there's a lot of unique faces."
 
-    #scene bg courtyard
+    scene bg courtyard
 
     "We reach the courtyard, which seems to have one of those stages in the middle that looks like it was set up for the occasion."
     "There's a few groups of people here already, sitting on benches or just forming their own clusters."
@@ -374,24 +374,24 @@ label ch1_main:
     "Azura seems to try and give me a smile, but her face kind of just twitches."
     "We move onto more areas. Azura practically drags me everywhere."
 
-    #scene bg classroom
+    scene bg classroom
     a "...this is class. We learn things here."
 
-    #scene bg cafeteria
+    scene bg cafeteria
     a "...there is food here. They gave me some earlier."
     a "They were very nice."
 
-    #scene bg gym_int with dissolve
+    scene bg gym_int with dissolve
 
     a "...and um, this is the place to get stronger."
 
-    #show azura at jumping
+    show azura at jumping
     "While she shows me the big interior of the gym, she starts jumping around a bit more than usual."
     mc "Something up?"
     a "Bathroom, please."
     mc "Ah, okay."
     "Azura points to where the locker rooms are and we head over there."
-    #show azura at easeInsideLeft
+    show azura at easeInsideLeft
     "I yank at the door, but..."
     "{i}CLUNK CLUNK.{/i}"
     "It's ID locked. I haven't gotten an ID yet."
@@ -401,17 +401,17 @@ label ch1_main:
     mc "It's alright. I'll go unlock it."
     mc "I can phase through walls, so I can just open it, probably."
     #$aface = 'surprised'
-    #show azura
+    show azura
     a "Ooooooooooh."
     "She looks at me, but from her eyes it's clear she didn't understand what I said."
-    #$aface = 'neutral'
-    #show azura
+    $aface = 'neutral'
+    show azura
     "I look at my surroundings to see where's the best place to phase through."
     "The ceiling's a little too low for my comfort near the door; I might end up bonking my head on it if I unphase too quickly."
     "I'll go for the wall right next to it."
     "I do my regular hop-n-phase technique through the wall to get inside."
 
-    #scene black with dissolve
+    scene black with dissolve
     stop music fadeout 2.0
     "However..."
     "I forgot locker rooms usually have lockers, so I unphase too quickly."
@@ -461,50 +461,50 @@ label ch1_main:
     "Seiko yanks me out of the locker, slamming it behind me."
     #hide cg with dissolve
 
-    #scene bg lockerroom
+    scene bg lockerroom
     "I feel her wrap around me as she helps me out of my predicament."
     "Urgh...I'm being touched again... I feel uncomfortable."
     "Four arms wrapping around me, this feels WAYYYY too weird for me."
     "Seiko finally lets me go as I am able to take a breather."
-    #show seiko at middle with dissolve
+    show seiko at middle with dissolve
     "She gives me a smile."
     "I inch away slowly, swiftly making it to the door that I have to open for Azura."
     play sound "audio/sfx/running.wav"
-    #show azura at running
+    show azura at running
     "I barely get to open the door as Azura rushes in and goes straight to the stalls."
     "Seiko laughs softly, seeing Azura's goofy run."
     #$sface = 'happy'
-    #show seiko zorder 2
+    show seiko zorder 2
     s "S'that your friend? She's such a cuuuuuuuuuuuutie patootie! Heehee!"
     "I cover my ears as she screams once more."
     "If she were just a little bit louder, I bet this entire locker room would just collapse in on itself."
 
-    #show azura at sideLeft with moveinleft
+    show azura at sideLeft with moveinleft
     "Azura comes out of the bathroom sighing with relief."
     "She looks at Seiko with that permanent sad look."
-    #show azura at focus
+    show azura at focus
     a "I heard a scream. Are you okay?"
-    #show azura at unfocus
-    #show seiko at focus
+    show azura at unfocus
+    show seiko at focus
     s "YUUUUUUUUP!"
-    #show seiko at unfocus
+    show seiko at unfocus
     "I look at her for the THIRD time as she screams."
     "Does she have an off button?"
     mc "Yes, that was the tiny one."
     mc "Her name is Seiko. She likes to scream."
     mc "...a lot."
-    #show azura at focus
+    show azura at focus
     a "Oh. Okay."
-    #show azura at unfocus
+    show azura at unfocus
     "Azura just bounces in place, carelessly. She doesn't seem to mind."
-    #$sface = 'neutral'
-    #show seiko
-    #show seiko at focus
+    $sface = 'neutral'
+    show seiko
+    show seiko at focus
     s "Well you know my name, what's yours?"
-    #show seiko at unfocus
-    #show azura at focus
+    show seiko at unfocus
+    show azura at focus
     a "I'm Azura."
-    #show azura at unfocus
+    show azura at unfocus
     "Azura does the same routine with taking out her passport and showing it to Seiko."
     "Seiko gives her an interesting look, smiling softly at her."
     "I look at both of them just staring."
@@ -516,43 +516,43 @@ label ch1_main:
     "I guess that seems fitting for her."
     "They seem to like each others company, well that's good at least."
     #$sface = 'happy'
-    #show seiko at focus
+    show seiko at focus
     s "You are the cutest thing ever!"
     s "You remind me of a big puppy! Heehee!"
-    #show seiko at unfocus, easeInsideLeft
+    show seiko at unfocus, easeInsideLeft
     "Seiko hugs Azura with all of her arms, Azura hugging back."
     "Well... here I am, watching the weirdos hug each other."
     "I watch as Seiko uses one of her extra arms to keep petting Azura softly."
     "I wait there patiently, just kicking my feet against each other."
     "All of a sudden, I hear an alarm go off."
     "Seems to be coming from Seiko's phone in her back pocket."
-    #$sface = 'neutral'
-    #show seiko at easeInmiddle
+    $sface = 'neutral'
+    show seiko at easeInmiddle
     "I advert my eyes quickly as the two weirdos finally let each other go."
     "Seiko grabs her phone and makes a face."
-    #show seiko at bounce, focus
+    show seiko at bounce, focus
     s "Oooooh yeahhhhhhhhhhhhh!"
-    #show seiko at unfocus
+    show seiko at unfocus
     "Azura I think looks concerned."
     "So hard to tell what she is feeling with the constant sad eye look going on."
-    #show seiko at focus
+    show seiko at focus
     s "Orientation's in 10 minutes! We have to get going to the courtyard!"
-    #show seiko at unfocus
+    show seiko at unfocus
     "Azura and I nod as Seiko grabs our hands."
 
-    #scene bg gym_int with dissolve
+    scene bg gym_int with dissolve
     #$sface = 'happy'
-    #show seiko at middle with dissolve
+    show seiko at middle with dissolve
     "Her hands are really soft, and I just noticed she has a little bit of fancy perfume on."
     "Seiko uses her free hands to open the door for us."
-    #$sface = 'neutral'
+    $sface = 'neutral'
 
-    #scene bg field with dissolve
+    scene bg field with dissolve
 
     "We spent a longer time inside that locker room than I thought."
-    #show seiko at sideLeft with dissolve
+    show seiko at sideLeft with dissolve
     "Time really flies when you have a really loud four armed woman yelling in your ears."
-    #show azura at sideRight with dissolve
+    show azura at sideRight with dissolve
     "Along with a big blue woman just...being herself I guess?"
     "What a weird day so far."
     "I guess it will always be weird."
@@ -568,46 +568,47 @@ label ch1_main:
     show yasuda at focus zorder 2
     y "Hello, [player]. I am glad to see you once more."
     show yasuda at unfocus  zorder 0
-    #mc "Heya."
+    mc "Heya."
     "Seiko immediately eyes the anomaly that presented itself."
     #$sface = 'flirty'
-    #show seiko at focus zorder 2
+    show seiko at focus zorder 2
     s "Who's the goth chick?"
-    #$sface = 'neutral'
-    #show seiko at unfocus  zorder 0
+    $sface = 'neutral'
+    show seiko at unfocus  zorder 0
     mc "She's my roommate, Yasuda Nana."
-    #show yasuda at focus zorder 2
+    show yasuda at focus zorder 2
     y "A pleasure to meet you, Miss. Is this a new friend?"
     show yasuda at unfocus  zorder 0
     mc "Yeah, not by choice, but yeah."
     #$sface = 'happy'
-    #show seiko at focus zorder 2
-    s "It was meant to be! DESTINYYYY!"
-    #show seiko at unfocus zorder 0
+    show seiko at focus zorder 2
+    s "It was meant to be!"
+    s "DESTINYYYY!"
+    show seiko at unfocus zorder 0
     show yasuda at focus zorder 2
     y "...I see."
     show yasuda at unfocus zorder 0
-    #show azura at easeInmiddle zorder 2
+    show azura at easeInmiddle zorder 2
     "In the time it takes for Yasuda to meet Seiko, Azura's already done her thing and approached Yasuda with the intent to sniff."
     #$yface = 'surprised'
-    #show yasuda at focus zorder 2
+    show yasuda at focus zorder 2
     y "Oh!-"
     "Yasuda goes stiff, raising her hands to let Azura do her thing."
     y "Hello, young lady."
     show yasuda at unfocus zorder 0
     "{i}Sniff sniff.{/i}"
-    #show azura at focus zorder 2
+    show azura at focus zorder 2
     a "Hello."
-    #show azura at unfocus zorder 0
+    show azura at unfocus zorder 0
     mc "That's Azura. She likes to sniff people."
     #$yface = 'blush'
     show yasuda at focus zorder 2
     y "Ah. Well, it is nice to meet you too."
     show yasuda at unfocus zorder 0
-    #show azura at easeInsideRight
+    show azura at easeInsideRight
     "Yasuda avoids touching Azura as she gets herself acquainted."
     show yasuda at focus zorder 2
-    #$yface = 'neutral'
+    $yface = 'neutral'
     y "So, what do you plan to do for the meet up, [player]?"
     show yasuda at unfocus zorder 0
     mc "What I wanna do?"
@@ -615,7 +616,7 @@ label ch1_main:
     y "Yes. This event is meant for socialization, no?"
     show yasuda at unfocus zorder 0
     mc "Oh yeah. Probably should do that."
-    #scene bg field with dissolve
+    scene bg field with dissolve
     "But do I really wanna?"
     "Two people is enough, three including Yasuda."
     "Do I really wanna go for more?"
@@ -634,7 +635,7 @@ label ch1_main:
 
             call meet_hide from _call_meet_hide
 
-    #scene bg field with wipeleft_scene
+    scene bg field with wipeleft_scene
     "The time flies by, feels like hours turned into minutes."
     "I hear speakers shot out some feedback, then a loud boom."
     "Seems like there's a whole set up for this meet and greet that I wasn't even aware of."
@@ -673,17 +674,17 @@ label ch1_main:
     om "Enjoy the rest of your day, everyone."
     om "Classes start the day after tomorrow, so spend it wisely getting prepared."
     "The principal seemingly disappears as he finishes his speech."
-    #$sface = 'neutral'
-    #show seiko at sideLeft with dissolve
+    $sface = 'neutral'
+    show seiko at sideLeft with dissolve
     show yasuda at middle with dissolve
-    #show azura at sideRight with dissolve
+    show azura at sideRight with dissolve
     "I see the trio walking over to me, smiling."
     "Well, except for Azura, she has that permanent sad face."
     #$sface = 'happy'
-    #show seiko at focus, bounce zorder 2
+    show seiko at focus, bounce zorder 2
     s "I have like a bajillion ideas for that talent show thing!"
     s "I'm super duper HYYYYPEEEED!"
-    #show seiko at unfocus zorder 0
+    show seiko at unfocus zorder 0
     "Azura looks confused, but doesn't say anything."
     #$yface = 'blush'
     show yasuda
@@ -691,40 +692,40 @@ label ch1_main:
     mc "I'm looking forward to it, too."
     mc "The festival part, not the people part."
     mc "For now, I think it's time to hit the dorms and call it a day."
-    #$yface = 'neutral'
+    $yface = 'neutral'
     show yasuda
     "Yasuda nods and leads the way, but Seiko and Azura tag along."
 
-    #scene bg hallways with dissolve
+    scene bg hallways with dissolve
     "We make it to the dorms."
     "Azura and Seiko search for their dorms, but we quickly find out that the two are roommates."
     "Well hey, guess things happen for a reason."
     #$sface = 'happy'
-    #show seiko at sideLeft, focus zorder 2
+    show seiko at sideLeft, focus zorder 2
     s "More pets for my big ol' blue friend!"
     "Azura lets out a slow, but loud laugh."
-    #show seiko at unfocus zorder 0
+    show seiko at unfocus zorder 0
     #$aface = 'excited'
-    #show azura at slightLeft, focus zorder 2
+    show azura at slightLeft, focus zorder 2
     a "A-hee-hee-hee."
-    #show azura at unfocus zorder 0
-    #hide seiko with dissolve
-    #hide azura with dissolve
+    show azura at unfocus zorder 0
+    hide seiko with dissolve
+    hide azura with dissolve
     "She jumps down with excitement as Seiko drags her into their dorm."
     "Yasuda and I go into our dorm."
 
-    #scene bg playerdorm with dissolve
+    scene bg playerdorm with dissolve
 
     "I throw myself on my bed."
     "What a day."
     "Got introduced to a weird school and a weird cast of people to boot."
 
-    #if(rel_meter == 0):
+    if(rel_meter == 0):
         #$yface = 'happy'
-        #show yasuda with dissolve
-        #y "Well, I am glad that you have gotten a good start to your school career."
-        #$yface = 'neutral'
-        #hide yasuda with dissolve
+        show yasuda with dissolve
+        y "Well, I am glad that you have gotten a good start to your school career."
+        $yface = 'neutral'
+        hide yasuda with dissolve
 
     play sound "audio/sfx/knock_01.wav"
     "As Yasuda cleans and dusts literally nothing at this point, a knock is heard at our door."
@@ -742,7 +743,7 @@ label ch1_main:
 
 label meet_socialize:
 
-    #scene bg field with dissolve
+    scene bg field with dissolve
     "I'm already here anyways."
     "Might as well socialize, although Seiko's beat me to it."
     "I walk through the crowds and stray away from the group."
@@ -793,7 +794,7 @@ label meet_socialize:
 
 label meet_group:
 
-    #scene bg field with dissolve
+    scene bg field with dissolve
     show yasuda at middle with dissolve
     "I'm just gonna stay here with Yasuda and catch up on some things."
     #$yface = 'surprised'
@@ -801,7 +802,7 @@ label meet_group:
     y "You are not going to socialize?"
     mc "Nah, I'm not really a social butterfly."
     mc "I like smaller groups anyways."
-    #$yface = 'neutral'
+    $yface = 'neutral'
     show yasuda
     y "I see."
     y "Well if we are going to be here to socialize, why not talk about how you met your two new acquaintances?"
@@ -825,7 +826,7 @@ label meet_group:
     y "I don't think I'll do well with conversing with new faces."
     mc "Well, you did well enough warming up to me."
     mc "How about we try it together?"
-    #$yface = 'neutral'
+    $yface = 'neutral'
     show yasuda
     y "Sure. But only with your assistance, if you do not mind."
     mc "Fine by me."
@@ -837,14 +838,14 @@ label meet_group:
 
 label meet_hide:
 
-    #scene bg field with dissolve
+    scene bg field with dissolve
     "Yeah, my anxiety is rising from all the new people here."
     "I think I'll need some space to breathe."
     "I head towards the outskirts of the crowd, sitting underneath a tree."
     "Thankfully, it seems no one followed me."
     "I'd much rather be alone with my own thoughts."
     "I close my eyes as my mind begins to wander."
-    #scene black
+    scene black
     "Today's been quite a day."
     "I don't know if I'll ever get used to this."
     "If I've already met three people, who knows how many I'll meet by the end of this thing."
@@ -855,29 +856,29 @@ label meet_hide:
     "What to do...what to do..."
     a "Hello."
     "I hear Azura's voice and a bunch of warmth around me."
-    #scene bg field with dissolve
-    #show azura at middle, closeup zorder 5
+    scene bg field with dissolve
+    show azura at middle, closeup zorder 5
     "I open my eyes to see Azura sitting right in front of me, staring me down."
     #$sface = 'happy'
-    #show seiko at sideLeft, focus zorder 2
+    show seiko at sideLeft, focus zorder 2
     s "Got ya!"
-    #show seiko at unfocus zorder 0
+    show seiko at unfocus zorder 0
     "Welp, that ends my peace and quiet."
-    #show azura at slightLeft, unhug zorder 1
+    show azura at slightLeft, unhug zorder 1
     "Seiko pets Azura on the head."
-    #show seiko at focus zorder 2
+    show seiko at focus zorder 2
     s "Good girl!"
-    #show seiko at unfocus zorder 0
+    show seiko at unfocus zorder 0
     #$aface = 'excited'
-    #show azura
+    show azura
     "Azura practically melts in Seiko's hands, laying on her back, seemingly excited."
     call changeColor(-0.1)
-    #show azura at focus zorder 2
+    show azura at focus zorder 2
     a "I did it."
     "After Azura's second pet session of the day, the two weirdos drag me back into the circle and attempt to get me to socialize with strangers."
     "Guess I have no choice, but I won't like it."
-    #$aface = 'neutral'
-    #$sface = 'neutral'
+    $aface = 'neutral'
+    $sface = 'neutral'
 
     $ met_helena_at_orientation = False
 
