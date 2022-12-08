@@ -40,7 +40,7 @@ define chr_bestiary = Mon.Monster('placeholder_portrait.png', 'Christine Windsor
 image bg playerdorm = "bgs/bg playerdorm.png"
 
 ##Freetime Variables
-image tutorial_floor = "gui/freetime/floor2.png"
+image tutorial_floor = "gui/freetime/tutorial_floor.png"
 define floor0_spots = []
 define floor1_spots = []
 define floor2_spots = []
@@ -80,6 +80,8 @@ define advisorsLoc = ""
 define advisorsSeen = False
 
 #Floor 2
+define commonRoomLoc = ""
+define commonRoomSeen = False
 define azuraSeikoLoc = ""
 define azuraSeikoSeen = False
 define playDormLoc = ""
@@ -88,9 +90,6 @@ define playDormLoc = ""
 ##
 ##These are variables that will change the flow of the story
 #Outfit
-define day = "Monday"
-define time = "Daytime"
-define location = "Bedroom"
 define objective = "Get comfortable with academy life."
 define outfit = ""
 default met_helena_at_orientation = None
@@ -131,6 +130,10 @@ init:
     $ huer = 1.0
     $ hueg = 1.0
     $ hueb = 1.0
+
+    $ day = ""
+    $ currentTime = ""
+    $ location = ""
 
 image yasuda:
     LiveComposite(

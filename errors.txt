@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/hud.rpy", line 106: expected 'comma or end of line' not found.
-    currentAlpha = abs(rel_meter)
-                 ^
+File "game/script-ch0.rpy", line 12: end of line expected.
+    show screen in_game_ui at slideIn(0.0, 0.3)
+                           ^
+
+File "game/script-ch0.rpy", line 13: end of line expected.
+    show screen relationship_heart at slideIn(0.0, 0.3)
+                                   ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Dec  5 02:54:42 2022
+Thu Dec  8 02:53:02 2022

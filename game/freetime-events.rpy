@@ -9,6 +9,8 @@ label pond1:
     call freeTimeEventSetup
     if pondSeen == False:
         scene bg pond with dissolve
+        $ location = "Pond"
+        show screen in_game_ui
         call noInteraction from _call_noInteraction
         $ pondSeen = True
     call freeTime
@@ -18,6 +20,8 @@ label field1:
     call freeTimeEventSetup
     if fieldSeen == False:
         scene bg field with dissolve
+        $ location = "Field"
+        show screen in_game_ui
         $sface = 'neutral'
         show seiko at middle
         menu:
@@ -86,7 +90,7 @@ label field1:
                         "Seiko smirks at me once more. She looks determined."
                         "Without hesitation, she screams herself."
                         scene bg field at vpunch
-                        $sface = 'happy'
+                        $sface = 'scream'
                         show seiko at middle
                         s "AHHHHHHHHHHHHHHHHH!!!"
                         "I swear, this girl is gonna give me tinnitus some day."
@@ -122,7 +126,7 @@ label field1:
                         show seiko
                         s "You may wanna start lining up! Because the ladies will be flying at me!"
                         scene bg field at vpunch
-                        $sface = 'happy'
+                        $sface = 'scream'
                         show seiko at middle
                         s "AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH HHHHHHHHHHHHHHHHHHHHHHHH!!!!!"
                         play sound "audio/sfx/running.wav"
@@ -130,6 +134,8 @@ label field1:
                         "Seiko is out of breath with how loud she really can scream, but she starts running away from the field."
                         "I follow suit, since of course I don't wanna be in trouble for this too."
                         scene bg outside with dissolve
+                        $ location = "Outside"
+                        show screen in_game_ui
                         $sface = 'neutral'
                         show seiko
                         s " So I win?"
@@ -146,6 +152,8 @@ label field1:
                         "I have to time this perfectly."
                         "One...two...jump!"
                         scene bg cafeteria with wipeleft_scene
+                        $ location = "Cafeteria"
+                        show screen in_game_ui
                         play sound "audio/sfx/table_slam.wav"
                         "I jump through the wall with Seiko attached to me and phase through. I unphase as we land on top of a cafeteria table with a thud."
                         "It's over, for now."
@@ -160,7 +168,7 @@ label field1:
                         s "Yeah!"
                         "That's...weirdly relieving in a way."
                         "With eyes on both of us, I crawl off of the table top and act as if nothing happened, going to grab some lunch with Seiko."
-                        call changeColor(0.1)
+                        call changeColor(0.5)
 
                     "Maybe At A Different Time":
                         mc "Eh, I'm not really sure that's right now is the right place and time for that."
@@ -180,6 +188,8 @@ label field1:
                         s "Got cha! Let's find Azura!"
                         "Seiko grabs my arms and takes me with her to go search the giant campus for Azura."
                         scene classroom with wipeleft_scene
+                        $ location = "Classroom"
+                        show screen in_game_ui
                         "We find Azura in the study hall downstairs, doing some math homework."
                         "She gets up from her seat."
                         a "Hello."
@@ -196,14 +206,21 @@ label field1:
                         s "Well, if you're not gonna join, I'll start my own game!"
                         s "Watch this!"
                         "Seiko takes a deep breath and before I can stop her, she lets out a scream filled with energy."
+                        scene bg field at vpunch
+                        $sface = 'scream'
+                        show seiko at middle
                         s "AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!"
                         "Jesus Christ."
                         "This is second-hand embarrassment at its finest."
                         mc "Yeah, I get it. You're really darn loud."
-                        s "Yup yup! And the ladies lllllove it! Don't cha?"
+                        $sface = 'flirty'
+                        show seiko
+                        s "Yup yup! And the ladies lllllove it! Don't you?"
                         "She looks around at the surrounding students."
                         "For the most part, they either ignore her completely or give a very displeased look."
                         "I feel like I'm gonna melt from all of this embarrassment."
+                        $sface = 'neutral'
+                        show seiko
                         s "...tough crowd."
                         s "Anyways, what do youuuu propose we do for funsies?"
                         mc " Now that you screamed and disturbed the peace, how about some lunch?"
@@ -217,7 +234,7 @@ label field1:
                         "If anything, she's a little bummed."
                         "We walk side by side to go rally up our group for some lunch."
                         "Well, at least after everything, I didn't get forced into any weird escapades."
-                        call changeColor(-0.1)
+                        call changeColor(-0.5)
 
                 $ fieldSeen = True
             "No":
@@ -230,6 +247,8 @@ label shed1:
     call freeTimeEventSetup
     if shedSeen == False:
         scene bg shed with dissolve
+        $ location = "Shed"
+        show screen in_game_ui
         call noInteraction from _call_noInteraction_1
         $ shedSeen = True
     call freeTime from _call_freeTime_5
@@ -239,6 +258,8 @@ label garden1:
     call freeTimeEventSetup
     if gardenSeen == False:
         scene bg garden with dissolve
+        $ location = "Garden"
+        show screen in_game_ui
         call noInteraction from _call_noInteraction_2
         $ gardenSeen = True
     call freeTime from _call_freeTime_6
@@ -249,6 +270,8 @@ label classroom1:
     call freeTimeEventSetup
     if classroomSeen == False:
         scene bg classroom with dissolve
+        $ location = "Classroom"
+        show screen in_game_ui
         "I take a look into one of the classrooms with the door slightly ajar."
         "There's a young lady with a blindfold painting a very beautiful portrait of a bat woman on a couch."
         "I could only ever dream of painting that well, nevermind with a blindfold."
@@ -265,14 +288,16 @@ label classroom1:
 label studyHall1:
     call freeTimeEventSetup
     if studyHallSeen == False:
-        scene bg classroom with dissolve
+        scene bg studyhall with dissolve
+        $ location = "Study Hall"
+        show screen in_game_ui
         $aface = 'neutral'
         show azura at middle
         menu:
             tut "Would you like to hang out with Azura?"
             "Yes":
                 "I walk to the study hall hoping to find something to do."
-                "As I walk through the double doors, I spot Azura at one of the tables looking frustrated."
+                "As I walk through the double doors, I spot Azura at one of the tables trying to look frustrated."
                 "Even with those permanent sad eyes, I can tell she's not having the time of her life."
                 "I walk over to her, tapping her shoulder lightly."
                 "She turns around and I see her working on some math homework."
@@ -282,9 +307,9 @@ label studyHall1:
                 a "...but I am trying my best."
                 a "I still do not get it."
                 mc "I'm sure you can do it."
-                mc " Well first off, how much do you know?"
+                mc "Well first off, how much do you know?"
                 a "Multiplication."
-                mc " And much schooling do you have in general?"
+                mc "...how much schooling do you have in general?"
                 a "Well... I have really great hunting skills."
                 mc "That's not really school, though."
                 a "I'm really good at hunting. The education stuff I am too. But this is new."
@@ -296,7 +321,7 @@ label studyHall1:
                 a "Thinking? Process?"
                 "She says that in a slow tone."
                 "That must mean she really doesn't know what to do when it comes to this kind of stuff."
-                "What should I do to help her out?"
+                "I'm not sure what I can do to help her out."
                 window hide
                 menu:
                     "Find A Tutor To Help":
@@ -305,14 +330,16 @@ label studyHall1:
                         "Azura stands up and heads out, waiting for me to tag along."
                         "She's pretty darn quick to the elevators, jumping a little bit as she waits for me."
                         scene bg advisors with dissolve
-                        "We head to the advisor center and talk to the secretary there."
+                        $ location = "Advising Center"
+                        show screen in_game_ui
+                        "We head to the advisor center and talk to the secretary there, since the actual advisor seems to be busy."
                         "She looks professional with a suit and tie, alongside fancy glasses."
                         sec "Hello there. How may I assist you?"
                         mc "Hey uh, where would we find tutors for classes?"
                         sec "You will have to fill out a form. Right this way, ladies."
                         "The woman stands from her chair and heads down a thin corridor, her high heels clicking and clacking as she does so."
                         "She leads us to a place full of forms, one specifically labelled \"Tutor Request Form\"."
-                        sec "Please fill out the form and we can get you a formal tutor shortly"
+                        sec "Please fill out the form and we can get you a formal tutor shortly."
                         sec "In the meantime, you may use your computers to get in touch with our eLearning hub to speak to representatives. They will gladly assist you with any problems."
                         "Wow, even though this place is supernatural, it feels like it's run really similarly to actual colleges."
                         "I nod in response."
@@ -327,6 +354,8 @@ label studyHall1:
                         mc "Of course. Anything to help you out."
                         "The secretary nods farewell as we depart to the library."
                         scene bg library with wipeleft_scene
+                        $ location = "Library"
+                        show screen in_game_ui
                         "We head to the library and log onto a computer."
                         mc "Alright. So this is your computer mouse. You use it to click on the little pictures on the screen."
                         a "Oh. Okay."
@@ -385,7 +414,7 @@ label studyHall1:
                         if "loose paper" in inventory:
                             mc "I have some in my bag if you want it."
                             s "Perfect, thankies!"
-                            call changeColor(0.1)
+                            call changeColor(0.5)
                             "Seiko takes the paper and starts to do the math on the paper."
                         else:
                             mc "Sorry, don't have any on me."
@@ -400,7 +429,7 @@ label studyHall1:
                         s "It's basically the same thing except in a weird way!"
                         "It seems like Seiko is trying her best, but she is definitely not a good teacher in the slightest."
                         "Azura is still confused."
-                        s "You can think of multiplication and stuff if you can for these bigger problems and try to remember the patterns of multiplication!"
+                        s "You can think of multiplication and stuff for these bigger problems and like, just try to remember the patterns!"
                         s "Makes sense?"
                         a "Um...I don't know."
                         "Seiko thinks a little bit, since her method of teaching doesn't seem to get through to her."
@@ -415,7 +444,7 @@ label studyHall1:
                         "Azura didn't seem keen on the idea in her voice. I can hear it in her voice."
                         "She didn't really get anywhere here."
                         "The two roommates pack up their stuff and head out to the dorms."
-                        call changeColor(0.1)
+                        call changeColor(0.5)
 
                     "I Can Do It":
                         mc "Alright. Let's sit down and do this together."
@@ -478,7 +507,7 @@ label studyHall1:
                         mc "Of course I will Azura! I'll be happy to help you out with any assignment if I can."
                         a "Yey~"
                         "Azura seems satisfied with my help."
-                        call changeColor(-0.1)
+                        call changeColor(-0.5)
 
                 $ studyHallSeen = True
             "No":
@@ -492,6 +521,8 @@ label library1:
     call freeTimeEventSetup
     if librarySeen == False:
         scene bg library with dissolve
+        $ location = "Library"
+        show screen in_game_ui
         "I enter the library, looking for some books."
         "However, there seems to be a cart full of books that look worn or are donated by students."
         "Might as well give it a shot. Could find something interesting."
@@ -509,6 +540,8 @@ label gym1:
     call freeTimeEventSetup
     if gymSeen == False:
         scene bg gym_int with dissolve
+        $ location = "Gym"
+        show screen in_game_ui
         call noInteraction from _call_noInteraction_12
         $ gymSeen = True
     call freeTime from _call_freeTime_16
@@ -518,6 +551,8 @@ label lockerRoom1:
     call freeTimeEventSetup
     if lockerRoomSeen == False:
         scene bg lockerroom with dissolve
+        $ location = "Locker Rooms"
+        show screen in_game_ui
         call noInteraction from _call_noInteraction_13
         $ lockerRoomSeen = True
     call freeTime from _call_freeTime_17
@@ -527,6 +562,8 @@ label cafeteria1:
     call freeTimeEventSetup
     if cafeteriaSeen == False:
         scene bg cafeteria with dissolve
+        $ location = "Cafeteria"
+        show screen in_game_ui
         "No time better than now to grab a bite to eat."
         "I decide to check out the cafeteria, hoping that they serve at least somewhat edible food."
         "Back in high school, I'm pretty sure I found mold in my pizza once."
@@ -600,6 +637,8 @@ label nurse1:
     call freeTimeEventSetup
     if nurseSeen == False:
         scene bg nurse with dissolve
+        $ location = "Nurse's Office"
+        show screen in_game_ui
         call noInteraction from _call_noInteraction_15
         $ nurseSeen = True
     call freeTime from _call_freeTime_19
@@ -609,17 +648,31 @@ label advisors1:
     call freeTimeEventSetup
     if advisorsSeen == False:
         scene bg advisors with dissolve
+        $ location = "Advising Center"
+        show screen in_game_ui
         call noInteraction from _call_noInteraction_16
         $ advisorsSeen = True
     call freeTime
     return
 
 #Floor 2
+label commonRoom1:
+    call freeTimeEventSetup
+    if commonRoomSeen == False:
+        scene bg commonroom with dissolve
+        $ location = "Dorm Common Area"
+        show screen in_game_ui
+        call noInteraction
+        $ commonRoomSeen = True
+    call freeTime
+    return
 
 label azuraSeikoDorm1:
     call freeTimeEventSetup
     if azuraSeikoSeen == False:
         scene bg hallways with dissolve
+        $ location = "Hallways"
+        show screen in_game_ui
         "{i}Knock Knock.{/i}"
         "Guess no one's inside. Maybe they're somewhere else."
         $ azuraSeikoSeen = True
@@ -630,6 +683,8 @@ label azuraSeikoDorm1:
 label playerDorm1:
     call freeTimeEventSetup
     scene bg playerdorm with dissolve
+    $ location = "Dorm"
+    show screen in_game_ui
     "I head back to our dorm to see Yasuda reading her book."
     $yface = 'neutral'
     show yasuda at middle

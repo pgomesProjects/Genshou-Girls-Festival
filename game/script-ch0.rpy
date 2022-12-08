@@ -4,6 +4,16 @@ label ch0_main:
 
     scene black
 
+    $ day = "Wednesday"
+    $ currentTime = "Daytime"
+    $ location = "Bedroom"
+
+    #Show UI
+    show screen in_game_ui with dissolve
+    show screen relationship_heart with dissolve
+
+    play music "audio/00_quiet_ambience.mp3" fadein 2.0
+
     "People call me a {important}freak.{/important} A {important}weirdo.{/important} A {important}monster.{/important}"
     "A... {important}'Destructive'{/important}, people call it."
     "In this world full of abnormal people, even to them, I am {important}not normal.{/important}"
@@ -17,7 +27,7 @@ label ch0_main:
     "Even the ground, if I'm not careful enough."
     "In a society where the weirdest of the weird is shunned, I can't just be myself."
 
-    #scene bg room with dissolve
+    scene bg room with dissolve
     "These labels society casts upon me and those with powers never leave my mind, and continue to do so while I lay in bed and let my blackout curtains protect me from the morning light."
     m "[player], breakfast tiiiime! Come and eaaat~"
     $m_name = "Mom"
@@ -147,7 +157,9 @@ label ch0_main:
     "I stumbled out of bed again for good, marking a reminder on my calendar for the start of the school year."
     "Afterwards, I went downstairs with a letter in hand and a mind full of questions."
 
-    #scene bg kitchen with dissolve
+    scene bg kitchen with dissolve
+    $ location = "Kitchen"
+    show screen in_game_ui
     "I head to Mom, who's in the kitchen cleaning after having finished her breakfast."
     "Mom looks up at me smiling softly, but her attention is quickly averted to the letter."
     m "What's that, sweet pea?"
@@ -182,7 +194,9 @@ label ch0_main:
     "Glad to know that I wasn't in any danger."
     "Still, I think they should change their enrollment process {i}just{/i} a little bit."
 
-    #scene bg room with dissolve
+    scene bg room with dissolve
+    $ location = "Bedroom"
+    show screen in_game_ui
     "I go into my room, looking at my calendar, holding the letter still in my hands."
     "The one thing that stuck to my mind was the festival Mom mentioned they hold every year."
     "I try to imagine her story in my head like my mom, but I sure don't have an active imagination, nevermind Dreamscaping."
@@ -204,7 +218,9 @@ label ch0_main:
 
     call storyTransition from _call_storyTransition_3
 
-    #scene bg room with dissolve
+    scene bg room with dissolve
+    $ day = "Monday"
+    show screen in_game_ui
     show screen objective_popup
     "I open my eyes, realizing the past month has been a huge blur for me."
     "Living with depression and anxiety does that to a person."
@@ -252,10 +268,14 @@ label ch0_main:
     "Before I head out, I do a quick 180 and grab my water bottle."
     "Gotta stay hydrated."
 
-    #scene bg door with dissolve
+    scene bg door with dissolve
+    $ location = "Living Room"
+    show screen in_game_ui
     "I turn my light off and rush down the stairs, shoving a piece of bacon into my mouth along the way."
     "I hear my mom shuffling around, waiting to send me off."
     "I wave goodbye to her and jump through the door to head outside."
+    $ location = "Outside"
+    show screen in_game_ui
     "All I see is a yellow bright bus with a few people on it."
     "Seems like a regular school bus, but I imagine that's sort of a disguise like nine and three-quarters."
     "My hands are shaking, as I feel my legs not wanting to move, but yet I'm getting closer to the bus."

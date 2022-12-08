@@ -29,6 +29,7 @@ label freeTimeSetUp:
         advisorsLoc = "advisors" + str(freeTimeNum)
 
         #Floor 2
+        commonRoomLoc = "commonRoom" + str(freeTimeNum)
         azuraSeikoLoc = "azuraSeikoDorm" + str(freeTimeNum)
         playerDormLoc = "playerDorm" + str(freeTimeNum)
 
@@ -61,6 +62,7 @@ label freeTimeSetUp:
     $ advisorsSeen = False
 
     #Floor 2
+    $ commonRoomSeen = False
     $ azuraSeikoSeen = False
 
     return
@@ -96,6 +98,9 @@ screen freeTime_ani:
         at startAni
 
 screen freeTime_minimap:
+    zorder -1
+    add "gui/freetime/freetime_background.png"
+
     #Up and down keys
     key "K_UP" action Call("moveUp")
     key "K_DOWN" action Call("moveDown")
@@ -106,34 +111,38 @@ screen freeTime_minimap:
 
         if map_floor == 0:
             #Pond
-            hotspot(503, 172, 151, 219) action Call(pondLoc)
+            hotspot (30,330,197,225) action Call(pondLoc)
             #Field
-            hotspot(812, 153, 268, 208) action Call(fieldLoc)
+            hotspot (576,351,328,180) action Call(fieldLoc)
             #Shed
-            hotspot(1106, 287, 120, 105) action Call(shedLoc)
+            hotspot (1348,613,98,128) action Call(shedLoc)
             #Garden
-            hotspot(1302, 183, 90, 167) action Call(gardenLoc)
+            hotspot (1146,315,305,268) action Call(gardenLoc)
         if map_floor == 1:
             #Study Hall
-            hotspot(838, 236, 245, 246) action Call(studyHallLoc)
+            hotspot (557,630,360,154) action Call(studyHallLoc)
+            #Classroom
+            hotspot (377,639,37,57) action Call(classroomLoc)
         if map_floor == 2:
             #Library
-            hotspot(606, 126, 169, 164) action Call(libraryLoc)
+            hotspot (238,375,191,264) action Call(libraryLoc)
             #Gym
-            hotspot(504, 296, 269, 218) action Call(gymLoc)
+            hotspot (236,638,193,211) action Call(gymLoc)
             #Lockerroom
-            hotspot(605, 523, 170, 111) action Call(lockerRoomLoc), SetVariable("quick_menu", True)
+            hotspot (234,849,195,57) action Call(lockerRoomLoc)
             #Cafeteria
-            hotspot(1217, 124, 215, 242) action Call(cafeteriaLoc), SetVariable("quick_menu", True)
+            hotspot (902,782,343,129) action Call(cafeteriaLoc)
             #Nurse
-            hotspot(1217, 373, 126, 145) action Call(nurseLoc), SetVariable("quick_menu", True)
+            hotspot (1172,613,73,171) action Call(nurseLoc)
             #Advisors
-            hotspot(1218, 523, 212, 115) action Call(advisorsLoc), SetVariable("quick_menu", True)
+            hotspot (936,418,174,160) action Call(advisorsLoc)
         if map_floor == 3:
+            #Common Room
+            hotspot (932,418,172,160) action Call(commonRoomLoc)
             #AzuraSeikoDorm
-            hotspot(779, 426, 42, 103) action Call(azuraSeikoLoc)
+            hotspot (1161,686,47,42) action Call(azuraSeikoLoc)
             #PlayerDorm
-            hotspot(1078, 429, 58, 96)action Call(playerDormLoc)
+            hotspot (1157,759,54,43) action Call(playerDormLoc)
 
     if map_floor == 0:
         if len(floor0_spots) != 0:
@@ -158,6 +167,30 @@ screen freeTime_minimap:
             for i in range(0, len(floor3_spots)):
                 $currentSpot = floor3_spots[i]
                 add "[currentSpot]" xalign 0.0 yalign 0.0
+
+    vbox:
+        style_prefix "btns"
+        xalign 0.97
+        yalign 0.8
+
+        textbutton "Dorms" action SetVariable("map_floor", 3)
+        null height 10
+        textbutton "Main Floor" action SetVariable("map_floor", 2)
+        null height 10
+        textbutton "Underground" action SetVariable("map_floor", 1)
+        null height 10
+        textbutton "Outside" action SetVariable("map_floor", 0)
+
+style btns_button:
+    xysize (355, 140)
+    background "gui/freetime/freetime_button_idle.png"
+    hover_background "gui/freetime/freetime_button_hover.png"
+
+style btns_button_text:
+    xalign 0.5
+    color "#FFFFFF"
+    font "fonts/Merriweather-Regular.otf"
+
 label moveUp:
     play sound "gui/sfx/smghover.wav"
     if map_floor != 3:

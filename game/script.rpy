@@ -18,9 +18,8 @@ label start:
     $ sam_name = "Blindfolded Student"
     $ air_name = "Bat Student"
 
-    #Show UI
-    show screen in_game_ui
-    show screen relationship_heart
+    #Stops main menu music with a fade
+    $renpy.music.stop(fadeout = 1.0)
 
     call storyTransition from _call_storyTransition
     with dissolve

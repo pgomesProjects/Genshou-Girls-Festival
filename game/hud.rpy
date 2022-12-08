@@ -1,8 +1,8 @@
 define rel_meter = 0
 
 #Max values for each end
-define AZURA_MAX = -1
-define SEIKO_MAX = 1
+define AZURA_MAX = -5
+define SEIKO_MAX = 5
 
 define AZURA_COLOR = Color((138,163,219))
 define SEIKO_COLOR = Color((241,217,152))
@@ -11,23 +11,28 @@ define prevColor = Color((255,255,255))
 define currentColor = Color((255,255,255))
 
 style day:
-    size 60
+    size 55
+
+style location:
+    size 22
 
 #Show UI
 screen in_game_ui:
-    fixed at slideIn(0.0, 0.3):
+    fixed:
         add "gui/ui/corner.png"
         vbox:
             xalign 0.01
             yalign 0.007
             $ dayUpper = day.upper()
+            $ print(day)
             text "[dayUpper]" style "day"
             null height 10
-            text "[time]"
-            null height 60
-            text "[location]"
+            text "[currentTime]"
+            null height 30
+            text "[location]" style "location"
 
 screen relationship_heart:
+    zorder 3
     add "gui/ui/relationship_heart.png" xalign 0.01 yalign 0.25 at changeHeart
 
 screen bestiary_popup(name):
@@ -92,7 +97,7 @@ label changeColor(changeValue):
 
     #Currently Azura Route
     elif rel_meter < 0:
-        $ currentColor = Color((255,255,255)).interpolate(AZURA_COLOR, rel_meter)
+        $ currentColor = Color((255,255,255)).interpolate(AZURA_COLOR, -rel_meter)
 
     #Current Seiko Route
     elif rel_meter > 0:

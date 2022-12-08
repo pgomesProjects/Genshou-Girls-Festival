@@ -1,8 +1,11 @@
 label ch2_main:
 
     scene bg playerdorm with dissolve
+    $ day = "Tuesday"
+    $ currentTime = "Daytime"
+    show screen in_game_ui
     play music "audio/couplen_starrynight.mp3" fadein 2.0
-    "My head is pounding as I start to wake up in my dorm."
+    "My head is pounding as I start to wake up."
     "I'm not used to waking up here, and it's already the first day of classes."
     "I don't remember much from yesterday, besides the few interactions with Seiko, Azura, and Yasuda."
     "Everyone here has quite a strong personality, something I'm gonna have to get used to."
@@ -42,6 +45,8 @@ label ch2_main:
     "Those must be our weekly schedules, judging how we only know about our first class for now."
     "I grab them off the floor and phase into the hallway, hoping to see if I can thank the messenger that sent these."
     scene bg hallways
+    $ location = "Hallways"
+    show screen in_game_ui
     "Instead, I see Seiko out in the distance with a little bit of messy hair, yawning."
     "I also see Azura on the ground, curled into a ball sleeping on the floor of the hallway."
     "From what I learned, Azura's never really had a bed before, so she just likes sleeping on the ground."
@@ -52,6 +57,8 @@ label ch2_main:
     "I watch Seiko go back into her room, giving a loud yawn."
     "I phase back into my dorm to give Yasuda her schedule."
     scene bg playerdorm with dissolve
+    $ location = "Dorm"
+    show screen in_game_ui
     show yasuda at middle
     "I open mine and skim through it, noticing I have math in the morning as I expected."
     "However, there seems to be descriptions of all of my classes, and they all seem to be pretty strange."
@@ -146,6 +153,8 @@ label ch2_main:
     "Azura parts ways with us as we head to math."
 
     scene bg hallways with dissolve
+    $ location = "Hallways"
+    show screen in_game_ui
     show seiko at middle
     s "Trust me, it won't be too bad!"
     s "I'm sure it'll be just fine since there isn't really anything to do on the first day!"
@@ -153,6 +162,8 @@ label ch2_main:
     "I see the math class coming closer to us. I feel my hands twitching."
     "Seiko touches my shoulder to comfort me as we enter."
     scene bg classroom with wipeleft_scene
+    $ location = "Underground Classroom"
+    show screen in_game_ui
     show seiko at middle
     "We sit down for class as we wait for the professor."
     "It was nice of her to join me at least."
@@ -188,6 +199,8 @@ label ch2_main:
 
 
     scene bg gym_int with wipeleft_scene
+    $ location = "Gym"
+    show screen in_game_ui
     "I see Yasuda's spiral black hair out in the distance looking lost."
     "I speed my walk up quickly to her. She notices me about halfway."
     show yasuda at middle
@@ -201,6 +214,8 @@ label ch2_main:
     "I walk with Yasuda inside the gym."
 
     scene bg lockerroom with wipeleft_scene
+    $ location = "Locker Rooms"
+    show screen in_game_ui
     show yasuda at middle
     "We head over to the locker rooms and take the stall all the way in the back."
     "Yasuda takes one and I take the other that are side by side."
@@ -223,6 +238,8 @@ label ch2_main:
     "Yasuda puts back on her smile as we walk out of the locker room together."
 
     scene bg gym_int with wipeleft_scene
+    $ location = "Gym"
+    show screen in_game_ui
     show yasuda at middle
     if met_helena_at_orientation == True:
         "As we walk out onto the gym floor, I see Helena in my class as well wearing a tank top with red shorts with thigh high socks."
@@ -287,6 +304,9 @@ label ch2_main:
                 renpy.show_screen("bestiary_popup", name="Helena Ivory")
 
     scene bg lockerroom with wipeleft_scene
+    $ currentTime = "Afternoon"
+    $ location = "Locker Rooms"
+    show screen in_game_ui
     show yasuda at middle
     "Yasuda and I get dressed in the locker room and prepare to head off."
     mc "What's next on your schedule, Yasuda?"
@@ -330,6 +350,9 @@ label ch2_main:
 
     play music "audio/everyoneisgoodfriend.mp3" fadein 2.0
     scene bg playerdorm with dissolve
+    $ currentTime = "Evening"
+    $ location = "Dorm"
+    show screen in_game_ui
     "Well, today's been a good day."
     "I managed to get my classes in order, got to hang out with my friends, all that good stuff."
     "I think I'll do fine here, as long as these classes don't get too hard."
@@ -348,7 +371,7 @@ label ch2_main:
     show seiko at sideLeft with dissolve
     show azura at sideRight with dissolve
     "Azura and Seiko enter the room."
-    #$yface = 'surprised'
+    $yface = 'surprised'
     show yasuda at middle, focus zorder 2
     y "Oh? Azura too?"
     y "What brings you both to our dorm?"
@@ -359,7 +382,7 @@ label ch2_main:
     show azura at focus zorder 2
     a "Me too."
     show azura at unfocus zorder 0
-    #$sface = 'happy'
+    $sface = 'happy'
     show seiko at focus zorder 2
     s "Yeah, her too! Heehee!"
     show seiko at unfocus zorder 0
@@ -371,7 +394,7 @@ label ch2_main:
     $yface = 'neutral'
     show yasuda at focus zorder 2
     y "Indeed. You plan to sign up?"
-    #$sface = 'happy'
+    $sface = 'happy'
     show yasuda at unfocus zorder 0
     show seiko at focus zorder 2
     s "Not {i}plan{/i}!"
@@ -385,7 +408,7 @@ label ch2_main:
     show azura at unfocus zorder 0
     show yasuda at focus zorder 2
     y "I see."
-    #$yface = 'happy'
+    $yface = 'happy'
     show yasuda
     mc "That's good news for both of you. Congrats."
     $sface = 'neutral'
@@ -393,7 +416,7 @@ label ch2_main:
     show seiko at focus zorder 2
     s "Wait a second!"
     s "Before we're done here, I wanna ask you both somethin'! You and Yasuda!"
-    #$yface = 'surprised'
+    $yface = 'surprised'
     show seiko at unfocus zorder 0
     show yasuda at focus zorder 2
     y "Me?"
@@ -414,7 +437,7 @@ label ch2_main:
     show yasuda at unfocus zorder 0
     show seiko at focus zorder 2
     s "Yup yup! Unlike Azura, I have the opposite problem!"
-    #$sface = 'happy'
+    $sface = 'happy'
     show seiko
     s "I have too many ideas to choose from! Heehee!"
     s "So, what do you think we should do about this?"
@@ -423,7 +446,7 @@ label ch2_main:
     "As long as I'm not a part of their acts, I'd be perfectly fine with helping them do their thing for sure."
     mc "How about we all meet somewhere formally to talk about this tomorrow?"
     mc "Maybe a classroom or something."
-    #$yface = 'happy'
+    $yface = 'happy'
     show yasuda at focus zorder 2
     y "Ah, that sounds like a splendid idea."
     $yface = 'neutral'
@@ -452,15 +475,15 @@ label ch2_main:
     s "Great! It's a date then!"
     s "Me, Azura, [player], and Yasuda!"
     s "Let's meet in the cafeteria tomorrow morning, then we'll go and ask for a room together!"
-    #$yface = 'surprised'
+    $yface = 'surprised'
     show seiko at unfocus zorder 0
     show yasuda at focus zorder 2
     y "Eh? Me as well?"
-    #$yface = 'blush'
+    $yface = 'blush'
     show yasuda
     y "I am not one for creative activity."
     y "I apologize, I would just be a burden to the team."
-    #$sface = 'happy'
+    $sface = 'happy'
     show yasuda at unfocus zorder 0
     show seiko at focus zorder 2
     s "Nonsense! I think you'll be great!"

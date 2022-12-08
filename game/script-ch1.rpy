@@ -1,6 +1,8 @@
 label ch1_main:
 
     scene bg bus with dissolve
+    $ location = "Bus"
+    show screen in_game_ui
     "I ignore the other passengers, as my head is spinning around with thoughts as per usual."
     "I feel so overwhelmed that my brain might just melt in my head and become some liquidy mess."
     "What do I do?"
@@ -24,6 +26,8 @@ label ch1_main:
     "Instead of waiting for the bus like I had planned, I just phase through the side of it, making sure to land on the ground gracefully instead of making a fool out of myself."
 
     scene bg outside with dissolve
+    $ location = "Outside"
+    show screen in_game_ui
     "I look around at all of the signs, trying to find the one with my first name."
     "After looking through the sea of writing, I stumble across it in big letters."
     "Guess I'm in the right place, after all."
@@ -36,10 +40,10 @@ label ch1_main:
     mc "Uh...hi, I'm [player]?"
     "He looked at me with a small smile. Maybe one of pity?"
     om "Welcome! You must be one of our newest students, come follow me!"
-    om "My name is Mr. Furukawa, the principal at this here academy. A pleasure."
-    "Wait, the principal!?"
+    om "My name is Mr. Furukawa, the president at this here academy. A pleasure."
+    "Wait, the president!?"
     "Why is he my assistant!?"
-    "Don't they have enough staff for that?"
+    "Don't they have enough staff for this thing?"
     "I reach out to shake his hand, hoping to not mess up in front of the person that literally runs the place."
     "While he gives my hand a firm grip, I end up doing one of those limp fish handshakes in return."
     "Sure nailed {i}that{/i} one."
@@ -59,26 +63,29 @@ label ch1_main:
     om "The reason why is that we try to protect our outstanding students from those in society who aren't all that welcome with the supernatural."
     om "Therefore, our students stay here until they have mastered their powers and can show that we can live in harmony with the Normals."
     "I follow him slowly, staying behind him trying to look around and take in the elaborate and quite expensive scenery all around me."
+    scene bg hallways with dissolve
+    $ location = "Hallways"
+    show screen in_game_ui
     "I get the feeling of butterflies in my stomach."
     "Thoughts start racing in my head again."
-    "What if my roommate doesn't like me? I'm sure to get a roommate. "
+    "I'm sure I'' be getting have a roommate. What if they don't like me?"
     "But hey, at least it's the all girls section so I don't have to deal with brutes screaming down the hallway or something."
     "The thought of that makes me relieved."
-    "Boys at my old school would always pick on me for 'switching teams'."
+    "Boys at my old school would always pick on me for \"switching teams\"."
     "There were a lot of homophobes at that school."
     "I'm just happy I'm somewhere I belong, or should belong at least."
     "I keep following the nice man, realizing I was lost in thought."
     "I should probably be listening to him, shouldn't I?"
-    "I got out of the clouds for a second to realize he stopped talking. I blush softly in embarrassment."
+    "I got out of the clouds for a second to realize he stopped talking. I blush from embarrassment."
     "I didn't hear a single word of what he just said."
     mc "Yeah uh, can you repeat that? Didn't get the last part."
     "He smirks patiently and begins to explain it again to my jumbled mind."
     om "Of course, [player]. I was just going over our living facility."
-    om "Your dorm is to the right. Two doors up is the bathroom. Common area is on the second floor."
+    om "Your dorm is to the right. Back where you came is the bathrooms and across from there is the common area."
     om "Your roommate should be in there already, eager to meet you."
     om "I hope you enjoy your time here at our academy."
     om "And I surely hope you will attend the orientation ceremony at the courtyard in an hour."
-    "I nod in his direction as he departs to work on whatever else principals do."
+    "I nod in his direction as he departs to work on whatever else academy presidents do."
     "I sigh, since I don't have to keep forcing myself to act proper."
 
     "Which leaves me with my dorm and...my new roommate."
@@ -96,6 +103,8 @@ label ch1_main:
     "I phase through the door."
 
     #call showCg from _call_showCg_2
+    $ location = "Dorm"
+    show screen in_game_ui
     "I see my roommate sitting on the bed."
     y "Hello there."
     "A girl wearing a lolita outfit looks towards me."
@@ -111,7 +120,7 @@ label ch1_main:
 
     $y_name = "Roommate"
     y "I hope you like the room, I organized everything alphabetically and cleaned our closet, as well as organizing our halves of the room."
-    #$yface = 'blush'
+    $yface = 'blush'
     show yasuda
     y "I'm sort of a clean freak, if you do not mind that."
     "A clean freak though?"
@@ -119,7 +128,7 @@ label ch1_main:
     "My butterflies went away at this point as I set my bag down in the middle of the floor."
     mc "That's fine. What's your name again?"
 
-    #$yface = 'surprised'
+    $yface = 'surprised'
     show yasuda at bounce
     y "Oh my goodness, I totally forgot!"
     $y_name = "Yasuda"
@@ -130,7 +139,7 @@ label ch1_main:
     "However, when I look back up, Yasuda seems to be staring at my backpack like it committed arson."
     "She seems to be itching to move my bag, but is holding herself from doing so."
     mc "Erm...would you like me to move my bag? You look uncomfortable."
-    #$yface = 'surprised'
+    $yface = 'surprised'
     show yasuda
     y "I apologize, did that offend you?"
     y "I just really like a clean room. It refreshes the mind."
@@ -143,7 +152,7 @@ label ch1_main:
     y "I like gardening, tea, and reading a good book over candle light."
     mc "...cool, but what's your power?"
     "Yasuda looks at me a bit hesitantly."
-    #$yface = 'blush'
+    $yface = 'blush'
     show yasuda
     y "Well..."
     y "I do not have one, really. I'm sorry."
@@ -167,7 +176,7 @@ label ch1_main:
     mc "I uh...phase through stuff, I guess."
     mc "Like, anything. If I wanted to."
     "Yasuda claps her hands together."
-    #$yface = 'happy'
+    $yface = 'happy'
     show yasuda
     y "Ah, that's a splendid ability!"
     y "So that explains the phenomenon I saw as you entered our room."
@@ -176,7 +185,7 @@ label ch1_main:
     y "I must warn you for the future that if you are to phase through the door, continue to knock beforehand."
     mc "Yeah, of course."
     mc "I'm not a peeping tom or anything."
-    #$yface = 'happy'
+    $yface = 'happy'
     show yasuda
     y "I would certainly hope not."
     "Yasuda giggles to herself."
@@ -199,7 +208,7 @@ label ch1_main:
 
     call storyTransition from _call_storyTransition_4
 
-    #$yface = 'surprised'
+    $yface = 'surprised'
     show yasuda
     y "Oh! And before I forget, what do you think of the school?"
     mc "The school? Haven't really seen much of it other than the outside and a few hallways."
@@ -210,7 +219,7 @@ label ch1_main:
     "I probably should, shouldn't I?"
     "I'd feel kinda dumb if I had trouble getting there in the first place."
     mc "I'll go do that. You do the same."
-    #$yface = 'happy'
+    $yface = 'happy'
     show yasuda
     y "Certainly. I will quickly tidy up the room and depart on my own."
     "But...the place is already as clean as I could imagine it to be."
@@ -220,6 +229,8 @@ label ch1_main:
     $yface = 'neutral'
 
     scene bg hallways with dissolve
+    $ location = "Hallways"
+    show screen in_game_ui
     stop music fadeout 2.0
 
     "The hallways here are pretty wide."
@@ -245,7 +256,7 @@ label ch1_main:
             "She's not doing any harm, I hope."
             "She sniffs me for a solid minute before backing off."
 
-            call changeColor(-0.1)
+            call changeColor(-0.5)
             #hide cg with dissolve
             show azura at middle
             a "Hello. I like your smell."
@@ -261,7 +272,7 @@ label ch1_main:
             "The blue girl immediately stops and backs away, however she looks pretty sad."
             "I kind of feel bad now, but she invaded my personal space."
 
-            call changeColor(0.1)
+            call changeColor(0.5)
             #hide cg with dissolve
             show azura
 
@@ -295,7 +306,7 @@ label ch1_main:
     "It's really jarring, unsettling even."
     mc "Are you okay?"
     a "Yes. Yes."
-    #$aface = 'surprised'
+    $aface = 'surprised'
     show azura
     a "Are you new? I'm new too."
     mc "Yeah, I just got here not long ago."
@@ -317,7 +328,7 @@ label ch1_main:
     mc "So uh, what makes you special?"
     a "I'm blue."
     mc "Mhm. I see."
-    #$aface = 'excited'
+    $aface = 'excited'
     show azura
     a "They say I smell better than other people."
     mc "I've noticed. Do you smell everyone you meet?"
@@ -347,7 +358,7 @@ label ch1_main:
     a "I looked at the campus already."
     a "Can I show you?"
     mc "Um, sure."
-    #$aface = 'excited'
+    $aface = 'excited'
     show azura at bounce
     a "Yey~"
     show azura at hug
@@ -366,6 +377,8 @@ label ch1_main:
     "The place is really fancy all around, and there's a lot of unique faces."
 
     scene bg courtyard
+    $ location = "Courtyard"
+    show screen in_game_ui
 
     "We reach the courtyard, which seems to have one of those stages in the middle that looks like it was set up for the occasion."
     "There's a few groups of people here already, sitting on benches or just forming their own clusters."
@@ -375,14 +388,19 @@ label ch1_main:
     "We move onto more areas. Azura practically drags me everywhere."
 
     scene bg classroom
+    $ location = "Classroom"
+    show screen in_game_ui
     a "...this is class. We learn things here."
 
     scene bg cafeteria
+    $ location = "Cafeteria"
+    show screen in_game_ui
     a "...there is food here. They gave me some earlier."
     a "They were very nice."
 
     scene bg gym_int with dissolve
-
+    $ location = "Gym"
+    show screen in_game_ui
     a "...and um, this is the place to get stronger."
 
     show azura at jumping
@@ -400,7 +418,7 @@ label ch1_main:
     "However, this is the perfect scenario for weirdos like me."
     mc "It's alright. I'll go unlock it."
     mc "I can phase through walls, so I can just open it, probably."
-    #$aface = 'surprised'
+    $aface = 'surprised'
     show azura
     a "Ooooooooooh."
     "She looks at me, but from her eyes it's clear she didn't understand what I said."
@@ -417,6 +435,8 @@ label ch1_main:
     "I forgot locker rooms usually have lockers, so I unphase too quickly."
     mc "Fu-"
     play sound "audio/sfx/locker_thud.wav"
+    $ location = "???"
+    show screen in_game_ui
     "{i}THUD!{/i}"
     "I hit my head on the interior of a locker door."
     "Hey, at least I know I can fit in one of these lockers."
@@ -462,6 +482,8 @@ label ch1_main:
     #hide cg with dissolve
 
     scene bg lockerroom
+    $ location = "Locker Rooms"
+    show screen in_game_ui
     "I feel her wrap around me as she helps me out of my predicament."
     "Urgh...I'm being touched again... I feel uncomfortable."
     "Four arms wrapping around me, this feels WAYYYY too weird for me."
@@ -473,7 +495,7 @@ label ch1_main:
     show azura at running
     "I barely get to open the door as Azura rushes in and goes straight to the stalls."
     "Seiko laughs softly, seeing Azura's goofy run."
-    #$sface = 'happy'
+    $sface = 'happy'
     show seiko zorder 2
     s "S'that your friend? She's such a cuuuuuuuuuuuutie patootie! Heehee!"
     "I cover my ears as she screams once more."
@@ -485,6 +507,7 @@ label ch1_main:
     show azura at focus
     a "I heard a scream. Are you okay?"
     show azura at unfocus
+    $sface = 'scream'
     show seiko at focus
     s "YUUUUUUUUP!"
     show seiko at unfocus
@@ -515,7 +538,7 @@ label ch1_main:
     "Seiko retorts by petting Azura on the head."
     "I guess that seems fitting for her."
     "They seem to like each others company, well that's good at least."
-    #$sface = 'happy'
+    $sface = 'happy'
     show seiko at focus
     s "You are the cutest thing ever!"
     s "You remind me of a big puppy! Heehee!"
@@ -541,13 +564,17 @@ label ch1_main:
     "Azura and I nod as Seiko grabs our hands."
 
     scene bg gym_int with dissolve
-    #$sface = 'happy'
+    $ location = "Gym"
+    show screen in_game_ui
+    $sface = 'happy'
     show seiko at middle with dissolve
     "Her hands are really soft, and I just noticed she has a little bit of fancy perfume on."
     "Seiko uses her free hands to open the door for us."
     $sface = 'neutral'
 
-    scene bg field with dissolve
+    scene bg courtyard with dissolve
+    $ location = "Courtyard"
+    show screen in_game_ui
 
     "We spent a longer time inside that locker room than I thought."
     show seiko at sideLeft with dissolve
@@ -570,7 +597,7 @@ label ch1_main:
     show yasuda at unfocus  zorder 0
     mc "Heya."
     "Seiko immediately eyes the anomaly that presented itself."
-    #$sface = 'flirty'
+    $sface = 'flirty'
     show seiko at focus zorder 2
     s "Who's the goth chick?"
     $sface = 'neutral'
@@ -580,7 +607,7 @@ label ch1_main:
     y "A pleasure to meet you, Miss. Is this a new friend?"
     show yasuda at unfocus  zorder 0
     mc "Yeah, not by choice, but yeah."
-    #$sface = 'happy'
+    $sface = 'happy'
     show seiko at focus zorder 2
     s "It was meant to be!"
     s "DESTINYYYY!"
@@ -590,7 +617,7 @@ label ch1_main:
     show yasuda at unfocus zorder 0
     show azura at easeInmiddle zorder 2
     "In the time it takes for Yasuda to meet Seiko, Azura's already done her thing and approached Yasuda with the intent to sniff."
-    #$yface = 'surprised'
+    $yface = 'surprised'
     show yasuda at focus zorder 2
     y "Oh!-"
     "Yasuda goes stiff, raising her hands to let Azura do her thing."
@@ -601,7 +628,7 @@ label ch1_main:
     a "Hello."
     show azura at unfocus zorder 0
     mc "That's Azura. She likes to sniff people."
-    #$yface = 'blush'
+    $yface = 'blush'
     show yasuda at focus zorder 2
     y "Ah. Well, it is nice to meet you too."
     show yasuda at unfocus zorder 0
@@ -616,7 +643,7 @@ label ch1_main:
     y "Yes. This event is meant for socialization, no?"
     show yasuda at unfocus zorder 0
     mc "Oh yeah. Probably should do that."
-    scene bg field with dissolve
+    scene bg courtyard with dissolve
     "But do I really wanna?"
     "Two people is enough, three including Yasuda."
     "Do I really wanna go for more?"
@@ -635,19 +662,21 @@ label ch1_main:
 
             call meet_hide from _call_meet_hide
 
-    scene bg field with wipeleft_scene
+    scene bg courtyard with wipeleft_scene
+    $ currentTime = "Afternoon"
+    show screen in_game_ui
     "The time flies by, feels like hours turned into minutes."
     "I hear speakers shot out some feedback, then a loud boom."
     "Seems like there's a whole set up for this meet and greet that I wasn't even aware of."
-    "I look over and see the principal once again."
+    "I look over and see the president once again."
     "I hear his loud voice echo from the speakers."
     om "Good Afternoon students; newcomers and returning."
-    om "Welcome! I am the head of administration, Principal Furukawa."
+    om "Welcome! I am the head of administration, President Furukawa."
     om "I know you all are excited for the new year, but first we gotta do the boring stuff."
     om "What to expect for the upcoming year ahead of us."
     om " First off, I hope you all enjoy your new roommates."
     om "If you have an issue with yours, please come to the front office and we can discuss it privately and anonymously."
-    "The Principal goes on about the technical stuff, school manuals, blah blah blah."
+    "The President goes on about the technical stuff, school manuals, blah blah blah."
     "I kinda doze off during some parts, but at least he doesn't seem like a complete buzzkill."
     om "...another matter I would like to address is, of course, the one beginning of the year event everyone looks forward to."
     "Hm, maybe he's going to talk about the festival? Mom mentioned it to me."
@@ -665,7 +694,7 @@ label ch1_main:
     om "We know that these are exciting times and happily encourage anyone to apply for these events!"
     om "We get unique talents every year, so we hope to see some exciting abilities from the student body."
     om "And onto other topics-"
-    "As the Principal keeps talking, I start to zone out again."
+    "As the President keeps talking, I start to zone out again."
     "Trying to figure out what I should do."
     "Do I even want to go for the festival?"
     "I still have time to think about it, but I immediately think back to my high school proms and formal events of the like."
@@ -673,20 +702,20 @@ label ch1_main:
     "My palms start to sweat thinking about it."
     om "Enjoy the rest of your day, everyone."
     om "Classes start the day after tomorrow, so spend it wisely getting prepared."
-    "The principal seemingly disappears as he finishes his speech."
+    "The president seemingly disappears as he finishes his speech."
     $sface = 'neutral'
     show seiko at sideLeft with dissolve
     show yasuda at middle with dissolve
     show azura at sideRight with dissolve
     "I see the trio walking over to me, smiling."
     "Well, except for Azura, she has that permanent sad face."
-    #$sface = 'happy'
+    $sface = 'happy'
     show seiko at focus, bounce zorder 2
     s "I have like a bajillion ideas for that talent show thing!"
     s "I'm super duper HYYYYPEEEED!"
     show seiko at unfocus zorder 0
     "Azura looks confused, but doesn't say anything."
-    #$yface = 'blush'
+    $yface = 'blush'
     show yasuda
     "Yasuda seems apprehensive."
     mc "I'm looking forward to it, too."
@@ -697,15 +726,17 @@ label ch1_main:
     "Yasuda nods and leads the way, but Seiko and Azura tag along."
 
     scene bg hallways with dissolve
+    $ location = "Hallways"
+    show screen in_game_ui
     "We make it to the dorms."
     "Azura and Seiko search for their dorms, but we quickly find out that the two are roommates."
     "Well hey, guess things happen for a reason."
-    #$sface = 'happy'
+    $sface = 'happy'
     show seiko at sideLeft, focus zorder 2
     s "More pets for my big ol' blue friend!"
     "Azura lets out a slow, but loud laugh."
     show seiko at unfocus zorder 0
-    #$aface = 'excited'
+    $aface = 'excited'
     show azura at slightLeft, focus zorder 2
     a "A-hee-hee-hee."
     show azura at unfocus zorder 0
@@ -715,13 +746,15 @@ label ch1_main:
     "Yasuda and I go into our dorm."
 
     scene bg playerdorm with dissolve
+    $ location = "Dorm"
+    show screen in_game_ui
 
     "I throw myself on my bed."
     "What a day."
     "Got introduced to a weird school and a weird cast of people to boot."
 
     if(rel_meter == 0):
-        #$yface = 'happy'
+        $yface = 'happy'
         show yasuda with dissolve
         y "Well, I am glad that you have gotten a good start to your school career."
         $yface = 'neutral'
@@ -781,7 +814,7 @@ label meet_socialize:
     mc "Yeah, guess so. Good job."
     "Helena and I talk for a while."
     "In the meantime, I see Seiko in the distance basically trying to woo over the ladies."
-    call changeColor(0.1)
+    call changeColor(0.5)
     "Guess she's having fun too."
 
     python:
@@ -797,7 +830,7 @@ label meet_group:
     scene bg field with dissolve
     show yasuda at middle with dissolve
     "I'm just gonna stay here with Yasuda and catch up on some things."
-    #$yface = 'surprised'
+    $yface = 'surprised'
     show yasuda
     y "You are not going to socialize?"
     mc "Nah, I'm not really a social butterfly."
@@ -809,7 +842,7 @@ label meet_group:
     mc "Sure. It's a little weird, but I guess it's interesting enough."
     "I tell Yasuda all about Azura's little tour and our escapades in the gym locker room."
     "She seems to listen with an open ear, which is nice."
-    #$yface = 'happy'
+    $yface = 'happy'
     show yasuda
     y "Well, they certainly are quite colorful in personality."
     mc "Yeah, I guess so."
@@ -819,7 +852,7 @@ label meet_group:
     "That, or just listen for anyone screaming from her trying to sniff them."
     y "I would not worry. She seems to love finding new people."
     mc "How about you? Did you want to go meet new people?"
-    #$yface = 'blush'
+    $yface = 'blush'
     show yasuda at bounce
     y "Eh? Me?"
     y "Ah, I am...quite the shy woman, I must say."
@@ -859,7 +892,7 @@ label meet_hide:
     scene bg field with dissolve
     show azura at middle, closeup zorder 5
     "I open my eyes to see Azura sitting right in front of me, staring me down."
-    #$sface = 'happy'
+    $sface = 'happy'
     show seiko at sideLeft, focus zorder 2
     s "Got ya!"
     show seiko at unfocus zorder 0
@@ -869,10 +902,10 @@ label meet_hide:
     show seiko at focus zorder 2
     s "Good girl!"
     show seiko at unfocus zorder 0
-    #$aface = 'excited'
+    $aface = 'excited'
     show azura
     "Azura practically melts in Seiko's hands, laying on her back, seemingly excited."
-    call changeColor(-0.1)
+    call changeColor(-0.5)
     show azura at focus zorder 2
     a "I did it."
     "After Azura's second pet session of the day, the two weirdos drag me back into the circle and attempt to get me to socialize with strangers."
