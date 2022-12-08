@@ -54,6 +54,8 @@ define gui.interface_text_color = '#FFFFFF'
 
 ## Fonts and Font Sizes ########################################################
 
+define gui.default_font = "fonts/Merriweather-Regular.otf"
+
 ## The font used for in-game text.
 define gui.text_font = "fonts/Merriweather-Regular.otf"
 

@@ -1,34 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 27, in script call
-    call ch0_main from _call_ch0_main
-  File "game/script-ch0.rpy", line 8, in script
-    $ ChangeTime("Daytime")
-  File "game/script-ch0.rpy", line 8, in <module>
-    $ ChangeTime("Daytime")
-  File "game/hud.rpy", line 36, in ChangeTime
-    currentTime = newTime
-NameError: name 'newTime' is not defined
+  File "renpy/common/00start.rpy", line 240, in script call
+    call _splashscreen from _call_splashscreen_1
+  File "game/splashscreen.rpy", line 19, in script
+    show splash_warning "[splash_message]" with Dissolve(max(0, 4.0 - (datetime.datetime.now() - starttime).total_seconds()), alpha=True)
+  File "game/splashscreen.rpy", line 19, in <module>
+    show splash_warning "[splash_message]" with Dissolve(max(0, 4.0 - (datetime.datetime.now() - starttime).total_seconds()), alpha=True)
+NameError: name 'datetime' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 27, in script call
-    call ch0_main from _call_ch0_main
-  File "game/script-ch0.rpy", line 8, in script
-    $ ChangeTime("Daytime")
-  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/script-ch0.rpy", line 8, in <module>
-    $ ChangeTime("Daytime")
-  File "game/hud.rpy", line 36, in ChangeTime
-    currentTime = newTime
-NameError: name 'newTime' is not defined
+  File "renpy/common/00start.rpy", line 240, in script call
+    call _splashscreen from _call_splashscreen_1
+  File "game/splashscreen.rpy", line 19, in script
+    show splash_warning "[splash_message]" with Dissolve(max(0, 4.0 - (datetime.datetime.now() - starttime).total_seconds()), alpha=True)
+  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\ast.py", line 1654, in execute
+    paired = renpy.python.py_eval(self.paired)
+  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Program Files (x86)\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/splashscreen.rpy", line 19, in <module>
+    show splash_warning "[splash_message]" with Dissolve(max(0, 4.0 - (datetime.datetime.now() - starttime).total_seconds()), alpha=True)
+NameError: name 'datetime' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 Genshou Girls Festival 1.0
-Thu Dec  8 02:19:37 2022
+Thu Dec  8 18:07:23 2022

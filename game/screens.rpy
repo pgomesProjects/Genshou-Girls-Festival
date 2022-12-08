@@ -21,6 +21,13 @@ style hyperlink_text:
     properties gui.text_properties("hyperlink", accent=True)
     hover_underline True
 
+style splash_text:
+    size 50
+    color "#000"
+    font gui.default_font
+    text_align 0.5
+    outlines []
+
 style gui_text:
     properties gui.text_properties("interface")
 
@@ -366,6 +373,8 @@ screen main_menu():
     tag menu
 
     add gui.main_menu_background
+    add "gui/main_menu/yasuda_portrait.png" xalign 1.0 yalign 0.0
+    add "gui/main_menu/logo.png" xalign 1.0 yalign 0.0
 
     ## This empty frame darkens the main menu.
     frame:
@@ -380,10 +389,7 @@ screen main_menu():
         vbox:
             style "main_menu_vbox"
 
-            text "[config.name!t]":
-                style "main_menu_title"
-
-            text "[config.version]":
+            text "{color=#000000}[config.version]{/color}":
                 style "main_menu_version"
 
 
