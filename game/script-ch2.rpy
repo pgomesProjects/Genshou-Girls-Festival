@@ -235,7 +235,7 @@ label ch2_main:
     "I see the math class coming closer to us. I feel my hands twitching."
     "Seiko touches my shoulder to comfort me as we enter."
     scene bg classroom with wipeleft_scene
-    $ location = "Underground Classroom"
+    $ location = "Classroom"
     show screen in_game_ui
     show seiko at middle
     "We sit down for class as we wait for the professor."

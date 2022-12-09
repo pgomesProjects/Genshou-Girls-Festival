@@ -37,7 +37,31 @@ define chr = DynamicCharacter('chr_name', what_prefix='"', what_suffix='"', ctc=
 define chr_bestiary = Mon.Monster('placeholder_portrait.png', 'Christine Windsor', 'Professional Oracle', 'Her ability allows her to see up to 15 minutes into the future. As a kid, she used this power for money and ended up becoming very successful from it. As a very recent graduate from H.U.D.A., she decided to dedicate her time as a part-time advisor for the academy and a full-time therapist outside of that.')
 
 ##Backgrounds
+image bg room = "bgs/bg room.png"
+image bg kitchen = "bgs/bg kitchen.png"
+image bg door = "bgs/bg door.png"
+image bg bus = "bgs/bg bus.png"
+image bg outside = "bgs/bg outside.png"
+image bg courtyard = "bgs/bg courtyard.png"
+
 image bg playerdorm = "bgs/bg playerdorm.png"
+image bg hallways = "bgs/bg hallways.png"
+image bg commonroom = "bgs/bg commonroom.png"
+
+image bg library = "bgs/bg library.png"
+image bg advisors = "bgs/bg advisors.png"
+image bg nurse = "bgs/bg nurse.png"
+image bg cafeteria = "bgs/bg cafeteria.png"
+image bg gym_int = "bgs/bg gym_int.png"
+image bg lockerroom = "bgs/bg lockerroom.png"
+
+image bg garden = "bgs/bg garden.png"
+image bg shed = "bgs/bg shed.png"
+image bg field = "bgs/bg field.png"
+image bg pond = "bgs/bg pond.png"
+
+image bg classroom = "bgs/bg classroom.png"
+image bg studyhall = "bgs/bg studyhall.png"
 
 ##Freetime Variables
 image tutorial_floor = "gui/freetime/tutorial_floor.png"
