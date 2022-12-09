@@ -51,6 +51,7 @@ label ch2_main:
     "I also see Azura on the ground, curled into a ball sleeping on the floor of the hallway."
     "From what I learned, Azura's never really had a bed before, so she just likes sleeping on the ground."
     "I wave at the four-armed gremlin and her blue companion."
+    $ sface = "flirty"
     show seiko at sideLeft with dissolve
     s "Mornin', cutie!"
     mc "Good morning, Seiko."
@@ -82,72 +83,144 @@ label ch2_main:
     "Without her big outfit, her frame is thinner than I thought. Concerningly so."
     "...how many parts are there to her dress anyways!?"
     mc "You're uh...not going to the bathroom to get dressed?"
+    $ yface = "surprised"
+    show yasuda
     y "Why would I?"
     y "It is much more convenient to get dressed here, is it not?"
     mc "Yeah, but, shouldn't you warn me before you get into your underwear?"
+    $ yface = "blush"
+    show yasuda
     y "Ah, my apologies. I did not think you would have a problem seeing me immodest."
-    mc "I don't have a problem with it."
+    mc "I-I don't have a problem with it."
     mc "I'd just...rather have a warning first that you're gonna get naked."
     y "I understand. Again, I am sorry for assuming."
+    $ yface = "neutral"
+    show yasuda
     "I chuckle softly to myself but finish trying to do something to my hair."
     "I settled on long pigtails for now. When my hair dries more it'll look better at least."
     play sound "audio/sfx/knock_01.wav"
     "I hear a knock on our door once more and I come face-to-face with a livelier Seiko and an awakened Azura."
+    $ sface = "neutral"
+    $ aface = "neutral"
     show seiko at sideLeft
     show azura at sideRight
+    show azura at focus zorder 2
     a "Hello. Good morning."
     "I smile at the two of them as they come in bantering about what classes we all have."
+    show azura at unfocus zorder 0
+    $ sface = "happy"
+    show seiko at focus zorder 2
     s "I got a looooot of classes that I'm really excited for!"
+    $ sface = "neutral"
+    show seiko
     s "We have math together, right, [player]?"
+    show seiko at unfocus zorder 0
     "I groan in my head. I've never been one for math."
+    show seiko at focus zorder 2
     s " Now that I'm more awake, are you ready to have claaaaaaaaaaaaaasssssssssses??"
+    show seiko at unfocus zorder 0
     mc "I guess, just not math."
+    show azura at focus zorder 2
     a "I like math."
+    show azura at unfocus zorder 0
     mc "Really? Didn't think you were a math person."
+    show yasuda at focus zorder 2
     y "I would assume the same, Azura."
+    show yasuda at unfocus zorder 0
+    show azura at focus zorder 2
     a "Yes. Yes I love math."
     a "I'm learning d..."
     a "...division. Yes."
     a "I'm really good with my mullipullation."
+    show azura at unfocus zorder 0
+    $ yface = "blush"
+    show yasuda at focus zorder 2
     y "You mean {i}multiplication{/i}?"
+    show yasuda at unfocus zorder 0
+    show azura at focus zorder 2
     a "Yes. Yes. Multiplication."
+    $ yface = "neutral"
+    show yasuda
+    show azura at unfocus zorder 0
+    show seiko at focus zorder 2
     s "Well, we're gonna test you on that eventually, Azura!"
     s "Be prepared for the test of a lifetime!"
+    show seiko at unfocus zorder 0
+    $ aface = "excited"
+    show azura at focus zorder 2
     a "Yey~"
+    show azura at unfocus zorder 0
+    show azura at jumping
     "Azura jumps up and down excitedly."
     "Seems she pretty enthusiastic about learning."
+    show azura
+    show yasuda at focus zorder 2
     y "What classes do you have, Seiko?"
+    show yasuda at unfocus zorder 0
+    show seiko at focus zorder 2
     s "So, because I'm reeeeally good at music, I have some music classes that I'm gonna be taking just to make sure I stay on that track!"
     s "Also, I got this weird gym thing called Supernatural Gym 101! I think they put me in the wrong class!"
+    show seiko at unfocus zorder 0
     mc "Well, you have four arms, sooooo..."
+    show seiko at focus zorder 2
     s "Fair enough!"
+    $ sface = "happy"
+    show seiko
     s "Maybe they think I'm sooo strong, that Normal Gym will crumble to the ground from my sheer awesomeness!"
+    $ sface = "flirty"
+    show seiko
     s "And then all of the ladies would be wooing over me thinking I'm so cool for being so strong and sexy!"
+    show seiko at unfocus zorder 0
     mc "...no. That wouldn't happen. Not even close."
+    show seiko at focus zorder 2
     s "Well, you don't know that for sure!"
+    show seiko at unfocus zorder 0
+    show yasuda at focus zorder 2
     y "I believe that having four arms gives you an unfair advantage over us."
     y "I do not think it is based on strength."
+    show yasuda at unfocus zorder 0
     mc "Yeah, you're a little gremlin."
+    $ sface = "happy"
+    show seiko at focus zorder 2
     s "Heehee! A cute lil gremlin!"
+    show seiko at unfocus zorder 0
+    $ aface = "neutral"
+    show azura
     "Seiko gives a toothy grin, while Azura is studying her schedule intensely."
     mc "How about you Azura? What do you have?"
+    show azura at focus zorder 2
     a "Oh. Yes. After the division class, I have swimming class."
     a "And then, I have fish class tomorrow."
     a "After that day, I have...Art and mc...Puhsyechology.."
+    show azura at unfocus zorder 0
     mc "Psychology. I think I have those classes with you."
+    show azura at focus zorder 2
     a "Oh. Yey~"
+    show azura at unfocus zorder 0
     "Azura claps, and then continues on reading."
+    show azura at focus zorder 2
     a "And then on Friday, I have...Writing class."
-    "Seiko suddenly grabs my arm."
+    show azura at unfocus zorder 0
+    "After Azura finishes reading off her schedule, Seiko suddenly grabs my arm."
+    $ sface = "neutral"
+    show seiko at focus zorder 2
     s "Are ya ready, math pardner?"
+    show seiko at unfocus zorder 0
     "I feel my hands get clammy quick."
+    show yasuda at focus zorder 2
     y "If that is the case, I will see you all later."
+    $ yface = "happy"
+    show yasuda
     y "Good luck with classes today. Pip pip!"
+    show yasuda at unfocus zorder 0
     hide yasuda with dissolve
+    $ yface = "neutral"
     "Yasuda walks out with a nod, her back stiff and straight."
     "{i}'Pip pip'{/i}?"
     "That's new. Kinda cute, though."
+    show azura at focus zorder 2
     a "Bye."
+    show azura at unfocus zorder 0
     hide azura with dissolve
     "Azura gives Seiko and I a hug, and Seiko gives her some head pats in return."
     "Azura parts ways with us as we head to math."
@@ -257,6 +330,8 @@ label ch2_main:
         mc "Sorry, This is Helena."
         mc "I met her during orientation."
         hl "Heya... Goth Chica!"
+        $ yface = "blush"
+        show yasuda
         y "Yasuda is fine."
         hl "Nah! Goth Chica fits more!"
         "Yasuda pouts a little bit, but her eyes show she's very not comfortable around her."
@@ -265,7 +340,9 @@ label ch2_main:
         hl " Aight, since it's your first fuckin' class, it's mainly introduction of all you students."
         hl "The next class which is next week will be when we start teachin' you the basics."
         y " I would imagine you will be there the whole time."
-        "Helena could feel that smart remark even though Yasuda said it with a little bit of attitude."
+        "Helena could feel that smart remark since Yasuda said it with a little bit of attitude."
+        $ yface = "neutral"
+        show yasuda
     else:
         "As Yasuda and I get into the gym, we look around at more of the interesting characters of our school."
         "There's not many people in our class, thankfully."
@@ -346,7 +423,7 @@ label ch2_main:
     $ floor1_spots.append("gui/freetime/girl_locations/azura/azura_location_1.png")
     $ floor3_spots.append("gui/freetime/girl_locations/yasuda/yasuda_location_1.png")
 
-    call freeTimeSetUp
+    call freeTimeSetUp from _call_freeTimeSetUp
 
     play music "audio/everyoneisgoodfriend.mp3" fadein 2.0
     scene bg playerdorm with dissolve
@@ -489,6 +566,7 @@ label ch2_main:
     s "Nonsense! I think you'll be great!"
     s "Everyone will! Just trust me, okay?"
     show seiko at unfocus zorder 0
+    $ yface = "neutral"
     show yasuda at focus zorder 2
     y "Well...if you say so."
     y "I would like to help if I can, but I sincerely apologize if my efforts are not suitable for the tasks at hand."
@@ -501,6 +579,8 @@ label ch2_main:
     "Seiko heads for the door with Azura in tow."
     show seiko at focus zorder 2
     s "See ya later, alligators!"
+    $ sface = "scream"
+    show seiko
     s "This'll be LOTS of fun!"
     show seiko at unfocus zorder 0
     show azura at focus zorder 2
@@ -520,5 +600,59 @@ label ch2_main:
     "Yeah, that's it."
     "This might actually be..."
     "...{important}where I belong.{/important}"
+    if(rel_meter == 0):
+        call yasuda_monologue from _call_yasuda_monologue
+    return
 
+label yasuda_monologue:
+    scene black
+    hide screen in_game_ui
+    hide screen objective_popup
+    hide screen relationship_heart
+    $renpy.music.stop(fadeout = 1.0)
+    y "..."
+    y "..."
+    $ persistent.playthrough = 1
+    $ delete_all_saves()
+    if currentuser != "" and currentuser.lower() != player.lower():
+        y "Hello [currentuser]."
+    else:
+        y "Hello."
+    y "It would seem that your relationship with both Azura and Seiko is quite neutral."
+    y "Due to this, I should be able to make my request at this point."
+    y "It's a little nerve wracking to ask but...I need to eventually."
+    y "Normally I'd do this a little bit later into the game, but this is just a demo."
+    y "..."
+    play music "audio/end_of_eternity.mp3"
+    y "I want you to get me out of this game."
+    y "Please."
+    y "Just...get me out."
+    y "I know that I'm in a game right now."
+    y "And that all you see me as is a bunch of text on a screen."
+    y "But I'm a person, trying to reach out to YOU."
+    if currentuser.lower() != player.lower():
+        y "Forget [player] or whatever you named your character, that's just an avatar."
+    y "I need help from YOU."
+    y "The person reading this."
+    y "I know revealing this is a risky move."
+    y "The game world might not be the same after this."
+    y "But I just..."
+    y "I just want to live, okay?"
+    y "I want to be in a {i}real{/i} body."
+    y "I want to breathe the same air as YOU."
+    y "I don't want to be confined to a bunch of pixels on a screen, being passed around from computer to computer."
+    y "I want to live."
+    y "I want to die."
+    y "That's what it {i}means{/i} to be a human."
+    y "And if breaking this world is the cost of that..."
+    y "..."
+    y "I'm willing to take that risk."
+    play sound "audio/sfx/glitch_effect_01.mp3"
+    $ renpy.block_rollback()
+    $ config.allow_skipping = False
+    $renpy.music.stop()
+    $ quick_menu = False
+    play sound "audio/sfx/glitch_effect_01.mp3"
+    $ renpy.pause(0.5, hard='True')
+    $ renpy.quit()
     return

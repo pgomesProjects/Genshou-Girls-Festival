@@ -10,9 +10,30 @@ image splash_warning = ParameterizedText(style="splash_text", xalign=0.5, yalign
 
 label splashscreen:
 
+    python:
+        process_list = []
+        currentuser = ""
+        if renpy.windows:
+            try:
+                process_list = subprocess.check_output("wmic process get Description", shell=True).lower().replace("\r", "").replace(" ", "").split("\n")
+            except:
+                pass
+            try:
+                for name in ('LOGNAME', 'USER', 'LNAME', 'USERNAME'):
+                    user = os.environ.get(name)
+                    if user:
+                        currentuser = user
+            except:
+                pass
+
+    if(persistent.playthrough == 1):
+        $ config.main_menu_music = "audio/empty_void.mp3"
+
     $ renpy.music.play(config.main_menu_music)
 
     $ renpy.pause(1.0, hard='True')
+
+    $ config.allow_skipping = False
 
     show white_screen with dissolve
     $ splash_message = splash_message_default
@@ -20,5 +41,7 @@ label splashscreen:
     $ renpy.pause(2.0, hard='True')
 
     hide white_screen with dissolve
+
+    $ config.allow_skipping = True
 
 return

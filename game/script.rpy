@@ -15,8 +15,11 @@ label start:
     $ ane_name = "Snake Student"
     $ rab_name = "Rabbit Student"
     $ sec_name = "Secretary"
+    $ cha_name = "Angel Student"
     $ sam_name = "Blindfolded Student"
     $ air_name = "Bat Student"
+    $ elo_name = "Nurse"
+    $ chr_name = "Advisor"
 
     #Stops main menu music with a fade
     $renpy.music.stop(fadeout = 1.0)

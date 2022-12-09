@@ -36,6 +36,7 @@ screen relationship_heart:
     add "gui/ui/relationship_heart.png" xalign 0.01 yalign 0.25 at changeHeart
 
 screen bestiary_popup(name):
+    zorder 5
     fixed at popupWindow:
         add "gui/ui/bestiary_popup.png" xalign 0.5
         vbox:

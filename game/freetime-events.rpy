@@ -4,20 +4,37 @@
 
 ##FREE TIME EVENTS 01#########################################
 
+##Variables
+init:
+    $ artSuppliesNeeded = False
+    $ q1_asked = False
+    $ q2_asked = False
+    $ q3_asked = False
+
 #Outside
 label pond1:
-    call freeTimeEventSetup
+    call freeTimeEventSetup from _call_freeTimeEventSetup
     if pondSeen == False:
         scene bg pond with dissolve
         $ location = "Pond"
         show screen in_game_ui
-        call noInteraction from _call_noInteraction
+        "I take a look at the academy's pond."
+        "It's kind of small, but seems perfect for swimming on a hot day."
+        "Maybe people with water-related superpowers would go here."
+        "That'd be pretty awesome to see."
+        "I take a deeper look into the water to see if I can spot any fish."
+        "..."
+        "Nope, nothing."
+        "Not much I can do here other than look."
+        "Before I leave, however, I decide to take a small stone from the ground and try to skip it over the water."
+        "I get maybe a skip and a half before it plops into the water."
+        "Guess I still suck at doing that."
         $ pondSeen = True
-    call freeTime
+    call freeTime from _call_freeTime_2
     return
 
 label field1:
-    call freeTimeEventSetup
+    call freeTimeEventSetup from _call_freeTimeEventSetup_1
     if fieldSeen == False:
         scene bg field with dissolve
         $ location = "Field"
@@ -168,7 +185,7 @@ label field1:
                         s "Yeah!"
                         "That's...weirdly relieving in a way."
                         "With eyes on both of us, I crawl off of the table top and act as if nothing happened, going to grab some lunch with Seiko."
-                        call changeColor(0.5)
+                        call changeColor(0.5) from _call_changeColor
 
                     "Maybe At A Different Time":
                         mc "Eh, I'm not really sure that's right now is the right place and time for that."
@@ -190,12 +207,20 @@ label field1:
                         scene classroom with wipeleft_scene
                         $ location = "Classroom"
                         show screen in_game_ui
+                        show seiko at middle with dissolve
                         "We find Azura in the study hall downstairs, doing some math homework."
                         "She gets up from her seat."
+                        show azura at sideRight with dissolve
+                        show azura at focus zorder 2
                         a "Hello."
+                        show azura at unfocus zorder 0
+                        show seiko at focus zorder 2
                         s "Hiya cutie patootie! Wanna get some lunch with us?"
+                        show seiko at unfocus zorder 0
+                        show azura at focus zorder 2
                         a "Oooooooh. Yes. Yes."
                         a "I'm doing homework right now, so maybe food will help me think better for my homework."
+                        show azura at unfocus zorder 0
                         mc "Sounds like a plan."
                         "Azura grabs her papers and heads with us to the cafeteria. She looks really excited."
                         "Thankfully this is a lot better than getting yelled at for screaming."
@@ -234,7 +259,7 @@ label field1:
                         "If anything, she's a little bummed."
                         "We walk side by side to go rally up our group for some lunch."
                         "Well, at least after everything, I didn't get forced into any weird escapades."
-                        call changeColor(-0.5)
+                        call changeColor(-0.5) from _call_changeColor_1
 
                 $ fieldSeen = True
             "No":
@@ -244,49 +269,160 @@ label field1:
     return
 
 label shed1:
-    call freeTimeEventSetup
+    call freeTimeEventSetup from _call_freeTimeEventSetup_2
     if shedSeen == False:
         scene bg shed with dissolve
         $ location = "Shed"
         show screen in_game_ui
-        call noInteraction from _call_noInteraction_1
+        "It's seems to just be a shed full of random supplies."
+        "Not much I can really do here."
         $ shedSeen = True
-    call freeTime from _call_freeTime_5
+    if artSuppliesNeeded == True:
+        if "Art Supplies" not in inventory:
+            "Pretty sure this is the shed where supplies are stored."
+            "I can probably find the stuff Samriti and the bat girl needs for their painting."
+            "..."
+            "..."
+            "Fan brushes, paint thinner, Van Dyke brown paint. Got it."
+            $ inventory.append("Art Supplies")
+            tut "Art Supplies added to Backpack."
+    call freeTime from _call_freeTime_4
     return
 
 label garden1:
-    call freeTimeEventSetup
+    call freeTimeEventSetup from _call_freeTimeEventSetup_3
     if gardenSeen == False:
         scene bg garden with dissolve
         $ location = "Garden"
         show screen in_game_ui
-        call noInteraction from _call_noInteraction_2
+        "I'm surprised that no one else is here."
+        "Personally, I really like these kind of secluded spaces."
+        "Nothing beats a bedroom, but these kind of lonely, open air places are a close second."
+        "I take a seat on a boulder barely large enough to hold my size."
+        "You know, sometimes it's great to just sit down and do absolutely nothing."
+        "Instead of listening to my thoughts, I can listen to the rustling of the trees."
+        "The muffled sounds of people chatting far, far away."
+        "I can't remember the last time I had a \"secret spot\", but maybe I can make this one."
+        "I just get the feeling that nobody really comes here."
+        "Even though this place is pretty well maintained, but let's not sweat the details."
+        "I close my eyes and let the sounds of nature speak to me."
+        $renpy.music.stop(fadeout = 1.0)
+        scene black with dissolve
+        "..."
+        "..."
+        "..."
+        scene bg garden with dissolve
+        if "a notebook" in inventory and "pencils" in inventory:
+            "You know what?"
+            "I have my notebook and pencils on me."
+            "Might as well keep my mind busy for a little bit."
+            tut "Side Quest: My Personal Therapy - Started"
+            "I take out my notebook and pencils from my backpack and start to draw."
+            "I'm no artist, but I like to doodle what's on my mind every now and then."
+            "Now seems like one of those times, and the garden seems like the perfect subject."
+            "I make tons of scribbles on a piece of paper."
+            "I try to replicate the shapes of the yellow tulips, the collection of leaves on the ground, the trees towering around me in pretty much every direction."
+            "The final product though barely ends up looking like a garden."
+            "Picasso would be proud at how abstract this \"drawing\" looks."
+            "Oh well, at least that killed some time."
+            tut "Side Quest: My Personal Therapy - Completed"
+            $ inventory.append("Drawing of the Garden")
+            tut "Drawing of the Garden added to Backpack."
+        else:
+            "Well, that was nice."
+
+        play music "audio/datsflaze_haste.mp3"
         $ gardenSeen = True
-    call freeTime from _call_freeTime_6
+    call freeTime from _call_freeTime_5
     return
 
 #Underground
 label classroom1:
-    call freeTimeEventSetup
+    call freeTimeEventSetup from _call_freeTimeEventSetup_4
     if classroomSeen == False:
         scene bg classroom with dissolve
         $ location = "Classroom"
         show screen in_game_ui
-        "I take a look into one of the classrooms with the door slightly ajar."
-        "There's a young lady with a blindfold painting a very beautiful portrait of a bat woman on a couch."
-        "I could only ever dream of painting that well, nevermind with a blindfold."
-        "I try to sneak a peek into the room some more, only to accidentally bump the door."
-        "Hopefully they don't notice."
-        "..."
-        "..."
-        "Shit, they totally noticed."
-        "They look straight in my direction as I contemplate phasing through the wall behind me."
-        $ classroomSeen = True
-    call freeTime
+        if artSuppliesNeeded == False:
+            "I take a look into one of the classrooms with the door slightly ajar."
+            "There's a young lady with a blindfold painting a very beautiful portrait of a bat woman on a couch."
+            "I could only ever dream of painting that well, nevermind with a blindfold."
+            "I try to sneak a peek into the room some more, only to accidentally bump the door."
+            "Hopefully they don't notice."
+            "..."
+            "..."
+            "Shit, they totally noticed."
+            "They look straight in my direction as I contemplate phasing through the wall behind me."
+            sam "Come in."
+            "The woman speaks with a very distinct Indian accent."
+            "The other girl looks in my direction with a smile and very cloudy eyes."
+            mc "Uh...hi."
+            air "Welcome!"
+            air "Don't mind us, Sammy's just doing some painting."
+            $ sam_name = "Sammy?"
+            sam "For the last time, stop calling me that."
+            air "But it's cute!"
+            "The blindfolded woman, apparently named something similar to Sammy, is probably rolling her eyes."
+            sam "Anyways, since you decided to intrude, young lady, would you mind doing us a favor?"
+            mc "Sure, what do you need?"
+            sam "Do you mind getting me some supplies from the shed?"
+            sam "I need them to finish this painting."
+            mc "I can do that, what do you need?"
+            sam "Just a couple fan brushes, some Van Dyke brown paint, and some more paint thinner, if you could."
+            mc "Yeah, totally."
+            air "Awesome! Thanks a bunch!"
+            air "I can't wait to see your painting when it's done, Sammy!"
+            $ sam_name = "Samriti"
+            sam "It's Samriti."
+            sam "Nonetheless, I still don't know how you see my paintings."
+            "Samriti gives a small smile in the bat girl's direction."
+            air "Don't you underestimate my power!"
+            air "I'm not bluffing when I say I can hear the colors, you know that."
+            sam "Yes, yes. But still, I can't even begin to comprehend that."
+            "She turns back to me."
+            sam "Anyways, young miss, just get those supplies to us as soon as you can."
+            mc "Got it."
+            tut "Side Quest: The Blind Painter - Started"
+            $ artSuppliesNeed = True
+        else:
+            if "Art Supplies" in inventory:
+                "The bat woman raises her head as I enter the door."
+                air "Oh hey, you got it!"
+                "Samriti stands up, wiping some excess paint off of a paint brush onto a palette."
+                sam "Just place them down next to me."
+                "I do as she asks."
+                $ inventory.remove("Art Supplies")
+                tut "Art Supplies removed from Backpack."
+                sam "Thank you. I should be able to finish this painting now."
+                sam "What is your name?"
+                mc "[player]."
+                sam "My name is Samriti Reilly, as you might have heard earlier."
+                sam "Thank you, [player]. Your snooping was very convenient for us."
+                $air_name = "Aire"
+                air "I'm Aire Daou, Samriti's girlfriend!"
+                air "We're both second years!"
+                "Samriti blushes at the word \"girlfriend\"."
+                mc "Nice to meet you two. I'm gonna continue wandering around though."
+                sam "Take care."
+                air "See ya!"
+                python:
+                    if(AddToBestiary(sam_bestiary) and AddToBestiary(air_bestiary)):
+                        renpy.show_screen("bestiary_popup", name="Samriti and Aire")
+                tut "Side Quest: The Blind Painter - Completed"
+                sam "Oh, and take this."
+                $ inventory.append("Art Brush Pin")
+                tut "Art Brush Pin added to Backpack."
+                $ classroomSeen = True
+            else:
+                sam "Let us know when you get the supplies."
+                air "Take all the time you need, sweetheart."
+
+        $ artSuppliesNeeded = True
+    call freeTime from _call_freeTime_6
     return
 
 label studyHall1:
-    call freeTimeEventSetup
+    call freeTimeEventSetup from _call_freeTimeEventSetup_5
     if studyHallSeen == False:
         scene bg studyhall with dissolve
         $ location = "Study Hall"
@@ -370,10 +506,14 @@ label studyHall1:
                         "She slowly types out her problems for the tutor and they send her a bunch of links to articles back in response."
                         a "Oh. What is this?"
                         mc "Those are links. Use the mouse to click them."
+                        $ aface = "excited"
+                        show azura
                         a "Ooooooh."
                         "Azura clicks all of them and a bunch of sites pop up on basic division."
                         "Azura claps, happy that she has a bunch of new information readily available."
                         a "Yey~"
+                        $ aface = "neutral"
+                        show azura
                         a "I'm going to read these, but there's a lot of words."
                         a "But I'll do my best."
                         "Azura looks conflicted, since she's not the best reader."
@@ -398,53 +538,97 @@ label studyHall1:
                         a "Oh. Yey~"
                         "Azura seems excited, bouncing in her seat."
                         "Seiko eventually storms into the study hall, almost slamming the door open."
+                        $ sface = "scream"
+                        show seiko at sideRight with dissolve
+                        show seiko at focus zorder 2
                         s "So I heard you need some help with MATHHHHHHH?"
+                        show seiko at unfocus zorder 0
                         "There goes Seiko again with the yelling."
                         "One of the supervisors in the classroom sends a hush our way like it was the library."
+                        show seiko at focus zorder 2
                         s " Alright let me see what we got here!"
+                        show seiko at unfocus zorder 0
                         "Seiko looks over her homework."
+                        show seiko at focus zorder 2
                         s "Oh! This is like, reallllly easy! Mental math stuff!"
                         s "So you take the big number and cut it up a bunch of times by the dividend number thing and then you'll get your answer!"
+                        show seiko at unfocus zorder 0
                         "That...was singlehandedly the worst explanation of division I could think of."
                         "Azura seems to agree, mindlessly staring through Seiko trying to comprehend that."
+                        show azura at focus zorder 2
                         a "Hwuh?"
+                        show azura at unfocus zorder 0
+                        show seiko at focus zorder 2
                         s "Here! Lemme show you!"
+                        show seiko at unfocus zorder 0
                         "Seiko sits right next to Azura."
+                        show seiko at focus zorder 2
                         s "Ya got a paper I can use?"
+                        show seiko at unfocus zorder 0
                         if "loose paper" in inventory:
                             mc "I have some in my bag if you want it."
+                            $ sface = "happy"
+                            show seiko at focus zorder 2
                             s "Perfect, thankies!"
-                            call changeColor(0.5)
+                            call changeColor(0.5) from _call_changeColor_2
+                            $ sface = "neutral"
+                            show seiko at unfocus zorder 0
                             "Seiko takes the paper and starts to do the math on the paper."
                         else:
                             mc "Sorry, don't have any on me."
+                            show seiko at focus zorder 2
                             s "That's fine, I'll just use a pencil so we can erase it!"
+                            show seiko at unfocus zorder 0
                             "Seiko starts doing the math on the side of the paper."
+                        show seiko at focus zorder 2
                         s "So, you make this weird little square thing. Big number inside, little number outside!"
                         s "And then, you do 6 times 3 is 18, cuz 6 times 3 is 18!"
+                        show seiko at unfocus zorder 0
                         "Azura sort of seems to get it, sort of doesn't."
+                        show azura at focus zorder 2
                         a "Where did you get the 6 from?"
+                        show azura at unfocus zorder 0
+                        show seiko at focus zorder 2
                         s "6 times 3!"
-                        a "I thought we were doing multiplication."
+                        show seiko at unfocus zorder 0
+                        show azura at focus zorder 2
+                        a "I thought we were doing division."
+                        show azura at unfocus zorder 0
+                        show seiko at focus zorder 2
                         s "It's basically the same thing except in a weird way!"
+                        show seiko at unfocus zorder 0
                         "It seems like Seiko is trying her best, but she is definitely not a good teacher in the slightest."
                         "Azura is still confused."
+                        show seiko at focus zorder 2
                         s "You can think of multiplication and stuff for these bigger problems and like, just try to remember the patterns!"
                         s "Makes sense?"
+                        show seiko at unfocus zorder 0
+                        show azura at focus zorder 2
                         a "Um...I don't know."
+                        show azura at unfocus zorder 0
                         "Seiko thinks a little bit, since her method of teaching doesn't seem to get through to her."
+                        show seiko at focus zorder 2
                         s "Maybe you need to learn a different way! I learn weirdly, so I dunno if my teaching methods will help!"
-                        a " I thought you would be a good teacher."
+                        show seiko at unfocus zorder 0
+                        show azura at focus zorder 2
+                        a "I thought you would be a good teacher."
+                        show azura at unfocus zorder 0
+                        show seiko at focus zorder 2
                         s "I could be, buuuut probably not for this!"
                         s "Try getting a tutor or somethin' maybe! That could help!"
+                        show seiko at unfocus zorder 0
+                        show azura at focus zorder 2
                         a "Oh. Okay."
+                        show azura at unfocus zorder 0
                         "Azura and Seiko pack up their stuff."
+                        show azura at focus zorder 2
                         a "Do you think tutors are good, [player]?"
+                        show azura at unfocus zorder 0
                         mc "Uh, yeah, probably."
                         "Azura didn't seem keen on the idea in her voice. I can hear it in her voice."
                         "She didn't really get anywhere here."
                         "The two roommates pack up their stuff and head out to the dorms."
-                        call changeColor(0.5)
+                        call changeColor(0.5) from _call_changeColor_3
 
                     "I Can Do It":
                         mc "Alright. Let's sit down and do this together."
@@ -505,30 +689,43 @@ label studyHall1:
                         mc "I'm really happy that I could help you out!"
                         a "Will you help me if I need it?"
                         mc "Of course I will Azura! I'll be happy to help you out with any assignment if I can."
+                        $ aface = "excited"
+                        show azura
                         a "Yey~"
                         "Azura seems satisfied with my help."
-                        call changeColor(-0.5)
+                        $ aface = "neutral"
+                        call changeColor(-0.5) from _call_changeColor_4
 
                 $ studyHallSeen = True
             "No":
                 hide azura with dissolve
-                call freeTime
+                call freeTime from _call_freeTime_7
 
     return
 
 #Floor 1
 label library1:
-    call freeTimeEventSetup
+    call freeTimeEventSetup from _call_freeTimeEventSetup_6
     if librarySeen == False:
         scene bg library with dissolve
         $ location = "Library"
         show screen in_game_ui
-        "I enter the library, looking for some books."
-        "However, there seems to be a cart full of books that look worn or are donated by students."
+        "I enter the library, looking for something interesting to read."
         "Might as well give it a shot. Could find something interesting."
-        "I head to the bin and look around."
+        tut "Side Quest: A Good Story - Started"
+        "I head straight to the young adult section looking for some manga."
+        "I'm sure they have at least some."
+        "I look through the shelves until I can see any familiar illustrations on the spines of the books."
+        "There's some manga here, but I've either read them already, or they're just old titles that I don't really want to bother with."
+        "Personally, I'm an isekai or a slice of life kind of person."
+        "Anything that can take me to a world that's far away from this one."
+        "After some time of going up and down the shelves, I'm about ready to call it quits."
+        "However, there seems to be a cart full of books that look worn or are donated by students near the front."
+        "I head over to the bin and look around."
+        "Usually you can find hidden gems in places like these."
         mc "Hmm...\"Raven's Circle\", huh?"
         "Might be worth the read. I'll take it."
+        tut "Side Quest: A Good Story - Completed"
         $ inventory.append("Raven's Circle")
         tut "Raven's Circle added to Backpack."
         $ librarySeen = True
@@ -537,7 +734,7 @@ label library1:
     return
 
 label gym1:
-    call freeTimeEventSetup
+    call freeTimeEventSetup from _call_freeTimeEventSetup_7
     if gymSeen == False:
         scene bg gym_int with dissolve
         $ location = "Gym"
@@ -548,7 +745,7 @@ label gym1:
     return
 
 label lockerRoom1:
-    call freeTimeEventSetup
+    call freeTimeEventSetup from _call_freeTimeEventSetup_8
     if lockerRoomSeen == False:
         scene bg lockerroom with dissolve
         $ location = "Locker Rooms"
@@ -559,7 +756,7 @@ label lockerRoom1:
     return
 
 label cafeteria1:
-    call freeTimeEventSetup
+    call freeTimeEventSetup from _call_freeTimeEventSetup_9
     if cafeteriaSeen == False:
         scene bg cafeteria with dissolve
         $ location = "Cafeteria"
@@ -577,6 +774,7 @@ label cafeteria1:
         "She looks just about ready to cry, her eyes darting around frantically."
         "I can relate, definitely been there before."
         "...you know what? I'll try to help her."
+        tut "Side Quest: First Day Jitters - Started"
         "I put my plate in one hand and wander over to the strange, shy girl."
         "I tap the table next to her to get her attention."
         ane "Hm?"
@@ -621,6 +819,7 @@ label cafeteria1:
         "She hands me a small pin with a spiral on it."
         mc "Oh, that's so cute! Thank you."
         "I grab my backpack and fasten it on the side."
+        tut "Side Quest: First Day Jitters - Completed"
         $ inventory.append("Spiral Pin")
         tut "Spiral Pin added to Backpack."
         "We end up chatting for a little bit more before we head our separate ways."
@@ -630,45 +829,178 @@ label cafeteria1:
                 renpy.show_screen("bestiary_popup", name="Anemone Chauveret")
 
         $ cafeteriaSeen = True
-    call freeTime
+    call freeTime from _call_freeTime_8
     return
 
 label nurse1:
-    call freeTimeEventSetup
+    call freeTimeEventSetup from _call_freeTimeEventSetup_10
     if nurseSeen == False:
         scene bg nurse with dissolve
         $ location = "Nurse's Office"
         show screen in_game_ui
-        call noInteraction from _call_noInteraction_15
+        "Ever since middle school, I've had a pretty intimate relationship with the school nurse."
+        "Back when I was starting to discover my ability, I would get myself stuck in walls, floors, and ceilings."
+        "I was a walking mess of bandages, casts, and stitches."
+        "Thanks to people like me, Defectives are required to have frequent physical and mental checkups."
+        "Makes me feel like the government treats my existence as a threat or something."
+        "Either way, it's time for the annual \"Hey, look at me, my ability is dangerous\" talk."
+        "When I enter, I see a woman in an outfit that I can only describe as \"Nurse Joy\"."
+        elo "Welcome, welcome!"
+        elo "Whatever seems to be the problem?"
+        mc "Hi. I'm new here and just wanted to let you know I'm a Defective."
+        elo "I see."
+        elo "Don't you worry, I know where you're coming from."
+        elo "Defectives aren't required to have checkups in this school, if that's why you're here."
+        mc "Wait, really?"
+        mc "I thought it was a government thing I had to do."
+        elo "At regular schools, yes."
+        elo "But at schools meant for the supernatural, it's only optional."
+        mc "Okay, thank you very much."
+        elo "No worries."
+        elo "If you need me for any reason though, don't hesitate to come by."
+        $ elo_name = "Eloise"
+        elo "My name is Nurse Meyer, but you can call me Eloise."
+        mc "Thank you, Eloise."
+        elo "No problem. Take care now!"
+        python:
+            if(AddToBestiary(elo_bestiary)):
+                renpy.show_screen("bestiary_popup", name="Eloise Meyer")
         $ nurseSeen = True
-    call freeTime from _call_freeTime_19
+    call freeTime from _call_freeTime_9
     return
 
 label advisors1:
-    call freeTimeEventSetup
+    call freeTimeEventSetup from _call_freeTimeEventSetup_11
     if advisorsSeen == False:
         scene bg advisors with dissolve
         $ location = "Advising Center"
         show screen in_game_ui
-        call noInteraction from _call_noInteraction_16
+        "You know, even though I've gotten accepted here, I don't really know all that much about this place."
+        "Maybe I can learn a little bit from the advisor here."
+        tut "Side Quest: A Little Bit Of History - Started"
+        "I enter the advising center and see a slightly open door."
+        chr "Come in, [player]."
+        "...wait. Huh?"
+        "How did she know that I was here?"
+        "How does she know who I am?"
+        chr "I'm an Oracle."
+        chr "I can see up to 15 minutes into the future."
+        chr "Don't be shy, I won't bite."
+        "...that answers that."
+        "I pass by the secretary and enter the advisor's office."
+        chr "Sorry if that freaked you out a bit."
+        mc "Erm...no worries."
+        mc "I will admit that was really weird, though."
+        mc "But like, really cool."
+        chr "Eheh, thank you, hon."
+        chr "So before I answer your questions, let me introduce myself."
+        $ chr_name = "Christine"
+        chr "My name is Christine Windsor. I graduated from this academy a few years ago now."
+        chr "Any questions you have about this place, I can get them answered."
+        chr "You can ask away."
+        mc "Wait, but don't you already know what I'm going to ask?"
+        chr "Yes, but it wouldn't feel much like a conversation if I was the only one doing the talking, no?"
+        mc "I mean, I guess that's true."
+        mc "But, I guess my first question is..."
+        $ questionsAsked = 0
+        call advisorQuestionLoop from _call_advisorQuestionLoop
+        chr "Does that answer all of your questions?"
+        mc "Yes. Thank you."
+        chr "Anytime. If you come up with more questions, please let me know."
+        chr "Otherwise, feel free to take a complementary school pin on your way out."
+        python:
+            if(AddToBestiary(chr_bestiary)):
+                renpy.show_screen("bestiary_popup", name="Christine Windsor")
+        tut "Side Quest: A Little Bit Of History - Completed"
+        $ inventory.append("School Emblem Pin")
+        tut "School Emblem Pin added to Backpack."
         $ advisorsSeen = True
-    call freeTime
+    call freeTime from _call_freeTime_10
+    return
+
+label advisorQuestionLoop:
+
+    if questionsAsked == 0:
+        $ menuText = "But, I guess my first question is..."
+    else:
+        $ menuText = "My next question is..."
+
+    menu:
+        "[menuText]"
+        "Who Built This Academy?" if not q1_asked:
+            chr "That would be President Furukawa himself."
+            chr "As one of the oldest known people with an ability, he decided to create this school to have a place where the youth could embrace their abilities."
+            chr "As you might know, America, England, France, and India also have their own schools under the {important}Supernatural Student System{/important}, but H.U.D.A. is the most recognized."
+            chr "He hopes that showing alumni from this school can do good in society can help ease tensions between the normal and the supernatural."
+            $ q1_asked = True
+        "What Do I Get When I Graduate?" if not q2_asked:
+            chr "Well, you don't get the traditional degree like you would in a normal college."
+            chr "You get an {important}Ability License{/important}, which basically certifies that you have a expert grasp on your ability."
+            chr "Those with an Ability License aren't required to go through screenings when travelling, are allowed to work at any jobs they wish to, and can basically be treated as insurance in case tensions between the normal and supernatural rise."
+            $ q2_asked = True
+        "Are All Of The Students Here Supernatural?" if not q3_asked:
+            mc "My roommate Yasuda doesn't have an ability."
+            mc "Does that mean they messed up during their scouting?"
+            $renpy.music.stop()
+            chr "..."
+            chr "All I can say is that H.U.D.A. has never made a mistake in scouting students so far."
+            chr "Whatever the reason may be, the academy needs her here."
+            chr "That's all I can disclose."
+            play music "audio/datsflaze_haste.mp3"
+            $ q3_asked = True
+
+    $ questionsAsked += 1
+    if(questionsAsked < 3):
+        jump advisorQuestionLoop
     return
 
 #Floor 2
 label commonRoom1:
-    call freeTimeEventSetup
+    call freeTimeEventSetup from _call_freeTimeEventSetup_12
     if commonRoomSeen == False:
         scene bg commonroom with dissolve
         $ location = "Dorm Common Area"
         show screen in_game_ui
-        call noInteraction
+
+        "I check out the common room area to see what they have."
+        "Seems they have a couple of fridges, some stoves..."
+        "...a big dining table, laundry in the back..."
+        "...a TV, some chairs, some vending machines..."
+        "...and a woman with wings on the ground praying."
+        "Seems I might've walked in on something."
+        "I prepare to tiptoe out of here, but she ends up standing and looking in my direction."
+        cha "Hello."
+        mc "Sorry, did I like, interrupt you or something?"
+        cha "No, you are perfectly fine."
+        cha "I was simply having a conversation with someone and now it is complete."
+        mc "...uh-huh."
+        cha "You see, I am the Student of Praying."
+        cha "I can directly communicate with deities of my choosing, as long as I have complete faith in them."
+        mc "I see."
+        mc "I mean, I've never been a religious person, but I guess that's pretty cool."
+        cha "Do not worry, I understand the skepticism."
+        cha "In fact, it is welcome."
+        cha "Do not believe in things superficially, for you will fail to see the real truth."
+        mc "Yep, got cha."
+        mc "I gotta head out though, so I guess I'll be seeing you?"
+        cha "And you as well."
+        cha "But might I ask, what is your name?"
+        mc "My name is [player]."
+        $ cha_name = "Charmeine"
+        cha "Charmeine Hale. A pleasure to meet you."
+        mc "And you as well."
+        "I head out of the common room and take some deep breaths."
+        "Stuff like that gets me {i}really{/i} uncomfortable sometimes."
+        "Better find somewhere else to go."
+        python:
+            if(AddToBestiary(cha_bestiary)):
+                renpy.show_screen("bestiary_popup", name="Charmeine Hale")
         $ commonRoomSeen = True
-    call freeTime
+    call freeTime from _call_freeTime_11
     return
 
 label azuraSeikoDorm1:
-    call freeTimeEventSetup
+    call freeTimeEventSetup from _call_freeTimeEventSetup_13
     if azuraSeikoSeen == False:
         scene bg hallways with dissolve
         $ location = "Hallways"
@@ -681,7 +1013,7 @@ label azuraSeikoDorm1:
     return
 
 label playerDorm1:
-    call freeTimeEventSetup
+    call freeTimeEventSetup from _call_freeTimeEventSetup_14
     scene bg playerdorm with dissolve
     $ location = "Dorm"
     show screen in_game_ui
@@ -713,10 +1045,11 @@ label playerDorm1:
     y "Certainly."
     $yface = 'neutral'
     hide yasuda with dissolve
-    call freeTime
+    call freeTime from _call_freeTime_12
     return
 
 label noInteraction:
     "I enter and take a look around."
-    "Hm. Nothing interesting going on right now. I'll go look somewhere else."
+    "Hm. Nothing interesting going on right now."
+    "I'll go look somewhere else."
     return

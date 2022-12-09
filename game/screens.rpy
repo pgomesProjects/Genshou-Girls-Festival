@@ -319,7 +319,10 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("New Game") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please Enter Your Name", ok_action=Function(FinishEnterName)))
+            if(persistent.playthrough == 1):
+                textbutton _("îýÂwq±3öËkzG®ú¥") action Show(screen="dialog", message="I'm sorry. I broke the game.\nI guess I couldn't become real.\nPlease reinstall to play again.", ok_action=Hide("dialog"))
+            else:
+                textbutton _("New Game") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please Enter Your Name", ok_action=Function(FinishEnterName)))
 
         else:
 
@@ -349,6 +352,10 @@ screen navigation():
             ## Web.
             textbutton _("Exit") action Quit(confirm=not main_menu)
 
+        if(persistent.playthrough == 1):
+            null height 40
+            textbutton _("Reset Everything") action Show(screen="confirm", message="For demo purposes, you can use this button to reset the game.\nReset the game?", yes_action=Function(reset_game), no_action=Hide("confirm"))
+
 
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
@@ -373,8 +380,14 @@ screen main_menu():
     tag menu
 
     add gui.main_menu_background
-    add "gui/main_menu/yasuda_portrait.png" xalign 1.0 yalign 0.0
-    add "gui/main_menu/logo.png" xalign 1.0 yalign 0.0
+    if persistent.playthrough == 0:
+        add "gui/main_menu/seiko_portrait.png"
+        add "gui/main_menu/azura_portrait.png"
+        add "gui/main_menu/yasuda_portrait.png"
+        add "gui/main_menu/logo.png"
+    else:
+        add "gui/main_menu_glitch.png"
+        add "gui/main_menu/yasuda_portrait_glitch.png"
 
     ## This empty frame darkens the main menu.
     frame:
@@ -600,8 +613,13 @@ screen bestiary():
     use game_menu(_("Bestiary")):
 
         style_prefix "bestiary"
-
-        if(len(monsters) > 0):
+        if(persistent.playthrough == 1):
+            fixed:
+                vbox:
+                    xalign 0.5
+                    yalign 0.5
+                    text _("Everything is broken. It's all my fault.")
+        elif(len(monsters) > 0):
             fixed:
                 $ currentEntry = monsterPage + 1
                 text _("Entry [currentEntry]")
@@ -1248,6 +1266,33 @@ screen name_input(message, ok_action):
 
             textbutton _("OK") action ok_action
 
+screen dialog(message, ok_action):
+
+
+    modal True
+
+    zorder 200
+
+    style_prefix "confirm"
+
+    add "gui/overlay/confirm.png"
+
+    frame:
+
+        has vbox:
+            xalign .5
+            yalign .5
+            spacing 30
+
+        label _(message):
+            style "confirm_prompt"
+            xalign 0.5
+
+        hbox:
+            xalign 0.5
+            spacing 100
+
+            textbutton _("OK") action ok_action
 
 ## Confirm screen ##############################################################
 ##

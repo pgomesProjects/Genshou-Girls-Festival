@@ -256,7 +256,7 @@ label ch1_main:
             "She's not doing any harm, I hope."
             "She sniffs me for a solid minute before backing off."
 
-            call changeColor(-0.5)
+            call changeColor(-0.5) from _call_changeColor_5
             #hide cg with dissolve
             show azura at middle
             a "Hello. I like your smell."
@@ -272,7 +272,7 @@ label ch1_main:
             "The blue girl immediately stops and backs away, however she looks pretty sad."
             "I kind of feel bad now, but she invaded my personal space."
 
-            call changeColor(0.5)
+            call changeColor(0.5) from _call_changeColor_6
             #hide cg with dissolve
             show azura
 
@@ -814,7 +814,7 @@ label meet_socialize:
     mc "Yeah, guess so. Good job."
     "Helena and I talk for a while."
     "In the meantime, I see Seiko in the distance basically trying to woo over the ladies."
-    call changeColor(0.5)
+    call changeColor(0.5) from _call_changeColor_7
     "Guess she's having fun too."
 
     python:
@@ -905,7 +905,7 @@ label meet_hide:
     $aface = 'excited'
     show azura
     "Azura practically melts in Seiko's hands, laying on her back, seemingly excited."
-    call changeColor(-0.5)
+    call changeColor(-0.5) from _call_changeColor_8
     show azura at focus zorder 2
     a "I did it."
     "After Azura's second pet session of the day, the two weirdos drag me back into the circle and attempt to get me to socialize with strangers."

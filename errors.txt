@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script-ch0.rpy", line 12: end of line expected.
-    show screen in_game_ui at slideIn(0.0, 0.3)
-                           ^
-
-File "game/script-ch0.rpy", line 13: end of line expected.
-    show screen relationship_heart at slideIn(0.0, 0.3)
-                                   ^
+File "game/screens.rpy", line 615: expected ':' not found.
+    else if(len(monsters) > 0):
+         ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Dec  8 02:53:02 2022
+Fri Dec  9 04:25:49 2022

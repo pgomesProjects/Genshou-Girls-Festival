@@ -100,6 +100,7 @@ define inventory = []
 default persistent.playername = ""
 default player = persistent.playername
 default persistent.playthrough = 0
+default currentuser = ""
 
 init python:
 
@@ -155,3 +156,13 @@ image seiko:
         (0,0), im.MatrixColor("actors/seiko/bodies/%s.png"%(sbody),im.matrix.tint(huer, hueg, hueb)),
         (0,0), im.MatrixColor("actors/seiko/faces/%s.png"%(sface),im.matrix.tint(huer, hueg, hueb)),
         )
+
+init python:
+    def delete_all_saves():
+        for savegame in renpy.list_saved_games(fast=True):
+            renpy.unlink_save(savegame)
+
+    def reset_game():
+        persistent._clear(progress=True)
+        persistent.playthrough = 0
+        renpy.utter_restart()
